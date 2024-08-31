@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+    .main-nav-clutch{
+      padding-left: 6rem;
+      padding-right: 6rem;
+     }
+  }
+  @media (min-width: 1600px) {
+   .main-nav-clutch{
+    padding-left: 5rem;
+    padding-right: 5rem;
+   }
+  }
+  
+  @media (max-width: 768px) {
+  
+  }
+  

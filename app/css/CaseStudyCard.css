@@ -1,0 +1,202 @@
+.slider-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    padding: 20px;
+    cursor: grab;
+    position: relative;
+    display: flex;
+}
+
+.slider-container:active {
+    cursor: grabbing;
+}
+
+.card-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caseStudyCard {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -10px 0px 20px rgba(173, 216, 230, 0.5);
+    cursor: pointer;
+}
+
+.caseStudyCard.expanded {
+    flex: 1 0 600px;
+    height: 300px;
+    transition: all 0.8s ease-in-out;
+    box-shadow: -10px 0px 20px rgba(173, 216, 230, 0.5);
+}
+
+.text-content {
+    z-index: 1;
+    display: none;
+}
+
+.caseStudyCard.expanded .text-content {
+    display: inline-block;
+    padding: 10px;
+}
+
+.text-content h3 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.text-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 800px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.cta-text {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cta-text p {
+    margin-right: 0.5rem;
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+.image-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caseStudyCard.expanded .image-content {
+    height: 85%;
+    width: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+    .slider-container {
+        padding: 10px;
+        overflow-x: scroll; /* Enable horizontal scrolling on mobile */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    .card-slider {
+        flex-wrap: nowrap; /* Prevent wrapping of cards */
+        gap: 10px;
+    }
+
+    .caseStudyCard {
+        flex: 0 0 20%; /* Make each card take full width */
+        margin-bottom: 20px;
+    }
+
+    .caseStudyCard.expanded {
+        flex: 0 0 20%; /* Make the expanded card take full width */
+    }
+
+    /* Ensure that non-expanded cards are still visible */
+    .caseStudyCard:not(.expanded) {
+        display: block;
+        opacity: 0.8;
+    }
+
+    .caseStudyCard.expanded {
+        opacity: 1;
+    }
+
+    .caseStudyCard.expanded .text-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .caseStudyCard.expanded .text-content {
+        padding: 5px;
+    }
+
+    .caseStudyCard.expanded .image-content {
+        height: 50%;
+        width: 100%;
+    }
+    .text-content {
+        z-index: 1;
+        display: none;
+    }
+    
+ 
+    
+    .text-content h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    .text-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        width: 80%;
+        max-width: 800px;
+        line-height: 1.2;
+        text-align: left;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    
+    .cta-text {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    
+    .cta-text p {
+        margin-right: 0.5rem;
+    }
+    
+    .arrow {
+        font-size: 1.2rem;
+    }
+    
+}

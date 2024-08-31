@@ -1,0 +1,292 @@
+/* keyfeature.css */
+
+.card {
+  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+@media (max-width: 1090px) {
+  .keycard {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover {
+    width: 35rem; /* equivalent to w-96 */
+  }
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    height: 25rem;
+  }
+
+  .default-expanded {
+    width: 35rem; /* equivalent to w-96 */
+  }
+  .text-window {
+    overflow: hidden;
+    white-space: noWrap;
+  }
+}
+
+@media (max-width: 950px) {
+  .entireCard {
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .keycard {
+    margin-top: 25rem;
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* mobile */
+@media (max-width: 435px) and (max-height: 935px) {
+  .keycard {
+    margin-top: 5rem;
+  }
+  .headkeyfeature{
+    font-size: x-large;
+  }
+  .entireCard {
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+@media (max-width: 420px) and (max-height: 825px) {  
+  .keycard {
+    margin-top: 5rem;
+  }
+  .headkeyfeature{
+    font-size: x-large;
+  }
+  .entireCard {
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+@media (max-width: 420px) and (max-height: 825px) {  
+  .keycard {
+    margin-top: 5rem;
+  }
+  .entireCard {
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+  .headkeyfeature{
+    font-size: x-large;
+  }
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 360px) and (max-height: 740px) {  
+  .headkeyfeature{
+    font-size: x-large;
+  }
+  .keycard {
+    margin-top: 5rem;
+  }
+  .entireCard {
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree,
+  .cardFour,
+  .cardFive {
+    width: 100%; /* Make sure the card takes full width of the parent */
+    height: 5rem; /* equivalent to h-20 */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover,
+  .cardThree:hover,
+  .cardFour:hover,
+  .cardFive:hover,
+  .default-expanded {
+    height: 36rem; /* equivalent to h-144 */
+  }
+
+  .card .content {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .card .content .text-3xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card .content .text-lg {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
+

@@ -1,0 +1,59 @@
+
+
+.toggle-button {
+  /* Tailwind's red-500 */
+  color: rgb(11, 11, 11);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.6s;
+}
+
+.toggle-button:hover {
+ /* Tailwind's red-700 */
+  color: rgb(2, 54, 59);
+}
+
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+  background-color: #f1f2fa;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 50rem;
+}
+
+.dropdown.open {
+  max-height: 200px; /* Adjust according to content */
+  padding: 10px 25px;
+}
+
+
+
+@media (min-width: 1500px) {
+  .faqcontainer {
+    padding: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqcontainer {
+    flex: auto;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .toggle-button {
+    margin-top: 10px;
+    width: 20rem;
+  }
+  .dropdown {
+    width: 20rem;
+  }
+  .headfaq{
+    font-size: x-large;
+  }
+}

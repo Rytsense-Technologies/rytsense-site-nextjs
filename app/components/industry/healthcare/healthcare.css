@@ -1,0 +1,24 @@
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    height: 800px; /* Adjust height as per your image dimensions */
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as per your design */
+    padding: 0 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-content {
+      padding: 0 10px;
+    }
+  }
+  

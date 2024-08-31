@@ -1,0 +1,16 @@
+@media (min-width: 1200px) {
+  .slider-carousal {
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 1600px) {
+  .slider-carousal {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousal-headline {
+    font-size: medium;
+  }
+}
