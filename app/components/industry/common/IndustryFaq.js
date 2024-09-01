@@ -26,7 +26,7 @@ const IndustryFaq = ({ faq }) => {
           <h1 className="text-3xl font-bold ">Frequently asked questions</h1>
         </div>
         <div className="mt-10 flex gap-5 flex-wrap">
-          {faq.accordinarray.map((item, index) => (
+          {faq.map((item, index) => (
             <div key={index} className="w-full">
               <div
                 className="cursor-pointer border-b border-gray-300 p-5"

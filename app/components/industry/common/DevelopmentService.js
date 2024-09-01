@@ -1,41 +1,42 @@
 "use client"
 
+import Image from "next/image";
 import React, { useState } from "react";
 
-const DevelopmentService = ({ textColor, data }) => {
-  const [selectedService, setSelectedService] = useState(data.points[0]);
+const DevelopmentService = ({heading,subheading, data }) => {
+  const [selectedService, setSelectedService] = useState(data[0]);
 
   const handleTitleClick = (service) => {
     setSelectedService(service);
   };
 
   return (
-    <div className="px-4 sm:px-10 lg:px-20 py-10">
+    <div className="px-4 sm:px-10 lg:px-20 py-20">
       <div className="w-full lg:w-3/5">
-        <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-${textColor}`}>
-          {data.title}
+        <h1 className={`text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-800`}>
+          {heading}
         </h1>
-        <p className={`text-base sm:text-lg lg:text-xl text-${textColor} mt-5`}>
-          {data.subTitle}
+        <p className={`text-base sm:text-lg lg:text-lg text-gray-600 mt-5`}>
+          {subheading}
         </p>
       </div>
       <div className="w-full flex flex-col lg:flex-row border border-indigo-800 rounded-lg mt-10">
         <div className="w-full lg:w-1/2 pr-4 p-5 lg:p-10 bg-sky-600">
           <ul className="divide-y divide-gray-200">
-            {data.points.map((service, index) => (
+            {data.map((service, index) => (
               <li
                 key={index}
                 className={`py-3 cursor-pointer text-base sm:text-lg lg:text-xl font-semibold ${
-                  selectedService?.title === service.title
+                  selectedService?.heading === service.heading
                     ? "text-white"
-                    : "text-gray-400"
+                    : "text-gray-300"
                 }`}
                 onClick={() => handleTitleClick(service)}
               >
                 <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">{index + 1}.</div>
                   <div className="flex-1 min-w-0">
-                    <p className="truncate">{service.title}</p>
+                    <p className="truncate">{service.heading}</p>
                   </div>
                 </div>
               </li>
@@ -47,16 +48,18 @@ const DevelopmentService = ({ textColor, data }) => {
         <div className="w-full lg:w-1/2 pl-8 p-5 lg:p-20">
           {selectedService ? (
             <div>
-              <img
+              <Image
                 className="bg-sky-700 p-2 rounded-lg w-10 h-auto"
-                src={selectedService.icon}
-                alt={selectedService.title}
+                src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725175063/star-removebg-preview_sy1kzj.png"
+                alt="service"
+                width={20}
+                height={20}
               />
-              <h1 className={`text-xl sm:text-2xl font-bold text-${textColor} mt-5`}>
-                {selectedService.title}
+              <h1 className={`text-xl sm:text-2xl font-bold text-gray-800 mt-5`}>
+                {selectedService.heading}
               </h1>
-              <p className={`text-base sm:text-lg lg:text-xl text-${textColor} mt-5`}>
-                {selectedService.desc}
+              <p className={`text-base sm:text-lg lg:text-xl text-gray-800 mt-5`}>
+                {selectedService.passage}
               </p>
             </div>
           ) : (

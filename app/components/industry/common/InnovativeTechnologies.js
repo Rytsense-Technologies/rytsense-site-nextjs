@@ -1,19 +1,17 @@
 import React from "react";
 
-const InnovativeTechnologies = ({ data }) => {
+const InnovativeTechnologies = ({ data, title }) => {
   return (
     <>
       <div className="flex flex-col lg:flex-row px-4 py-10 lg:px-20">
         <div className="lg:w-3/5 bg-light-blue-200 lg:sticky lg:top-0 h-auto lg:h-1/2 p-5 lg:py-28">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">
-            {data.title}
+          <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold">
+            {title}
           </h1>
-          <p className="mt-4 lg:mt-8 text-sm md:text-lg">
-            {data.para}
-          </p>
+         
         </div>
         <div className="lg:w-1/2 p-5 mt-8 lg:mt-0">
-          {data.points.map((tec, i) => (
+          {data?.map((tec, i) => (
             <div key={i} className="py-6 lg:py-10">
               <div className="flex items-center gap-4">
                 <img
@@ -22,10 +20,10 @@ const InnovativeTechnologies = ({ data }) => {
                   alt=""
                 />
                 <h1 className="text-md md:text-lg font-semibold">
-                  {tec.title}
+                  {tec.heading}
                 </h1>
               </div>
-              <p className="text-sm md:text-md mt-2">{tec.para}</p>
+              <p className="text-sm md:text-md mt-2">{tec.passage}</p>
             </div>
           ))}
         </div>

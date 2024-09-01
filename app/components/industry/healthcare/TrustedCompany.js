@@ -1,5 +1,5 @@
 import React from "react";
-import Carousalclutch from "../../../clutch/clutch-comp/Carousalclutch";
+// import Carousalclutch from "../../../components/common/Carousalclutch";
 
 const TrustedCompany = ({ textColor }) => {
   return (
@@ -13,7 +13,7 @@ const TrustedCompany = ({ textColor }) => {
           </span>
         </div>
 
-        <Carousalclutch />
+        {/* <Carousalclutch /> */}
       </div>
     </>
   );

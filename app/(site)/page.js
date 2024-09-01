@@ -8,7 +8,7 @@ import CompanyStats from "../components/home/CompanyStats";
 import RankSection from "../components/home/RankSection";
 import KeyfeatureClutch from "../components/home/KeyfeatureClutch";
 import Testimonials from "../components/common/Testimonials";
-import ClientOnly from "../client/ClientOnly";
+
 import ServicesBox from "../components/common/ServicesBox";
 import Partnercompany from "../components/home/Partnercompany";
 import EstimateProject from "../components/home/EstimateProject";

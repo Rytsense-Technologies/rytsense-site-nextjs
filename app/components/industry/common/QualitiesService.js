@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const QualitiesService = ({ data, isImage }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
+const QualitiesService = ({ data, title, para }) => {
   return (
     <>
       <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8 bg-[#000000]">
@@ -25,54 +23,23 @@ const QualitiesService = ({ data, isImage }) => {
         <div className="relative z-10 px-4 lg:px-20 py-10">
           <div className="w-full lg:w-3/5">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              {data.title}
+              {title}
             </h1>
-            <p className="text-sm sm:text-lg text-gray-300 mt-5">{data.para}</p>
+            <p className="text-sm sm:text-lg text-gray-300 mt-5">{para}</p>
           </div>
-          {isImage === true ? (
-            <div className="mt-10">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                <div className="flex flex-col">
-                  {data.points.map((quality, index) => (
-                    <ul
-                      key={index}
-                      onClick={() => setSelectedIndex(index)}
-                      className={`${
-                        index === selectedIndex ? "list-disc" : ""
-                      }`}
-                    >
-                      <li
-                        className={`p-2 text-left text-lg sm:text-xl lg:text-2xl font-semibold py-4 lg:py-10 cursor-pointer ${
-                          index === selectedIndex
-                            ? "text-white"
-                            : "text-gray-400"
-                        }`}
-                      >
-                        {quality.title}
-                      </li>
-                    </ul>
-                  ))}
-                </div>
-                <div className="order-3 lg:order-none">
-                  <Image
-                    src={data.points[selectedIndex].img}
-                    alt={data.points[selectedIndex].title}
-                    className="w-full h-auto"
-                    width={300}
-                    height={300}
-                  />
-                </div>
-                <div className="order-2 lg:order-none p-4 text-gray-100 text-sm sm:text-base lg:text-lg">
-                  <p>{data.points[selectedIndex].desc}</p>
-                </div>
+          <div className="grid grid-cols-1 mt-8">
+            {data.map((quality, index) => (
+              <div key={index} className="text-white mb-5">
+                <h3 className="mb-5 text-lg">{quality.heading}</h3>
+                {quality.array.map((arr, i) => (
+                  <div key={i} className="flex items-center gap-5">
+                    <Image src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725175063/star-removebg-preview_sy1kzj.png" width={10} height={10} alt="" />
+                    <p>{arr}</p>
+                  </div>
+                ))}
               </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-4 mt-8">
-             { data.points.map((quality, i ) => (<div key={i} className="text-white mb-5">{quality.title}</div>
-              ))}
-            </div>
-          )}
+            ))}
+          </div>
         </div>
       </div>
     </>
