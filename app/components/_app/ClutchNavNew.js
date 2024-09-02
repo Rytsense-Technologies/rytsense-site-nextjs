@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import logo from "../../../public/images/logo.png";
 import Image from "next/image";
-import {menuItems} from "../../mock/menuItems"
+import { menuItems } from "../../mock/menuItems";
 
 const ClutchNavNew = ({ isHomePage, isTransparent }) => {
   const handleButtonClick = () => {
@@ -49,7 +49,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
   const handleItemClick = (path, index) => {
     setOpenSubmenu(null);
     toggleSubmenu(index);
-    navigate(path);
+    // navigate(path);
   };
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -124,7 +124,6 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isHomePage]);
-
 
   const [phoneHover, setPhoneHover] = useState(false);
   const handlePhone = () => {
@@ -209,35 +208,32 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
       <div className="h-1 " onMouseEnter={handleMouseEnter}></div>
 
       <nav className="main-nav-clutch  px-5 mx-auto flex justify-between items-center lg:mt-0 text-black">
-        <div
-          className="flex flex-col items-center justify-center hover:cursor-pointer py-4 "
-     
-        >
-         <Link href="/">
-         <div className="flex items-center gap-2">
-            <Image
-              className="" // Adjust the size as needed
-              src={logo}
-              alt="Rytsense Technologies"
-              width={20}
-              height={20}
-            />
-            <h1 className={`text-xl text-${textColor} font-semibold`}>
-              Rytsense Technologies
-            </h1>
-          </div>
-         </Link>
+        <div className="flex flex-col items-center justify-center hover:cursor-pointer py-4 ">
+          <Link href="/">
+            <div className="flex items-center gap-2">
+              <Image
+                className="" // Adjust the size as needed
+                src={logo}
+                alt="Rytsense Technologies"
+                width={20}
+                height={20}
+              />
+              <h1 className={`text-xl text-${textColor} font-semibold`}>
+                Rytsense Technologies
+              </h1>
+            </div>
+          </Link>
         </div>
         <div className="flex items-center gap-5 navright-card">
           <ul className="capitalize hidden text-lg gap-8 items-end justify-end xl:flex">
-            <li
-              // onClick={() => handleNavigation("/who-we-are")}
+            <Link
+              href="/company/who-we-are"
               className={`hover:cursor-pointer hover:text-indigo-500  text-${textColor} ${
                 activeTab === "/who-we-are" ? "bg-blue-500 text-indigo-500" : ""
               }`}
             >
               About
-            </li>
+            </Link>
             <li className="relative hover:cursor-pointer">
               <span
                 onClick={() => {
@@ -250,10 +246,9 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                 Services
               </span>
             </li>
-      
 
-            <li
-              // onClick={() => handleNavigation("/hire-developers-in-india")}
+            <Link
+             href="/hire-developer"
               className={`hover:cursor-pointer hover:text-indigo-500 text-${textColor} ${
                 activeTab === "/hire-developers-in-india"
                   ? "bg-blue-500 text-white"
@@ -261,23 +256,25 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
               }`}
             >
               Hire Developers
-            </li>
-            <li
-              onClick={() => handleNavigation("/case-studies")}
+            </Link>
+            <Link
+              href="/case-studies"
               className={`hover:cursor-pointer hover:text-indigo-500 text-${textColor} ${
                 activeTab === "/case-studies" ? "bg-blue-500 text-white" : ""
               }`}
             >
               Case Studies
-            </li>
-            <li
+            </Link>
+
+            <Link
+              href={"/contact-us"}
               // onClick={() => handleNavigation("/contact")}
               className={`hover:cursor-pointer hover:text-indigo-500 text-${textColor} ${
                 activeTab === "/contact" ? "text-indigo-500" : ""
               }`}
             >
               Contact Us
-            </li>
+            </Link>
           </ul>
           <div className="relative inline-block">
             {windowWidth > 1050 && (
@@ -424,8 +421,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                     }`}
                     onClick={() => {
                       if (
-                        (
-                          menuItem.label === "Resources" ||
+                        (menuItem.label === "Resources" ||
                           menuItem.label === "Services" ||
                           menuItem.label === "Hire Developers") &&
                         Array.isArray(menuItem.submenu)
@@ -476,9 +472,11 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                                   ? "border-b-2 border-slate-200"
                                   : ""
                               }`}
-                            
                             >
-                              <Link href={submenuItem.path} className="flex justify-between items-center inter-semibold">
+                              <Link
+                                href={submenuItem.path}
+                                className="flex justify-between items-center inter-semibold"
+                              >
                                 {submenuItem.label}
                               </Link>
                             </li>
@@ -510,8 +508,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                         }`}
                         onClick={() => {
                           if (
-                            (
-                              menuItem.label === "Resources" ||
+                            (menuItem.label === "Resources" ||
                               menuItem.label === "Services" ||
                               menuItem.label === "Hire Developers") &&
                             Array.isArray(menuItem.submenu)
@@ -545,9 +542,11 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                                       ? "border-r-2 border-slate-200"
                                       : ""
                                   }`}
-                              
                                 >
-                                  <Link href={submenuItem.path} className="flex justify-between items-center inter-semibold">
+                                  <Link
+                                    href={submenuItem.path}
+                                    className="flex justify-between items-center inter-semibold"
+                                  >
                                     {submenuItem.label}
                                   </Link>
                                 </li>

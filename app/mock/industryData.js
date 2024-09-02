@@ -1550,6 +1550,38 @@ export const industryData = [
       about:
         "Drive the best user experience for your customers by utilizing a high-performing, scalable, and secure travel mobile app solution with us.",
       buttontext: "Schedule a Call",
+      servicemid: {
+        heading:
+          "4 Undeniable Perks of Choosing Our SaaS Product Development Services",
+        passage:
+          "As an innovative Saas product development company, we are capable of translating your business idea into a digital solution that is competitive and resonates with your brand’s essence. Being a dedicated SaaS development company, our SaaS services oscillate unmatched excellence.",
+        arraypassage: [
+          {
+            heading: "Extensive Technical Process",
+            array: [
+              "Our developers are capable of delivering state-of-the-art SaaS solutions. Being well-versed in technologies like cloud, React, Angular, Node.js, MongoDB, MySQL, HTML, CSS, Javascript, PHP, Python, and Ruby, our skilled professionals bring a unique set of skills to the table, making your product stand out.",
+            ],
+          },
+          {
+            heading: "First-Time Right Practice",
+            array: [
+              "Our SaaS application development services are delivered according to a First Time Right (FTR) approach which guarantees the fastest time to market. Our agile and DevOps approaches are capable of increasing the efficiency, speed, and security of product delivery compared to a traditional waterfall approach.",
+            ],
+          },
+          {
+            heading: "Robust Security Compliance",
+            array: [
+              "As a SaaS application development company, we put emphasis on data encryption, which leads to the creation of secure SaaS solutions for our clients. Our SaaS product development redefines the intersection of top-notch security and superior UX.",
+            ],
+          },
+          {
+            heading: "Futuristic Product Development",
+            array: [
+              "As a dedicated SaaS platform development company, our SaaS software developers not only aim to offer workable solutions but also concentrate on delivering a highly secure and scalable product that is designed keeping in mind your performance metrics.",
+            ],
+          },
+        ],
+      },
       appservicesheading:
         "Travel Application Development Services that Make a Difference",
       appservicespassage:

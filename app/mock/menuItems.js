@@ -249,20 +249,20 @@ export const menuItems = [
     {
       label: "Resources",
       submenu: [
-        { label: "Blog", path: "" },
-        { label: "Research", path: "" },
-        { label: "Media Coverage", path: "" },
-        { label: "Press Release", path: "" },
-        { label: "Tech News", path: "" },
-        { label: "Whitepaper", path: "" },
-        { label: "Podcast", path: "" },
-        { label: "Portfolio", path: "" },
-        { label: "Download-Brochure", path: "" },
+        { label: "Blog", path: "/resource/blog" },
+        { label: "Research", path: "/resource/research" },
+        { label: "Media Coverage", path: "/resource/media-coverage" },
+        { label: "Press Release", path: "/resource/press-release" },
+        { label: "Tech News", path: "/resource/tech-news" },
+        { label: "Whitepaper", path: "/resource/whitepaper" },
+        { label: "Podcast", path: "/resource/podcast" },
+        { label: "Portfolio", path: "/resource/portfolio" },
+        { label: "Download-Brochure", path: "/resource/download-brochure" },
       ],
     },
     {
       label: "Contact Us",
-      path: "/contact",
+      path: "/contact-us",
     },
   ];
   
