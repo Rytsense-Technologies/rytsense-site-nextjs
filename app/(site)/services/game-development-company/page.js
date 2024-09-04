@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import kjyu from "../../../../public/images/service-img/game-banner.jpg"
 import ClientReviews from '../../../components/services/ClientReviews'
 import TechnologyStack from '../../../components/services/TechnologyStack'
 

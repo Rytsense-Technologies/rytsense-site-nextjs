@@ -1,0 +1,36 @@
+.logo-slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(200px * 18); /* Matches the image width */
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 9));
+    }
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo-slider span {
+    transition: transform 1s;
+}
+
+.logo-slider span:hover {
+    transform: scale(1.1);
+}

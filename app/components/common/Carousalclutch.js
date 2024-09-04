@@ -1,11 +1,6 @@
-
-
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import React from 'react'
 import Image from "next/image";
+import "../../css/logoSlider.css"
 
 const logos = [
   "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131449/virginpus_nsaulp.png",
@@ -15,43 +10,31 @@ const logos = [
   "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131514/Disney__logo.svg_ei0hl0.webp",
   "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131537/Fidelity-Logo_k3vtga.png",
   "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131520/CEAT_xm9dsb.webp",
-  "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131561/TCS_b9uup3.png",
+  "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725426919/tcs1_wigk9e.webp",
 ];
 
 const Carousalclutch = () => {
   return (
-    <>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        pagination={{
-          clickable: true,
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
+    <div className="my-5 px-6 py-10">
+      <div
+        className="container items-center justify-center mx-auto"
+        data-aos="fade-up"
       >
-        {logos.map((pro, i) => (
-          <SwiperSlide key={i}>
-            <Image src={pro} width={40} height={40} alt="" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
-  );
-};
+        <h2 className="text-center text-3xl md:text-4xl font-extrabold text-black">
+          Brands that work with us
+        </h2>
+        <div className="logo-slider">
+          <div className="slide-track">
+            {[...logos, ...logos].map((company, index) => (
+              <div key={index} className="slide px-4">
+                <Image width={200} height={200} src={company} alt={company} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-export default Carousalclutch;
+export default Carousalclutch

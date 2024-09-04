@@ -150,16 +150,25 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
   // const [isOpenIndustry, setIsOpenIndustry] = useState(false);
 
   const submenu = [
-    { label: "AI & ML", path: "/services/ai-ml" },
-    { label: "Mobile App Development", path: "/services/mobile-app" },
+    {
+      label: "AI & ML",
+      path: "/services/artificial-intelligence-and-machine-learning",
+    },
+    {
+      label: "Mobile App Development",
+      path: "/services/mobile-app-development",
+    },
+    { label: "Web And CMS Development", path: "/services/web-development" },
+    { label: "Ecommerce Development", path: "/services/ecommerce-development" },
+    {
+      label: "Blockchain Development",
+      path: "/services/blockchain-development",
+    },
+    { label: "Game Development", path: "/services/game-development-company" },
+    { label: "Salesforce Solutions", path: "/services/salesforce-development" },
+    { label: "IoT & Embedded", path: "/services/iot-development" },
+    { label: "Devops", path: "/services/devops" },
     { label: "UI/UX", path: "/services/ui-ux" },
-    { label: "Web And CMS Development", path: "/services/web-cms" },
-    { label: "Ecommerce Development", path: "/services/ecommerce" },
-    { label: "Blockchain Development", path: "/services/blockchain" },
-    { label: "Game Development", path: "/services/game" },
-    { label: "Salesforce Solutions", path: "/services/saleforce" },
-    { label: "IoT & Embedded", path: "/services/iot" },
-    { label: "Devops", path: "/services/dev-ops" },
   ];
 
   const [activeTab, setActiveTab] = useState("");
@@ -248,7 +257,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
             </li>
 
             <Link
-             href="/hire-developer"
+              href="/hire-developer"
               className={`hover:cursor-pointer hover:text-indigo-500 text-${textColor} ${
                 activeTab === "/hire-developers-in-india"
                   ? "bg-blue-500 text-white"
@@ -527,7 +536,12 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                               alt={menuItem.label}
                             />
                           )}
-                          <div className="inter-semibold">{menuItem.label}</div>
+                          <Link
+                            href={menuItem.path}
+                            className="flex justify-between items-center inter-semibold"
+                          >
+                            {menuItem.label}
+                          </Link>
                         </div>
                       </li>
                       {openSubmenu === index &&

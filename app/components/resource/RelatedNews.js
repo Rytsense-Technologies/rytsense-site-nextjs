@@ -1,13 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const RelatedNews = ({ data }) => {
   return (
     <div class="grid grid-cols-3 gap-4 px-10">
       {data.map((news, i) => (
-        <div
+        <Link
           key={i}
           class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          href={`/${news.linkTag}/${news.id}`}
         >
           <Image
             class="rounded-t-lg"
@@ -28,7 +30,7 @@ const RelatedNews = ({ data }) => {
            {news.para}
             </p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

@@ -3,6 +3,7 @@
 export const menuItems = [
     {
       label: "Company",
+      path: "",
       submenu: [
         { label: "Who We are", path: "/company/who-we-are" },
         { label: "Services", path: "/company/service" },
@@ -12,10 +13,11 @@ export const menuItems = [
     },
     {
       label: "Services",
+      path: "",
       submenu: [
         {
           label: "AI & ML",
-          path: "/services/ai-ml",
+          path: "/services/artificial-intelligence-and-machine-learning",
           sub_submenu: [
             { label: "Object Recognition", path: "/object-recognition" },
             { label: "Text to Speech", path: "/text-to-speech" },
@@ -36,7 +38,7 @@ export const menuItems = [
         },
         {
           label: "Mobile App Development",
-          path: "/mobile-app-development",
+          path: "/services/mobile-app-development",
           sub_submenu: [
             { label: "Android App", path: "/android-app-development" },
             { label: "Iphone App", path: "/iphone-application-development" },
@@ -51,7 +53,7 @@ export const menuItems = [
         },
         {
           label: "Web And CMS Development",
-          path: "/web-development",
+          path: "/services/web-development",
           sub_submenu: [
             { label: "PHP", path: "/php-web-application-development" },
             { label: "WordPress", path: "/wordpress-development" },
@@ -68,7 +70,7 @@ export const menuItems = [
         },
         {
           label: "Ecommerce Development",
-          path: "/ecommerce-development",
+          path: "/services/ecommerce-development",
           sub_submenu: [
             { label: "Magneto", path: "/magento-development" },
             { label: "Bigcommerce", path: "/bigcommerce" },
@@ -82,7 +84,7 @@ export const menuItems = [
         },
         {
           label: "Blockchain Development",
-          path: "/blockchain-development",
+          path: "/services/blockchain-development",
           sub_submenu: [
             { label: "Wallet", path: "/cryptocurrency-wallet-development" },
             { label: "Exchange", path: "/cryptocurrency-exchange-development" },
@@ -104,7 +106,7 @@ export const menuItems = [
         },
         {
           label: "Game Development",
-          path: "/game-development-company",
+          path: "/services/game-development-company",
           sub_submenu: [
             { label: "Unity3D", path: "/unity3d-game-development" },
             { label: "Metaverse", path: "/metaverse-development-company" },
@@ -122,7 +124,7 @@ export const menuItems = [
         },
         {
           label: "Salesforce Solutions",
-          path: "/salesforce-development",
+          path: "/services/salesforce-development",
           sub_submenu: [
             {
               label: "Salesforce Development",
@@ -137,7 +139,7 @@ export const menuItems = [
         },
         {
           label: "IoT & Embedded",
-          path: "/iot-development",
+          path: "/services/iot-development",
           sub_submenu: [
             { label: "IoT App", path: "/iot-app-development" },
             { label: "Embedded Software", path: "/embedded-software" },
@@ -157,18 +159,19 @@ export const menuItems = [
         },
         {
           label: "Devops",
-          path: "/devops",
+          path: "/services/devops",
           sub_submenu: [{ label: "Devops", path: "/devops-development" }],
         },
         {
           label: "UI/UX Development",
-          path: "/devops",
+          path: "/services/ui-ux",
           sub_submenu: [{ label: "Devops", path: "/devops-development" }],
         },
       ],
     },
     {
       label: "Hire Developers",
+      path: "",
       submenu: [
         { label: "App Developers", path: "/hire/app-developers-for-hire" },
         { label: "Web Developers", path: "/hire/hire-web-developers" },
@@ -229,6 +232,7 @@ export const menuItems = [
     },
     {
       label: "Industries",
+      path: "",
       submenu: [
         { label: "Real Estate", path:"/industry/real-estate" },
         { label: "Education", path:"/industry/education"},
@@ -248,6 +252,7 @@ export const menuItems = [
     },
     {
       label: "Resources",
+      path: "",
       submenu: [
         { label: "Blog", path: "/resource/blog" },
         { label: "Research", path: "/resource/research" },

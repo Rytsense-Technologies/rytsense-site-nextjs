@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import MainPageBanner from "../components/home/MainPageBanner";
 
-import Carousalclutch from "../components/home/Carousalclutch";
+import Carousalclutch from "../components/common/Carousalclutch";
 import Ranking from "../components/home/Ranking";
 import CompanyStats from "../components/home/CompanyStats";
 import RankSection from "../components/home/RankSection";

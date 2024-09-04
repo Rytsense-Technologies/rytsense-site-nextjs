@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { resourcepodcastarray } from "../../mock/resourcepodcastarray";
 
 const OurProdcast = () => {
   return (
@@ -58,168 +59,60 @@ const OurProdcast = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 md:grid-cols-3 gap-10">
-          <div class="rounded overflow-hidden flex flex-col max-w-md mx-auto">
-            <Image
-              class="w-54 h-54"
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190316/blockchain-3055701_1280_udxywl.jpg"
-              alt="Sunset in the mountains"
-              width={500}
-              height={500}
-            />
+          {resourcepodcastarray.slice(0, 3).map((prod, i) => (
+            <div
+              class="rounded overflow-hidden flex flex-col max-w-md mx-auto"
+              key={i}
+            >
+              <Image
+                class="w-54 h-54"
+                src={prod.image}
+                alt="Sunset in the mountains"
+                width={500}
+                height={500}
+              />
 
-            <div class="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10">
-              <Link
-                href="#"
-                class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-              >
-                Is BlockChain Technology Worth The H ...
-              </Link>
-              <p class="text-gray-500 text-sm">
-                Unfolds The Revolutionary & Versatility Of Blockchain Technology
-              </p>
-              <div className="flex justify-between mt-5">
-                <button>
-                  <Image
-                    src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190393/play-button_1_zpokrb.png"
-                    alt="icon"
-                    className="bg-gray-800"
-                    width={20}
-                    height={20}
-                  />
-                </button>
-                <div
-                  className="flex gap-2 p-4 text-white"
-                  style={{ backgroundColor: "#3D5AA4" }}
-                >
-                  <button>Learn more</button>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
+              <div class="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10">
+                <h1 class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+                  {prod.heading}
+                </h1>
+                <p class="text-gray-500 text-sm">{prod.title}</p>
+                <div className="flex justify-between mt-5">
+                  <button>
+                    <Image
+                      src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190393/play-button_1_zpokrb.png"
+                      alt="icon"
+                      className="bg-gray-800"
+                      width={20}
+                      height={20}
+                    />
+                  </button>
+                  <div
+                    className="flex gap-2 p-4 text-white"
+                    style={{ backgroundColor: "#3D5AA4" }}
+                  >
+                    <Link href={`/prodcast/${prod.id}`}>Learn more</Link>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="rounded overflow-hidden flex flex-col max-w-md mx-auto">
-            <Image
-              class="w-54 h-54"
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190321/iot_y5sfli.webp"
-              alt="Sunset in the mountains"
-              width={500}
-              height={500}
-            />
-
-            <div class="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10">
-              <Link
-                href="#"
-                class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-              >
-                IoT Technology - A Future In Making ...
-              </Link>
-              <p class="text-gray-500 text-sm">
-                Everything You Need To Know About IoT Technology ...{" "}
-              </p>
-              <div className="flex justify-between mt-5">
-                <button>
-                  <Image
-                    src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190393/play-button_1_zpokrb.png"
-                    alt="icon"
-                    className="bg-gray-800"
-                    width={20}
-                    height={20}
-                  />
-                </button>
-                <div
-                  className="flex gap-2 p-4 text-white"
-                  style={{ backgroundColor: "#3D5AA4" }}
-                >
-                  <button>Learn more</button>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rounded overflow-hidden flex flex-col max-w-md mx-auto">
-            <Image
-              class="w-full"
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190332/mobile-app-development-company-8379091_1280_lfvw9o.png"
-              alt="Sunset in the mountains"
-              width={500}
-              height={500}
-            />
-
-            <div class="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10">
-              <Link
-                href="#"
-                class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-              >
-                Flutter Vs. React Native - Choose Be ...
-              </Link>
-              <p class="text-gray-500 text-sm">
-                Unfolding The Confusion Of Which One Is Better ...{" "}
-              </p>
-              <div className="flex justify-between mt-5">
-                <button>
-                  <Image
-                    src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725190393/play-button_1_zpokrb.png"
-                    alt="icon"
-                    className="bg-gray-800"
-                    width={20}
-                    height={20}
-                  />
-                </button>
-                <div
-                  className="flex gap-2 p-4 text-white"
-                  style={{ backgroundColor: "#3D5AA4" }}
-                >
-                  <button>Learn more</button>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

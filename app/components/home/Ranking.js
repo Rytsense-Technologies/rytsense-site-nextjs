@@ -2,7 +2,7 @@ import React from "react";
 
 const Ranking = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-12 xl:px-24 py-10 md:py-16">
+    <div className="px-4 md:px-8 lg:px-12 xl:px-24  md:py-5">
       <h1
         className="text-2xl md:text-4xl lg:text-3xl font-bold text-sky-500 mb-4"
       >

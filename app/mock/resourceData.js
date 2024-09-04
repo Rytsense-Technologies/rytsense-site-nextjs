@@ -7,20 +7,28 @@ export const resourcesarray = [
     bgtext: "Blog",
     boxarray: [
       {
-        image: "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
+        id: 1,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
         heading: "App Development",
         para: "How to Create a Food Delivery App Like EatClub",
         date: "15 / 11 / 2023",
         nav: "create-a-food-delivery-app-like-eatclub",
       },
       {
-        image: "/images/homepageimages/How-To-Develop-A-Transportation-Logistics-Mobile-App.webp",
+        id: 2,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/How-To-Develop-A-Transportation-Logistics-Mobile-App.webp",
         heading: "App Development",
         para: "How to Create a Transportation App Like Transit",
         date: "10 / 11 / 2023",
         nav: "create-a-transportation-app-like-transit",
       },
       {
+        id: 3,
+        linkTag:"blog",
         image: "/images/homepageimages/general.png",
         heading: "Android",
         para: "Best Kotlin Tips for Android App Developers",
@@ -28,34 +36,48 @@ export const resourcesarray = [
         nav: "kotlin-tips-for-app-developers",
       },
       {
-        image: "/images/homepageimages/Ruby-on-Rails-vs-Laravel_-Which-Framework-to-Choose-for-Your-Next-Project_.png",
+        id: 4,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/Ruby-on-Rails-vs-Laravel_-Which-Framework-to-Choose-for-Your-Next-Project_.png",
         heading: "Web Development",
         para: "Comparison Between Larvel and Ruby on Rails",
         date: "01 / 11 / 2023",
         nav: "comparison-between-larvel-and-ruby-on-rails",
       },
       {
-        image: "/images/homepageimages/dot-net-concept-red-background-260nw-215597173.jpg",
+        id: 5,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/dot-net-concept-red-background-260nw-215597173.jpg",
         heading: "Software Development",
         para: "The 10 Must-Have Dot Net Development Tools",
         date: "27 / 10 / 2023",
         nav: "dot-net-development-tools",
       },
       {
-        image: "/images/homepageimages/a-complete-guide-to-salesforce-qa-testing.webp",
+        id: 6,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/a-complete-guide-to-salesforce-qa-testing.webp",
         heading: "Salesforce",
         para: "Salesforce vs serviceNow: Which CRM Platform is Best?",
         date: "24 / 10 / 2023",
         nav: "salesforce-vs-servicenow",
       },
       {
-        image: "/images/homepageimages/6410ebf8e483b5758186fbd8_ABM college mobile app dev main.jpg",
+        id: 7,
+        linkTag:"blog",
+        image:
+          "/images/homepageimages/6410ebf8e483b5758186fbd8_ABM college mobile app dev main.jpg",
         heading: "App Development",
         para: "Top Mobile App Development Trends to Watch Out in 2024",
         date: "18 / 10 / 2023",
         nav: "top-mobile-app-development-trends",
       },
       {
+        id: 8,
+        linkTag:"blog",
         image: "/images/homepageimages/Laravel-vs-Core-PHP.png",
         heading: "Web Development",
         para: "Comparison Between Larvel and Core PHP",
@@ -80,7 +102,8 @@ export const resourcesarray = [
         nav: "how-ai-is-transforming-businesses",
       },
       {
-        image: "/images/homepageimages/Things-to-remember-before-hiring-PHP-development-services.jpg",
+        image:
+          "/images/homepageimages/Things-to-remember-before-hiring-PHP-development-services.jpg",
         heading: "PHP Development",
         para: "How To Hire PHP Developers In 2023?",
         date: "02 / 09 / 2023",
@@ -136,14 +159,16 @@ export const resourcesarray = [
         nav: "hire-ruby-on-rails-developers",
       },
       {
-        image: "/images/homepageimages/android-app-development-8180855_1280.jpg",
+        image:
+          "/images/homepageimages/android-app-development-8180855_1280.jpg",
         heading: "Android Development",
         para: "How To Hire Android Developers In 2023?",
         date: "10 / 09 / 2023",
         nav: "hire-android-developers",
       },
       {
-        image: "/images/homepageimages/hire-react-native-mobile-app-programmer-india.jpg",
+        image:
+          "/images/homepageimages/hire-react-native-mobile-app-programmer-india.jpg",
         heading: "React Native Development",
         para: "Hire React Native Developers - A Definitive Guide",
         date: "11 / 09 / 2023",
@@ -264,7 +289,8 @@ export const resourcesarray = [
     bgtext: "Tech News",
     boxarray: [
       {
-        image: "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
+        image:
+          "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
         heading: "Mobile App Development",
         para: "Cost To Hire Mobile App Developers In India",
         date: "01 / 01 / 2017",
@@ -362,13 +388,18 @@ export const resourcesarray = [
     bgtext: "Let's Listen",
     boxarray: [
       {
-        image: "/images/homepageimages/Beautiful_Website_EWM_SA_Digital_Agency_Geneva.jpg",
+        id: 1,
+        linkTag:"prodcast",
+        image:
+          "/images/homepageimages/Beautiful_Website_EWM_SA_Digital_Agency_Geneva.jpg",
         heading: "Business Website",
         para: "Why Your Business Needs a Website?",
         date: "01 / 01 / 2023",
         nav: "why-your-business-needs-a-website",
       },
       {
+        id: 2,
+        linkTag:"prodcast",
         image: "/images/homepageimages/blockchain-3055701_1280.jpg",
         heading: "Blockchain Technology",
         para: "Is BlockChain Technology Worth The Hype?",
@@ -376,21 +407,30 @@ export const resourcesarray = [
         nav: "is-blockchain-technology-worth-the-hype",
       },
       {
-        image: "/images/homepageimages/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg",
+        id: 3,
+        linkTag:"prodcast",
+        image:
+          "/images/homepageimages/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg",
         heading: "IoT Technology",
         para: "IoT Technology - A Future In Making OR Speculating?",
         date: "01 / 01 / 2023",
         nav: "iot-technology-a-future-in-making-or-speculating",
       },
       {
-        image: "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
+        id: 4,
+        linkTag:"prodcast",
+        image:
+          "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
         heading: "App Development",
         para: "Application Development Reshaping The World",
         date: "01 / 01 / 2023",
         nav: "application-development-reshaping-the-world",
       },
       {
-        image: "/images/homepageimages/0408-FlutterMessangerDemo-Luke_Social-e8a0e8ddab86b503a125ebcad823c583.png",
+        id: 5,
+        linkTag:"prodcast",
+        image:
+          "/images/homepageimages/0408-FlutterMessangerDemo-Luke_Social-e8a0e8ddab86b503a125ebcad823c583.png",
         heading: "App Development",
         para: "Flutter Vs. React Native - Choose Best One",
         date: "01 / 01 / 2023",

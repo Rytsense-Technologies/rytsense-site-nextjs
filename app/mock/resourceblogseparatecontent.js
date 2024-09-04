@@ -1,5 +1,6 @@
 const resourceblogseparatecontent = [
   {
+    id:1,
     title: "How to Create a Food Delivery App Like EatClub?",
     nav: "create-a-food-delivery-app-like-eatclub",
     heading: "App Development",
@@ -127,6 +128,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
   },
   {
+    id:2,
     title: "How to Create a Transportation App Like Transit?",
     nav: "create-a-transportation-app-like-transit",
     heading: "App Development",
@@ -281,6 +283,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/How-To-Develop-A-Transportation-Logistics-Mobile-App.webp",
   },
   {
+    id:3,
     title: "Best Kotlin Tips for Android App Developers",
     nav: "kotlin-tips-for-app-developers",
     heading: "Android",
@@ -368,6 +371,7 @@ const resourceblogseparatecontent = [
     image: "/images/homepageimages/general.png",
   },
   {
+    id:4,
     title: "Comparison Between Larvel and Ruby on Rails",
     nav: "comparison-between-larvel-and-ruby-on-rails",
     heading: "Web Development",
@@ -474,6 +478,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/Ruby-on-Rails-vs-Laravel_-Which-Framework-to-Choose-for-Your-Next-Project_.png",
   },
   {
+    id:5,
     title: "The 10 Must-Have Dot Net Development Tools",
     nav: "dot-net-development-tools",
     heading: "Software Development",
@@ -559,6 +564,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/dot-net-concept-red-background-260nw-215597173.jpg",
   },
   {
+    id:6,
     title: "Salesforce vs serviceNow: Which CRM Platform is Best?",
     nav: "salesforce-vs-servicenow",
     heading: "Salesforce",
@@ -653,6 +659,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/a-complete-guide-to-salesforce-qa-testing.webp",
   },
   {
+    id:7,
     title: "Top Mobile App Development Trends to Watch Out in 2024",
     nav: "top-mobile-app-development-trends",
     heading: "App Development",
@@ -787,6 +794,7 @@ const resourceblogseparatecontent = [
       "/images/homepageimages/6410ebf8e483b5758186fbd8_ABM college mobile app dev main.jpg",
   },
   {
+    id:8,
     title: "Comparison Between Larvel and Core PHP",
     nav: "larvel-and-php",
     heading: "Web Development",
