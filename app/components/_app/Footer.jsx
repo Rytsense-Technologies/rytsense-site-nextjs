@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 
 import Link from "next/link";
@@ -23,14 +25,14 @@ const Footer = () => {
           <div className="box relative w-[150px] h-[55px]  bg-[#584ecd] overflow-hidden">
             {/* <li>
               <Link
-                to="https://calendly.com/ramkumar_p/call-schedule "
+                href="https://calendly.com/ramkumar_p/call-schedule "
                 className="lg:text-lg whitespace-nowrap"
               ></Link>
             </li> */}
           </div>
         </div>
         {/* <Link
-          to="https://calendly.com/ramkumar_p/call-schedule"
+          href="https://calendly.com/ramkumar_p/call-schedule"
           className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  bg-pink text-white shadow  hover:transition-all mb-7"
         >
           Book A Call
@@ -124,7 +126,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/who-we-are"
+                  href="/who-we-are"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Who We Are
@@ -132,7 +134,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/career"
+                  href="/career"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Career
@@ -140,7 +142,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/event"
+                  href="/event"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Events
@@ -148,7 +150,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Services
@@ -156,7 +158,7 @@ const Footer = () => {
               </li>
               {/* <li>
                   <Link
-                    to="/industry"
+                    href="/industry"
                     className="  dark:text-neutral-200  hover:text-rose-500"
                   >
                     Industries
@@ -164,7 +166,7 @@ const Footer = () => {
                 </li> */}
               <li>
                 <Link
-                  to="/casestudy"
+                  href="/casestudy"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Case Study
@@ -172,7 +174,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Services
@@ -180,7 +182,7 @@ const Footer = () => {
               </li>
               {/* <li>
                   <Link
-                    to=""
+                    href=""
                     className="  dark:text-neutral-200  hover:text-rose-500"
                   >
                     Porfolio
@@ -188,7 +190,7 @@ const Footer = () => {
                 </li> */}
               <li>
                 <Link
-                  to="/sitemap"
+                  href="/sitemap"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Sitemap
@@ -196,7 +198,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Contact US
@@ -226,7 +228,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/android-app-development"
+                  href="/android-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Android Apps
@@ -234,7 +236,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/iphone-application-development"
+                  href="/iphone-application-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   iPhone Apps
@@ -242,7 +244,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/hybrid-app-development"
+                  href="/hybrid-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Hybrid Apps
@@ -250,7 +252,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/flutter-app-development"
+                  href="/flutter-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Flutter
@@ -258,7 +260,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/react-native-app-development"
+                  href="/react-native-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   React Native
@@ -266,7 +268,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/kotlin-app-development"
+                  href="/kotlin-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Kotlin
@@ -274,7 +276,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/ionic-app-development"
+                  href="/ionic-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ionic
@@ -282,7 +284,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/swift-development"
+                  href="/swift-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Swift
@@ -290,7 +292,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/xamarin-app-development"
+                  href="/xamarin-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Xamrin
@@ -320,7 +322,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/magento-development"
+                  href="/magento-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Magento
@@ -328,7 +330,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/shopify-developmen"
+                  href="/shopify-developmen"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Shopify
@@ -336,7 +338,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/ubercart-development"
+                  href="/ubercart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ubercart
@@ -344,7 +346,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/prestashop"
+                  href="/prestashop"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Prestashop
@@ -352,7 +354,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/cs-cart-development"
+                  href="/cs-cart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CS Cart
@@ -360,7 +362,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/virtuemart-development"
+                  href="/virtuemart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   VirtueMart
@@ -368,7 +370,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/bigcommerce"
+                  href="/bigcommerce"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   BigCommerce
@@ -376,7 +378,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/woocommerce-development"
+                  href="/woocommerce-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   WooCommerce
@@ -405,7 +407,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/php-web-application-development"
+                  href="/php-web-application-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   PHP
@@ -413,7 +415,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/python-web-development"
+                  href="/python-web-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Python
@@ -421,7 +423,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/wordpress-development"
+                  href="/wordpress-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Wordpress
@@ -429,7 +431,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/drupal-development"
+                  href="/drupal-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Drupal
@@ -437,7 +439,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/laravel-development"
+                  href="/laravel-development"
                   className="  dark:text-neutral-200  hover:text-rose-50"
                 >
                   Laravel
@@ -445,7 +447,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/codeigniter-development"
+                  href="/codeigniter-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CodeIgniter
@@ -453,7 +455,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/cakephp-development"
+                  href="/cakephp-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CakesPHP
@@ -461,7 +463,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/typescript"
+                  href="/typescript"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   TypeScript
@@ -491,7 +493,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/text-to-speech"
+                  href="/text-to-speech"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Text to Speech
@@ -499,7 +501,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/business-intelligence"
+                  href="/business-intelligence"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Business Intelligence
@@ -507,7 +509,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/data-forecasting"
+                  href="/data-forecasting"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Data Forecasting
@@ -515,7 +517,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/atural-language-processing"
+                  href="/atural-language-processing"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Natural LAnguage Processing
@@ -523,7 +525,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  href="/data-analytics"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Data Analytics
@@ -531,7 +533,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/object-recognitio"
+                  href="/object-recognitio"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Object Recognition
@@ -539,7 +541,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/sentimental-analysis"
+                  href="/sentimental-analysis"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Semitimental Analysis
@@ -547,7 +549,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/alexa-skills-development"
+                  href="/alexa-skills-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Alexa SKill Development
@@ -577,7 +579,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/iot-app-development"
+                  href="/iot-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT App
@@ -585,7 +587,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/embedded-software"
+                  href="/embedded-software"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Embedded Software
@@ -593,7 +595,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/iot-hardware-prototyping"
+                  href="/iot-hardware-prototyping"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT Hardware Prototyping
@@ -601,7 +603,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/iot-dashboard-and-analytics"
+                  href="/iot-dashboard-and-analytics"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT Dashboard and Analytics
@@ -609,7 +611,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/smart-home-home-automation"
+                  href="/smart-home-home-automation"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Smart Home -Home Automation
@@ -639,7 +641,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/cryptocurrency-wallet-development"
+                  href="/cryptocurrency-wallet-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Wallet
@@ -647,7 +649,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/cryptocurrency-exchange-development"
+                  href="/cryptocurrency-exchange-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Exchange
@@ -655,7 +657,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/ethereum-app-development"
+                  href="/ethereum-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ethereum{" "}
@@ -663,7 +665,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/hyperledger-blockchain-development"
+                  href="/hyperledger-blockchain-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   HyperLedger
@@ -671,7 +673,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/smart-contracts-development"
+                  href="/smart-contracts-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Smart Contracts
@@ -679,7 +681,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/private-blockchain-development"
+                  href="/private-blockchain-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Private Blockchains
@@ -687,7 +689,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/nft-marketplace-development-company"
+                  href="/nft-marketplace-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   NFT Marketplace
@@ -716,7 +718,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  to="/unity3d-game-development"
+                  href="/unity3d-game-development"
                   className=" dark:text-neutral-200  hover:text-rose-500"
                 >
                   Unity 3D
@@ -724,7 +726,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/unreal-engine-game-development"
+                  href="/unreal-engine-game-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Unreal Engine
@@ -732,7 +734,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/augmented-reality-app-development-company"
+                  href="/augmented-reality-app-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Augmented Reality
@@ -740,7 +742,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/virtual-reality-mobile-game-application-development-company"
+                  href="/virtual-reality-mobile-game-application-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Virtual Reality
@@ -748,7 +750,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/casual-game-development"
+                  href="/casual-game-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Casual Games
