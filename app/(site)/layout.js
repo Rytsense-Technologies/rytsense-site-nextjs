@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
+import { usePathname } from "next/navigation"; 
 import "./globals.css";
 import ClutchNavNew from "../components/_app/ClutchNavNew";
 import FooterClutch from "../components/_app/FooterClutch";
@@ -11,18 +12,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const [isClutchRoute, setIsClutchRoute] = useState(false);
+  const pathname = usePathname();
 
   const clutchRoutes = ["/", "/clutch"];
 
   useEffect(() => {
-    // This will only run on the client side after the component has mounted
-    const currentPath = window.location.pathname;
-    if (clutchRoutes.includes(currentPath)) {
+    if (clutchRoutes.includes(pathname)) {
       setIsClutchRoute(true);
     } else {
       setIsClutchRoute(false);
     }
-  }, []); // Run once after the initial render
+  }, [pathname]);
 
   return (
     <html lang="en">
