@@ -134,7 +134,7 @@ const FooterClutch = () => {
                   <FontAwesomeIcon
                     onClick={() => {
                       window.location.href =
-                        "mailto:careers@rytsensetech.com";
+                        "mailto:hey@rytsensetech.com"   
                     }}
                     icon={faEnvelope}
                     className="hover:text-indigo-500"

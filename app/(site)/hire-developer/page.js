@@ -10,6 +10,19 @@ import HiringComparison from "../../components/hire-developers/HiringComparison"
 import DeveloperTips from "../../components/hire-developers/DeveloperTips";
 import FAQSection from "../../components/hire-developers/FAQSection";
 
+export const metadata = {
+  title: "Hire Software Developers / Programmers In India",
+  description:
+    "Looking to hire Indian software developers/ programmers ? Hire dedicated and skilled software programmers/developers in India to boost your project. Lets connect today!",
+  alternates: {
+    canonical: "https://rytsensetech.com/hire-developers-in-india",
+    languages: {
+      "en-us": "https://rytsensetech.com/hire-developers-in-india",
+      // "x-default": "https://rytsensetech.com/ai-development-services-usa",
+    },
+  },
+};
+
 const page = () => {
   return (
     <>

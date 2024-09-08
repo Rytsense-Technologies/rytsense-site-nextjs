@@ -18,6 +18,10 @@ export const metadata = {
     "We are one of the leading Custom software development company in USA and India, Lets Build innovative software solutions with Rytsense Technologies",
   alternates: {
     canonical: "https://rytsensetech.com/software-development-services-usa",
+    languages: {
+      'en-us': "https://rytsensetech.com/software-development-services-usa",
+      'x-default': "https://rytsensetech.com/software-development-services-usa",
+    },
   },
 };
 

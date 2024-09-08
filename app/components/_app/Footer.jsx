@@ -1,8 +1,17 @@
-"use client"
+"use client";
 
 import React from "react";
 
 import Link from "next/link";
+import Image from "next/image";
+import addressImage1 from "../../../public/images/address/hq-india 3.webp";
+import addressImage2 from "../../../public/images/address/INDIA.webp";
+import addressImage3 from "../../../public/images/address/hq-usa 2.webp";
+import addressImage4 from "../../../public/images/address/USA.webp";
+import addressImage5 from "../../../public/images/address/hq-uae 2.webp";
+import addressImage6 from "../../../public/images/address/UK.webp";
+import addressImage7 from "../../../public/images/address/hq-australia 2.webp";
+import addressImage8 from "../../../public/images/address/Australia.webp";
 
 const Footer = () => {
   const handleButtonClick = () => {
@@ -10,7 +19,6 @@ const Footer = () => {
   };
   return (
     <div className="footer">
-
       <div className="mx-auto max-w-screen-md text-center border border-gray-300 rounded-2xl  h-auto p-10 bg-indigo-700 -mb-24 relative z-1  shadow-2xl">
         <h2 className="mb-4 text-2xl tracking-tight font-bold leading-tight text-white">
           Lets Create Big Stories Together
@@ -22,86 +30,94 @@ const Footer = () => {
           className="flex justify-center items-center animated-outline-button"
           onClick={handleButtonClick}
         >
-          <div className="box relative w-[150px] h-[55px]  bg-[#584ecd] overflow-hidden">
-            {/* <li>
-              <Link
-                href="https://calendly.com/ramkumar_p/call-schedule "
-                className="lg:text-lg whitespace-nowrap"
-              ></Link>
-            </li> */}
+          <div className="box relative w-[200px] h-[55px]  overflow-hidden">
+            <Link
+              href="https://calendly.com/ramkumar_p/call-schedule"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  bg-rose-600 text-white shadow  hover:transition-all mb-7"
+            >
+              Book A Call
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </Link>
           </div>
         </div>
-        {/* <Link
-          href="https://calendly.com/ramkumar_p/call-schedule"
-          className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  bg-pink text-white shadow  hover:transition-all mb-7"
-        >
-          Book A Call
-          <svg
-            className="w-5 h-5 ml-2 -mr-1"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </Link> */}
       </div>
 
-      <div className="bg-neutral-900 text-white  min-h-screen">
-        <div className="grid ss:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4  ">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left mt-28">
-            <img
-              src="\images\address\hq-india 3.webp"
+      <div className="bg-neutral-900 text-white mx-auto  min-h-screen">
+        <div className="grid ss:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 flex justify-center ">
+          <div className="flex flex-col items-center   md:items-start text-center md:text-left mt-28">
+            <Image
+              src={addressImage1}
               alt="Description"
-              className="w-20 h-20 mb-2 ml-20"
+              width={200}
+              height={200}
             />
-            <img
-              src="\images\address\INDIA.webp"
+            <Image
+              src={addressImage2}
               alt="India address"
-              className="w-30 h-20 mb-2 address"
+              width={200}
+              height={200}
             />
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left mt-28">
-            <img
-              src="\images\address\hq-usa 2.webp"
+            <Image
+              src={addressImage3}
               alt="Description"
-              className="w-20 h-20 mb-2 ml-20"
+           
+              width={200}
+              height={200}
             />
-            <img
-              src="\images\address\USA.webp"
+            <Image
+              src={addressImage4}
               alt="India address"
-              className="w-30 h-20 mb-2 address"
+            
+              width={200}
+              height={200}
             />
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left mt-28">
-            <img
-              src="\images\address\hq-uae 2.webp"
+            <Image
+              src={addressImage5}
               alt="Description"
-              className="w-20 h-20 mb-2 ml-20"
+          
+              width={200}
+              height={200}
             />
-            <img
-              src="\images\address\UK.webp"
+            <Image
+              src={addressImage6}
               alt="India address"
-              className="w-30 h-20 mb-2 address"
+       
+              width={200}
+              height={200}
             />
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left mt-28">
-            <img
-              src="\images\address\hq-australia 2.webp"
+            <Image
+              src={addressImage7}
               alt="Description"
-              className="w-20 h-20 mb-2 ml-20"
+      
+              width={200}
+              height={200}
             />
-            <img
-              src="\images\address\Australia.webp"
+            <Image
+              src={addressImage8}
               alt="India address"
-              className="w-30 h-20 mb-2 ml-18 address"
+         
+              width={200}
+              height={200}
             />
           </div>
         </div>
@@ -257,7 +273,8 @@ const Footer = () => {
                 >
                   Flutter
                 </Link>
-              </li>
+              </li> 
+              
               <li>
                 <Link
                   href="/react-native-app-development"

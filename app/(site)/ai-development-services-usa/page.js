@@ -5,12 +5,24 @@ import Expertise from "../../components/software/Expertise";
 import AIService from "../../components/home-service/ai/AIServices";
 import AIModels from "../../components/home-service/ai/AIModels";
 import AIPartnershipModels from "../../components/home-service/ai/AIPartnershipModels";
-
+import AIBlog from "../../components/home-service/ai/AIBlog";
 import Faq from "../../components/common/faq/Faq";
 import LetsConnect from "../../components/common/LetsConnect";
 
+export const metadata = {
+  title: "Artificial Intelligence (AI) development services in USA",
+  description:
+    "We are one of the top AI development companies in USA, offering a wide range of custom AI development services for your business needs. As one of the best custom software development companies in USA, we offer a wide range of custom software development services for your business needs.",
+  alternates: {
+    canonical: "https://rytsensetech.com/ai-development-services-usa",
+    languages: {
+      "en-us": "https://rytsensetech.com/ai-development-services-usa",
+      "x-default": "https://rytsensetech.com/ai-development-services-usa",
+    },
+  },
+};
 
-const page= () => {
+const page = () => {
   const faqs = [
     {
       question: "Why should I opt for custom AI development?",
@@ -59,17 +71,14 @@ const page= () => {
 
   return (
     <>
-
-    
       <AIBanner />
       <Expertise />
       <AIService />
       <AIModels />
       <AIPartnershipModels />
-    
+      <AIBlog/>
       <Faq faqs={faqs} />
       <LetsConnect />
-    
     </>
   );
 };

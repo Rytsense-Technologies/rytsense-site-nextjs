@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 import "./globals.css";
 import ClutchNavNew from "../components/_app/ClutchNavNew";
 import FooterClutch from "../components/_app/FooterClutch";
@@ -14,7 +14,13 @@ export default function RootLayout({ children }) {
   const [isClutchRoute, setIsClutchRoute] = useState(false);
   const pathname = usePathname();
 
-  const clutchRoutes = ["/", "/clutch"];
+  const clutchRoutes = [
+    "/",
+    "/clutch",
+    "/ai-development-services-usa",
+    "/software-development-services-usa",
+    "/hire-developers-in-india",
+  ];
 
   useEffect(() => {
     if (clutchRoutes.includes(pathname)) {
@@ -24,10 +30,16 @@ export default function RootLayout({ children }) {
     }
   }, [pathname]);
 
+  const isHomePage = pathname === "/";
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ClutchNavNew />
+        <ClutchNavNew
+          key={pathname}
+          isTransparent={isHomePage ? true : false}
+        />
+
         <main>{children}</main>
         {isClutchRoute ? <FooterClutch /> : <Footer />}
       </body>
