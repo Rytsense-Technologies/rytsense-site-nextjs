@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/blockchain.png";
 
+export const metadata = {
+  title:
+    "Blockchain Development Service - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const blockchainIntro = {
   title: "What is Blockchain?",
   content: `

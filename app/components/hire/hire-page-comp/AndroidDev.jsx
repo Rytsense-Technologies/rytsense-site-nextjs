@@ -1,5 +1,6 @@
 import React from "react";
 import { fadeIn } from "../../../mock/varients";
+import Image from "next/image";
 
 export default function AndroidDev() {
   return (
@@ -8,11 +9,13 @@ export default function AndroidDev() {
         <h1 className="text-2xl font-bold mb-4 ">
           What Android App Development Services Can You Get?
         </h1>
-        <img
+        <Image
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="\images\service-img\androiddev1.jpg"
           alt="Rytesensetech Software Development"
           title="App development company in Bangalore"
+          width={200}
+          height={200}
         />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left p-10">
@@ -66,11 +69,13 @@ export default function AndroidDev() {
         <h1 className="text-2xl font-bold mb-4 ">
           Why Hire Dedicated Android App Developers From Rytsense Technologies?
         </h1>
-        <img
+        <Image
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="\images\service-img\androiddev2.jpg"
           alt="Rytesensetech Software Development"
           title="App development company in Bangalore"
+          width={200}
+          height={200}
         />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left p-10">

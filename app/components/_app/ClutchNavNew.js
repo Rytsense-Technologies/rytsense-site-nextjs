@@ -322,10 +322,12 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                       For Sales Department
                       <div className="mt-2 rounded-md shadow-sm">
                         <div className="flex">
-                          <img
+                          <Image
                             src="/images/flag/ind5.png"
                             alt="icon"
                             className="w-8 h-8 rounded-3xl"
+                            width={20}
+                            height={20}
                           />
                           <a
                             href="https://wa.me/917010044153"
@@ -337,20 +339,24 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                       </div>
                       <div className="rounded-md mt-3 shadow-sm border-1 hover:border-gray-400">
                         <div className="flex">
-                          <img
+                          <Image
                             src="/images/flag/usa.png"
                             alt="icon"
                             className="w-8 h-8"
+                            width={20}
+                            height={20}
                           />
                           <div className="mt-1 ml-6"> +1 650 681 0090</div>
                         </div>
                       </div>
                       <div className="mt-3 rounded-md shadow-sm border-1 border-gray-600 hover:border-gray-400">
                         <div className="flex">
-                          <img
+                          <Image
                             src="/images/flag/mail.png"
                             alt="icon"
                             className="w-8 h-8 rounded-3xl"
+                            width={20}
+                            height={20}
                           />
                           <div className="mt-1 ml-6">hey@rytsensetech.com</div>
                         </div>

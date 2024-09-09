@@ -1,6 +1,18 @@
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "Events - Rytsense Technologies",
+  description: "",
+  // alternates: {
+  //   canonical: "https://rytsensetech.com/software-development-services-usa",
+  //   languages: {
+  //     "en-us": "https://rytsensetech.com/software-development-services-usa",
+  //     "x-default": "https://rytsensetech.com/software-development-services-usa",
+  //   },
+  // },
+};
+
 const eventsData = [
   {
     title: "Game Connection Europe 2022",
@@ -134,71 +146,52 @@ const eventsData = [
 
 const page = () => {
   return (
-    <div className="py-28">
-      <div className="text-center p-10">
-        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-7xl xl:text-3xl font-bold">
-          Events & Conferences
-        </h1>
-        <span className=" font-semibold">
-          Discover The International Events Where We Showcase Our Business.
-        </span>
-      </div>
+    <div className="py-16">
+    <div className="text-center p-10">
+      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold">
+        Events & Conferences
+      </h1>
+      <span className="text-lg sm:text-xl font-semibold">
+        Discover The International Events Where We Showcase Our Business.
+      </span>
+    </div>
 
-      {eventsData.map((event, index) => (
-        <div key={index} className="relative overflow-hidden bg-white">
-          <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-              <div
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.5 }}
-                className="sm:max-w-lg"
-              >
-                <h1 className="font text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                  {event.title}
-                </h1>
-                {event.description.map((desc, idx) => (
-                  <p key={idx} className="mt-4  text-gray-500">
-                    {desc}
-                  </p>
-                ))}
-              </div>
-              <div>
-                <div className="mt-10">
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
-                  >
-                    <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                      <div className="grid grid-cols-3 gap-4 space-x-6 lg:space-x-8">
-                        {event.images.map((image, imgIdx) => (
-                          <div
-                            key={imgIdx}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{ once: false, amount: 0.5 }}
-                            className="h-64 w-44 overflow-hidden rounded-lg"
-                          >
-                            <Image
-                              src={image}
-                              alt="Rytsense Technologies Event"
-                              className="h-full w-full object-cover object-center"
-                              width={300}
-                              height={300}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+    {eventsData.map((event, index) => (
+      <div key={index} className="relative overflow-hidden bg-white py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Event Description */}
+            <div className="sm:max-w-lg">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                {event.title}
+              </h2>
+              {event.description.map((desc, idx) => (
+                <p key={idx} className="mt-4 text-gray-500">
+                  {desc}
+                </p>
+              ))}
+            </div>
+
+            {/* Event Images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 lg:mt-0">
+              {event.images.map((image, imgIdx) => (
+                <div key={imgIdx} className="h-64 w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={image}
+                    alt={`Event ${index + 1} Image ${imgIdx + 1}`}
+                    className="h-full w-full object-cover object-center"
+                    width={300}
+                    height={300}
+                  />
                 </div>
-              </div>
+              ))}
             </div>
           </div>
-          <hr className="w-48 h-2 mx-auto my-4 bg-indigo-700 border-0 rounded md:my-10" />
         </div>
-      ))}
-    </div>
+        <hr className="w-48 h-2 mx-auto my-8 bg-indigo-700 border-0 rounded" />
+      </div>
+    ))}
+  </div>
   );
 };
 

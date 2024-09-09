@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 import MainPageBanner from "../components/home/MainPageBanner";
@@ -16,7 +17,10 @@ import PartnerShipModel from "../components/home/PartnerShipModel";
 import ServiceSuspence from "../components/home/ServiceSuspence";
 import MainProdcast from "../components/home/MainProdcast";
 import LatestBlogs from "../components/home/Latestblog";
+import LetsConnect from "../components/common/LetsConnect";
 // import CaseStudyCardAnimation from "../components/home/CaseStudyCardAnimation";
+import EaseInOutCardsAnimation from "../components/case-study/EaseInOutCardsAnimation";
+import MobileViewCaseStudy from "../components/case-study/MobileViewCaseStudy";
 
 export const metadata = {
   title:
@@ -29,11 +33,14 @@ export const metadata = {
 };
 
 export default function Home() {
+  
+
   return (
     <>
       <main>
         <MainPageBanner />
         <Carousalclutch />
+
         <Ranking />
         <CompanyStats />
         <RankSection />
@@ -43,6 +50,8 @@ export default function Home() {
             "We Create New Solution &Transform.Existing Ones With a Development.  Process That Beats Industry - Best Time Line</span>"
           }
         />
+        <EaseInOutCardsAnimation />
+         {/* {isMobileView ? <MobileViewCaseStudy /> : <EaseInOutCardsAnimation />} */}
         <Partnercompany />
         <EstimateProject />
         <PartnerShipModel />
@@ -51,7 +60,8 @@ export default function Home() {
         <LatestBlogs />
         {/* <CaseStudyCardAnimation /> */}
 
-        {/* <Testimonials/> */}
+        <Testimonials/>
+        <LetsConnect/>
       </main>
     </>
   );

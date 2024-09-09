@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SponserSection1 = () => {
@@ -16,10 +17,12 @@ const SponserSection1 = () => {
             </button>
           </div>
         </div>
-        <img
+        <Image
           src="https://ibcindia.co.in/img/Database-Checks.jpeg"
           alt="Education Background"
           className="absolute inset-0 h-full w-full object-cover opacity-70"
+          width={300}
+          height={300}
         />
       </div>
     </div>

@@ -9,6 +9,8 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { allCaseStudies } from "../../mock/allCaseStudies";
 import Image from "next/image";
 
+
+
 const page = () => {
   const [popupContact, setPopupContact] = useState(false);
   const [activeType, setActiveType] = useState("All");
@@ -24,14 +26,14 @@ const page = () => {
     "Blockchain",
   ];
 
-
-
   const handleTypeChange = (type) => {
     setActiveType(type);
     if (type === "All") {
       setFilteredStudies(allCaseStudies);
     } else {
-      const filtered = allCaseStudies.filter((study) => study.tags.includes(type));
+      const filtered = allCaseStudies.filter((study) =>
+        study.tags.includes(type)
+      );
       setFilteredStudies(filtered);
     }
   };

@@ -1,13 +1,24 @@
-"use client"
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Who We Are - Rytsense Technologies",
+  description: "",
+  // alternates: {
+  //   canonical: "https://rytsensetech.com/software-development-services-usa",
+  //   languages: {
+  //     "en-us": "https://rytsensetech.com/software-development-services-usa",
+  //     "x-default": "https://rytsensetech.com/software-development-services-usa",
+  //   },
+  // },
+};
+
 const page = () => {
   return (
-  <>
-   <div className="relative flex flex-col items-center md:top-10 mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl lg:mt-14 md:mt-44 sm:mt-44 st:mt-44 mt-44">
+    <>
+      <div className="relative flex flex-col items-center md:top-10 mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl lg:mt-14 md:mt-44 sm:mt-44 st:mt-44 mt-44">
         <div className="w-full h-64 lg:w-1/2 lg:h-auto">
           <Image
             className="h-full w-full object-cover border border-gray-300 shadow-2xl"
@@ -75,7 +86,7 @@ const page = () => {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 relative top-0 -mt-16">
                     <div className="flex items-center justify-center h-20 w-20 rounded-full bg-rose-400 text-white border-4 border-white text-xl font-semibold">
-                    <svg
+                      <svg
                         width="89"
                         height="40"
                         viewBox="0 0 89 82"
@@ -107,7 +118,7 @@ const page = () => {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 relative top-0 -mt-16">
                     <div className="flex items-center justify-center h-20 w-20 rounded-full bg-rose-400 text-white border-4 border-white text-xl font-semibold">
-                    <svg
+                      <svg
                         width="89"
                         height="40"
                         viewBox="0 0 89 89"
@@ -141,7 +152,7 @@ const page = () => {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 relative top-0 -mt-16">
                     <div className="flex items-center justify-center h-20 w-20 rounded-full bg-rose-400 text-white border-4 border-white text-xl font-semibold">
-                    <svg
+                      <svg
                         width="89"
                         height="40"
                         viewBox="0 0 89 89"
@@ -182,8 +193,8 @@ const page = () => {
               </h1>
               <p className="mt-4 text-xl text-gray-500">
                 We help our clients make business decisions based on the best
-                possible information, Thats why we do our best to figure out
-                the budget as early as possible.
+                possible information, Thats why we do our best to figure out the
+                budget as early as possible.
               </p>
             </div>
             <div>
@@ -193,9 +204,10 @@ const page = () => {
                   className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
                 >
                   <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                    <div className="flex items-center space-x-6 lg:space-x-8">
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-72 w-72 overflow-hidden rounded-lg">
+                    <div className="flex flex-col lg:flex-row items-center lg:space-x-8">
+                      {/* First Column */}
+                      <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-72 w-full lg:w-72 overflow-hidden rounded-lg">
                           <Image
                             src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1705588592/grid1_jx8ki5.webp"
                             alt="Rytesensetech Software Development"
@@ -207,8 +219,10 @@ const page = () => {
                           />
                         </div>
                       </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-72 w-72 overflow-hidden rounded-lg">
+
+                      {/* Second Column */}
+                      <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8 mt-6 lg:mt-0">
+                        <div className="h-72 w-full lg:w-72 overflow-hidden rounded-lg">
                           <Image
                             src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1705588593/grid3_phtsso.webp"
                             alt="Rytesensetech Software Development"
@@ -219,7 +233,7 @@ const page = () => {
                             layout="responsive"
                           />
                         </div>
-                        <div className="h-72 w-72 overflow-hidden rounded-lg">
+                        <div className="h-72 w-full lg:w-72 overflow-hidden rounded-lg">
                           <Image
                             src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1705588595/grid4_wypkzq.webp"
                             alt="Rytesensetech Software Development"
@@ -239,9 +253,8 @@ const page = () => {
           </div>
         </div>
       </div>
-  
-  </>
-  )
-}
+    </>
+  );
+};
 
-export default page
+export default page;

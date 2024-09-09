@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/devops.png";
 
+export const metadata = {
+  title:
+    "DevOps Service - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const sections = [
   {
     text: `Dev stands for Software Development, and Ops stands for information technology operations. Adopting DevOps aims to reduce the system's development life cycle and provide perpetual delivery with high-quality software. Moreover, it helps to fix business objectives and keep the features and updates frequently in close alignment. It helps build cross-functional operations and supports various tools. It evolves and enhances products at a quickening speed. The organization speed gets better with DevOps software and offers more effectively in the market. The DevOps toolchain is a compressive tool that improves the system in the development life cycle. Modifying the software consumes time because of multiple tools, dynamic changes, technologies, practices, etc. The impression is larger than other software development. It provides a reliable environment with faster collaboration between operations and developments.`,
@@ -120,7 +130,7 @@ const page = () => {
             Rytsense Technologies has successfully delivered multiple DevOps
             solutions and services. Our services contain quality and consistency
             for the operation and development system. We provide multiple
-            practices, technologies, and unique techniques for DevOps. Ryt'sence
+            practices, technologies, and unique techniques for DevOps. Rytsence
             concentrates on continuous deployment, integration, process
             improvement, and more. We monitor the work and facilities it to
             optimize all IT operations. Our service carter robust system that

@@ -4,6 +4,16 @@ import Image from 'next/image'
 import ClientReviews from '../../../components/services/ClientReviews'
 import TechnologyStack from '../../../components/services/TechnologyStack'
 
+export const metadata = {
+  title:
+    "Game Development Service - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const page = () => {
   return (
    <>

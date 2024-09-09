@@ -1,41 +1,35 @@
-"use client"
-import React, { useEffect } from "react";
-import dynamic from 'next/dynamic';
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import { FreeMode, Navigation } from "swiper/modules";
-
-// Import Swiper and SwiperSlide dynamically
-const Swiper = dynamic(() => import('swiper/react').then(mod => mod.Swiper), { ssr: false });
-const SwiperSlide = dynamic(() => import('swiper/react').then(mod => mod.SwiperSlide), { ssr: false });
+"use client";
+import React, { useEffect, useState } from "react";
+import client1 from "../../../public/images/client/c1.jpg"
+import client2 from "../../../public/images/client/c2.jpg"
+import client3 from "../../../public/images/client/c3.png"
+import client4 from "../../../public/images/client/c4.jpg"
+import Image from "next/image";
 
 const Testimonials = () => {
   const details = [
     {
       message:
         '"Thoughtfully integrating consumer feedback to improve the UX/UI, Rytsense Technologies has developed a series of consistently improved mobile app iterations. Their competitive pricing structure pairs value with cost savings. The project manager was exceptionally skilled and communicative."',
-      profile: "/images/client-feedback/SKKYN_Shafeek Shaji.jpg",
+      profile: client1,
       name: "Sujai Soy",
       companyname: "Skkyn Technologies - Owner",
       country: "Dubai, UAE",
-      flagimage: "/images/homepageimages/download (2).png",
-      companylog: "/images/homepageimages/download (2).png",
+      flagimage: client1,
     },
     {
       message:
         '"Rytsense Technologies was diligent and responsive in solving any issues that came up throughout the development process and still provides excellent support when they are needed. The client feels that Rytsense has really gone above and beyond with their service."',
-      profile: "/images/client-feedback/Oanz Holdings_Omar Boyd.jpg",
+      profile: client2,
       name: "Omar Boyd",
       companyname: "CoFounder, Oanz Holdings",
       country: "Canada",
       flagimage: "/images/homepageimages/download (3).png",
-      companylog: "/images/homepageimages/download (2).png",
     },
     {
       message:
         '"The founder of Rytsense Technologies and the rest of his project team have placed customer service through responsiveness and proper communication above all else, leading to a strong initial product and the opportunity to continue the partnership through multiple iterations and enhancements."',
-      profile: "/images/homepageimages/overview.png",
+      profile: client3,
       name: "Brendan Buchholz",
       companyname: "Founder, Cool Charm Friends",
       country: "Brisbane, Australia",
@@ -44,14 +38,29 @@ const Testimonials = () => {
     {
       message:
         '"Users have reviewed the app positively. Rytsense Technologies was responsive and provided excellent support. Their follow-up is particularly noteworthy."',
-      profile: "/images/client-feedback/Mathew_food delivery startup.jpg",
+      profile: client4,
       name: "Owner",
       companyname: "Food Ordering App",
       country: "United Arab Emirates",
       flagimage: "/images/homepageimages/download (2).png",
-      companylog: "/images/homepageimages/download (2).png",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === details.length - 3 ? 0 : prevIndex + 1.5
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? details.length - 3 : prevIndex - 1
+    );
+  };
+
+
 
   const bannerColor = {
     background:
@@ -62,7 +71,31 @@ const Testimonials = () => {
     <>
       <style>
         {`
-          .swiper-button-next, .swiper-button-prev {
+          .carousel-container {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            width: 100%;
+            height: 650px;
+          }
+
+          .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: ${details.length * (100 / 4)}%;
+            transform: translateX(-${currentIndex * (100 / details.length)}%);
+          }
+
+          .carousel-slide {
+            flex: 0 0 33.33%; /* Show three slides at a time */
+            display: flex;
+            justify-content: center;
+          }
+
+          .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             background-color: black;
             color: white;
             border-radius: 50%;
@@ -71,9 +104,15 @@ const Testimonials = () => {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
           }
-          .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 16px;
+
+          .carousel-btn-prev {
+            left: 10px;
+          }
+
+          .carousel-btn-next {
+            right: 10px;
           }
         `}
       </style>
@@ -87,56 +126,45 @@ const Testimonials = () => {
             build it.
           </p>
         </div>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={10}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          }}
-          navigation
-          modules={[FreeMode, Navigation]}
-          className="mySwiper"
-        >
-          {details.map((cli, i) => (
-            <SwiperSlide key={i} className="flex justify-center">
-              <div
-                className="backdrop-opacity-10 backdrop-invert bg-[#092947]/30 rounded-2xl p-20  flex flex-col justify-between p-6 transition-all duration-500 hover:border-indigo-600"
-                style={{ width: "369px", height: "609px" }}
-              >
-                <p className="text-sm text-white mt-10 leading-6 font-semibold transition-all duration-500 min-h-24 group-hover:text-gray-800">
-                  {cli.message}
-                </p>
-                <div className="flex flex-col items-center gap-5 mb-5 sm:mb-9 mt-10">
-                  <img
-                    src={cli.profile}
-                    alt="avatar"
-                    className="w-20 h-20 rounded-full object-cover"
-                    style={{ width: "100px" }}
-                  />
-                  <div className="grid gap-1 text-center">
-                    <h5 className="text-white font-medium transition-all duration-500">
-                      {cli.name}
-                    </h5>
-                    <span className="text-sm leading-6 text-white">
-                      {cli.country}
-                    </span>
+        <div className="carousel-container">
+          <div className="carousel-wrapper">
+            {details.map((cli, i) => (
+              <div key={i} className="carousel-slide">
+                <div
+                  className="backdrop-opacity-10 backdrop-invert bg-[#092947]/30 rounded-2xl p-10 flex flex-col justify-between transition-all duration-500 hover:border-indigo-600"
+                  style={{ width: "369px", height: "609px" }}
+                >
+                  <p className="text-sm text-white mt-5 leading-6 font-semibold transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                    {cli.message}
+                  </p>
+                  <div className="flex flex-col items-center gap-5 mb-5 sm:mb-9 mt-20">
+                    <Image
+                      src={cli.profile}
+                      alt="avatar"
+                      className="w-20 h-20 rounded-full object-cover"
+                     width={100}
+                     height={100}
+                    />
+                    <div className="grid gap-1 text-center">
+                      <h5 className="text-white font-medium transition-all duration-500">
+                        {cli.name}
+                      </h5>
+                      <span className="text-sm leading-6 text-white">
+                        {cli.country}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ))}
+          </div>
+          <div className="carousel-btn carousel-btn-prev" onClick={prevSlide}>
+            &#10094;
+          </div>
+          <div className="carousel-btn carousel-btn-next" onClick={nextSlide}>
+            &#10095;
+          </div>
+        </div>
       </div>
     </>
   );

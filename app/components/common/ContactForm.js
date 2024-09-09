@@ -422,10 +422,12 @@ const ContactForm = () => {
                       <div className="relative mt-1">
                         <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                           <div className="flex items-center">
-                            <img
+                            <Image
                               src={selected.img}
                               alt={selected.name}
                               className="h-4 w-6 mr-2"
+                              width={20}
+                              height={20}
                             />
                             <span className="block truncate">
                               {`${selected.name} (${selected.code})`}
@@ -460,10 +462,12 @@ const ContactForm = () => {
                                 {({ selected }) => (
                                   <>
                                     <div className="flex items-center">
-                                      <img
+                                      <Image
                                         src={person.img}
                                         alt={person.name}
                                         className="h-4 w-6 mr-2"
+                                        width={20}
+                                        height={20}
                                       />
                                       <span
                                         className={`block truncate ${

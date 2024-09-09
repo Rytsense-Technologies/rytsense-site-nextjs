@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/web.png";
 
+export const metadata = {
+  title:
+    "Web Development - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const processSteps = [
   {
     title: "1) Planning :-",

@@ -8,6 +8,7 @@ import AIPartnershipModels from "../../components/home-service/ai/AIPartnershipM
 import AIBlog from "../../components/home-service/ai/AIBlog";
 import Faq from "../../components/common/faq/Faq";
 import LetsConnect from "../../components/common/LetsConnect";
+import Testimonials from "../../components/common/Testimonials"
 
 export const metadata = {
   title: "Artificial Intelligence (AI) development services in USA",
@@ -77,6 +78,7 @@ const page = () => {
       <AIModels />
       <AIPartnershipModels />
       <AIBlog/>
+      <Testimonials/>
       <Faq faqs={faqs} />
       <LetsConnect />
     </>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AIModels = () => {
@@ -8,9 +9,11 @@ const AIModels = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 sm:mb-6 lg:mb-10 font-bold">
             AI Models We Have Expertise In
           </h2>
-          <img
+          <Image
             src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1721789452/logos_qwneal.png"
             alt="ai models"
+            width={500}
+            height={500}
           />
         </div>
       </div>

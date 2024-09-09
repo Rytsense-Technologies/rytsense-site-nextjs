@@ -8,6 +8,15 @@ import InnovativeTechnologies from "../../../components/industry/common/Innovati
 import IndustryFaq from "../../../components/industry/common/IndustryFaq"
 import IndustryTechnologies from "../../../components/industry/common/IndustryTechnologies"
 
+export async function generateMetadata({ params }) {
+  const data = industryData.find((page) => page.slug === params.slug);
+
+  return {
+    title: data.seoTitle,
+    description: data.seoDescription,
+  };
+}
+
 const page = ({ params }) => {
   const data = industryData.find((page) => page.slug === params.slug);
 

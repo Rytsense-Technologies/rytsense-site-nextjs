@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const InnovativeTechnologies = ({ data, title }) => {
@@ -14,10 +15,12 @@ const InnovativeTechnologies = ({ data, title }) => {
           {data?.map((tec, i) => (
             <div key={i} className="py-6 lg:py-10">
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   className="w-8 md:w-10"
                   src="https://www.shutterstock.com/image-vector/light-bulb-electronics-new-electronic-600nw-1921894430.jpg"
                   alt=""
+                  width={40}
+                  height={40}
                 />
                 <h1 className="text-md md:text-lg font-semibold">
                   {tec.heading}

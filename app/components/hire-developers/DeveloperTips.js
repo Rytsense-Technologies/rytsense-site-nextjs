@@ -12,6 +12,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import "animate.css";
+import Image from "next/image";
 
 const DeveloperTips = () => {
   return (
@@ -22,10 +23,12 @@ const DeveloperTips = () => {
         </h2>
         <div className="mx-auto flex md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 md:mb-0">
-            <img
+            <Image
               className="object-cover object-center rounded"
               alt="hero"
               src="https://miro.medium.com/v2/resize:fit:602/1*E-fQw1n7SqtlWJpB3ByJPg.png"
+              width={200}
+              height={200}
             />
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

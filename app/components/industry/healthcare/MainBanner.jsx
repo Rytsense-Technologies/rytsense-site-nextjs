@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -35,9 +36,11 @@ const MainBanner = () => {
 
           <div class="mx-auto mt-4 md:mt-8">
             <div class="lg:max-w-6xl lg:mx-auto">
-              <img
+              <Image
                 class="px-4 md:mpx-8"
                 src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/medical-team-banner.webp"
+                width={350}
+                height={300}
               />
             </div>
           </div>

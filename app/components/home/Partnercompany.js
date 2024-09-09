@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Partnercompany = () => {
@@ -20,10 +21,12 @@ const Partnercompany = () => {
                   "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
               }}
             >
-              <img
+              <Image
                 src="/images/homepageimages/Google-Cloud-Logo.png"
                 alt="logo"
-              ></img>
+                width={200}
+                height={200}
+              />
             </div>
             <div
               className="p-5 w-32 h-32  flex justify-center items-center rounded-lg hover:transform hover:scale-110 transition-transform"
@@ -32,10 +35,12 @@ const Partnercompany = () => {
                   "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
               }}
             >
-              <img
+              <Image
                 src="/images/homepageimages/IBM_logo.svg.WEBP"
                 alt="logo"
-              ></img>
+                width={200}
+                height={200}
+              />
             </div>
           </div>
           <div className="flex gap-6">
@@ -46,10 +51,12 @@ const Partnercompany = () => {
                   "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
               }}
             >
-              <img
+              <Image
                 src="/images/homepageimages/2560px-Amazon_Web_Services_Logo.svg.webp"
                 alt="logo"
-              ></img>
+                width={200}
+                height={200}
+              />
             </div>
             <div
               className="p-5 w-32 h-32  flex justify-center items-center rounded-lg hover:transform hover:scale-110 transition-transform"
@@ -58,10 +65,12 @@ const Partnercompany = () => {
                   "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
               }}
             >
-              <img
+              <Image
                 src="/images/homepageimages/Google-Cloud-Logo.WEBP"
                 alt="logo"
-              ></img>
+                width={200}
+                height={200}
+              />
             </div>
           </div>
         </div>

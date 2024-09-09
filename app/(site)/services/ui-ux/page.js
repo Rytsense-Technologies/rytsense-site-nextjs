@@ -7,6 +7,16 @@ import UXDPractices from "../../../components/services/uiux/UXDPractices";
 import DesignSprintWorkshop from "../../../components/services/uiux/DesignSprintWorkshop";
 import Faq from "../../../components/common/faq/Faq";
 
+export const metadata = {
+  title:
+    "UI/UX Development - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const faqs = [
   {
     question: "What is the difference between UI and UX Design?",

@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/iot.png";
 
+export const metadata = {
+  title:
+    "Internet OF Things(IOT) Development - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const introContent = [
   "IoT presents a powerful mechanism to connect various objects with the internet and take advantage of smart technology. It allows devices to connect and transfer information, which can be used for a variety of purposes. IoT is changing the way businesses work. IoT data can be connected with advanced analytics to help businesses gain valuable insights to make their operations smoother. For example, sensors can be used in parking to help drivers find vacant parking lots. The Internet of Things is all set to transform your whole business processes.",
   "Machine learning is a part of Artificial Intelligence and is considered the most evolving technology for business. With real-world insight, AI & ML help to build frameworks that support businesses in gaining profit. Organizations that leverage Machine Learning and Artificial Intelligence have witnessed transformations in every aspect of their company. It has helped them reshape multiple industries and support enterprises with strategic management. The implementation of projects becomes easier with these tools and research analytics.",

@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/saleforce.png";
 
+export const metadata = {
+  title:
+    "Salesforce Development - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const introduction = [
   `Customers are surely the biggest & most valuable assets of your company. And, to their requirements, 
     the establishment of an effective CRM system becomes important now. The tools and services in Salesforce 

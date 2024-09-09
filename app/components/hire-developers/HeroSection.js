@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
@@ -20,10 +21,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
+          <Image
             className="object-cover object-center rounded"
             alt="hero"
             src="https://miro.medium.com/v2/resize:fit:800/0*XH3rLskyOsCqVV-j.jpg"
+            width={300}
+            height={300}
           />
         </div>
       </div>

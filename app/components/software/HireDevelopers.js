@@ -1,6 +1,7 @@
 import React from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import CustomButton from "../custom-common/CustomButton";
+import Image from "next/image";
 
 const HireDevelopers = () => {
   return (
@@ -38,10 +39,12 @@ const HireDevelopers = () => {
           </div>
         </div>
         <div className="md:w-1/2 w-full">
-          <img
+          <Image
             className="object-cover object-center rounded-lg"
             alt="hero"
             src="https://www.icoderzsolutions.com/image/hire-web-developers-img.webp"
+            width={300}
+            height={300}
           />
         </div>
       </div>

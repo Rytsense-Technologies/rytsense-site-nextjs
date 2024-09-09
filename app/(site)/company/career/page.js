@@ -4,6 +4,18 @@ import InterviewProcess from '../../../components/company/career/InterviewProces
 import JobOpenings from '../../../components/company/career/JobOpenings';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "Career - Rytsense Technologies",
+  description: "",
+  // alternates: {
+  //   canonical: "https://rytsensetech.com/software-development-services-usa",
+  //   languages: {
+  //     "en-us": "https://rytsensetech.com/software-development-services-usa",
+  //     "x-default": "https://rytsensetech.com/software-development-services-usa",
+  //   },
+  // },
+};
+
 const perksData = [
     {
       imgSrc: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1724916569/perks-img-1_vodhls.png",

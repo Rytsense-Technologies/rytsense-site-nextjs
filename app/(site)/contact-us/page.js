@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "../../components/common/ContactForm";
-import LocateUs from "../../components/contact/locateus";
+import LocateUs from "../../components/contact/LocateUs";
 import SocialMedia from "../../components/resource/SocialMedia";
 
 const page = () => {

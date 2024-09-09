@@ -15,6 +15,16 @@ import {
   FaUtensils,
 } from "react-icons/fa";
 
+export const metadata = {
+  title:
+    "AI ML Service - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const page = () => {
   const services = [
     {
@@ -132,6 +142,7 @@ const page = () => {
             {industries.map((industry, index) => (
               <div
                 className={`${industry.color} text-white shadow-lg rounded-lg p-6 text-center flex items-center gap-5`}
+                key={index}
               >
                 <div className="text-3xl">{industry.icon}</div>
                 <h2 className="text-lg font-bold">{industry.name}</h2>
@@ -148,7 +159,7 @@ const page = () => {
               </div>
               <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 {services.map((service, index) => (
-                  <div className="border border-sky-700 p-5">
+                  <div className="border border-sky-700 p-5" key={index}>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">
                       {service.title}
                     </h3>

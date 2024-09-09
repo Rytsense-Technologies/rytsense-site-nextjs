@@ -193,22 +193,22 @@ const FooterClutch = () => {
             <h3 className="mb-2.5 text-2xl font-bold uppercase">About</h3>
             <ul className="mb-0 list-none space-y-2">
               <li>
-                <Link href="/who-we-are" className="hover:text-indigo-500">
+                <Link href="/company/who-we-are" className="hover:text-indigo-500">
                   Who We Are
                 </Link>
               </li>
               <li>
-                <Link href="/career" className="hover:text-indigo-500">
+                <Link href="/company/career" className="hover:text-indigo-500">
                   Career
                 </Link>
               </li>
               <li>
-                <Link href="/event" className="hover:text-indigo-500">
+                <Link href="/company/event" className="hover:text-indigo-500">
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-indigo-500">
+                <Link href="/company/service" className="hover:text-indigo-500">
                   Services
                 </Link>
               </li>
@@ -223,7 +223,7 @@ const FooterClutch = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-indigo-500">
+                <Link href="/contact-us" className="hover:text-indigo-500">
                   Contact Us
                 </Link>
               </li>
@@ -235,20 +235,20 @@ const FooterClutch = () => {
             <ul className="mb-0 list-none space-y-2">
               <li>
                 <Link
-                  href="/artificial-intelligence-and-machine-learning"
+                  href="/services/artificial-intelligence-and-machine-learning"
                   className="hover:text-indigo-500"
                 >
                   AI & ML
                 </Link>
               </li>
               <li>
-                <Link href="/iot-development" className="hover:text-indigo-500">
+                <Link href="/services/iot-development" className="hover:text-indigo-500">
                   IOT
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/ecommerce-development"
+                  href="/services/ecommerce-development"
                   className="hover:text-indigo-500"
                 >
                   ECOMMERCE
@@ -256,7 +256,7 @@ const FooterClutch = () => {
               </li>
               <li>
                 <Link
-                  href="/blockchain-development"
+                  href="/services/blockchain-development"
                   className="hover:text-indigo-500"
                 >
                   BLOCKCHAIN
@@ -264,17 +264,13 @@ const FooterClutch = () => {
               </li>
               <li>
                 <Link
-                  href="/react-native-app-development"
+                  href="/service/MOBILE-APP/react-native-app-development"
                   className="hover:text-indigo-500"
                 >
                   React Native
                 </Link>
               </li>
-              <li>
-                <Link href="/web-development" className="hover:text-indigo-500">
-                  WEB
-                </Link>
-              </li>
+             
             </ul>
           </div>
 
@@ -283,7 +279,7 @@ const FooterClutch = () => {
             <ul className="mb-0 list-none space-y-2">
               <li>
                 <Link
-                  href="/magento-development"
+                  href="/service/ECOMMERCE/magento-development"
                   className="hover:text-indigo-500"
                 >
                   Magento
@@ -291,7 +287,7 @@ const FooterClutch = () => {
               </li>
               <li>
                 <Link
-                  href="/shopify-development"
+                  href="/service/ECOMMERCE/shopify-development"
                   className="hover:text-indigo-500"
                 >
                   Shopify
@@ -299,20 +295,20 @@ const FooterClutch = () => {
               </li>
               <li>
                 <Link
-                  href="/ubercart-development"
+                  href="/service/ECOMMERCE/ubercart-development"
                   className="hover:text-indigo-500"
                 >
                   Ubercart
                 </Link>
               </li>
               <li>
-                <Link href="/prestashop" className="hover:text-indigo-500">
+                <Link href="/service/ECOMMERCE/prestashop" className="hover:text-indigo-500">
                   Prestashop
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/cs-cart-development"
+                  href="/service/ECOMMERCE/cs-cart-development"
                   className="hover:text-indigo-500"
                 >
                   CS Cart
@@ -320,20 +316,20 @@ const FooterClutch = () => {
               </li>
               <li>
                 <Link
-                  href="/virtuemart-development"
+                  href="/service/ECOMMERCE/virtuemart-development"
                   className="hover:text-indigo-500"
                 >
                   VirtueMart
                 </Link>
               </li>
               <li>
-                <Link href="/bigcommerce" className="hover:text-indigo-500">
+                <Link href="/service/ECOMMERCE/bigcommerce-development" className="hover:text-indigo-500">
                   BigCommerce
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/woocommerce-development"
+                  href="/service/ECOMMERCE/woocommerce-development"
                   className="hover:text-indigo-500"
                 >
                   WooCommerce

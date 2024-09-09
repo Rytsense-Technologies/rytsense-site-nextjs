@@ -5,6 +5,16 @@ import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/mobile.png";
 import Link from "next/link";
 
+export const metadata = {
+  title:
+    "Mobile App Development - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const page = () => {
   return (
     <>

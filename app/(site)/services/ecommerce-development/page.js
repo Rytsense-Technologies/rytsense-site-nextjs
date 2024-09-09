@@ -4,6 +4,16 @@ import ClientReviews from "../../../components/services/ClientReviews";
 import HeroSection from "../../../components/services/HeroSection";
 import bannerImage from "../../../../public/images/services/ecommerce.webp";
 
+export const metadata = {
+  title:
+    "E-Commerce Development Service - Rytsense Technologies",
+  description:
+    "",
+  // alternates: {
+  //   canonical: "https://www.rytsensetech.com/",
+  // },
+};
+
 const eCommerceIntro = {
   title: "What Is E-Commerce?",
   description: `

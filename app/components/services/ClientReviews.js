@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ClientReviews = () => {
@@ -82,10 +83,12 @@ const ClientReviews = () => {
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <img
+                      <Image
                         class="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
                         alt=""
+                        width={40}
+                        height={40}
                       />
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">
@@ -155,10 +158,12 @@ const ClientReviews = () => {
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <img
+                      <Image
                         class="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
                         alt=""
+                        width={40}
+                        height={40}
                       />
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">
@@ -228,10 +233,12 @@ const ClientReviews = () => {
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <img
+                      <Image
                         class="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
                         alt=""
+                        width={40}
+                        height={40}
                       />
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">

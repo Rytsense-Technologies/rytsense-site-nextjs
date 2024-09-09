@@ -1,8 +1,65 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
-import { fa1 } from "@fortawesome/free-solid-svg-icons/fa1";
-import Image from "next/image";
+const techStacks = {
+  androidLanguages: [
+    { src: "/images/service-img/android.png", alt: "Android" },
+    { src: "/images/service-img/ios.png", alt: "iOS" },
+    { src: "/images/service-img/flutter.png", alt: "Flutter" },
+    { src: "/images/service-img/react-native.png", alt: "React Native" },
+    { src: "/images/service-img/kotlin.jfif", alt: "Kotlin" },
+    { src: "/images/service-img/ionic.png", alt: "Ionic" },
+    { src: "/images/service-img/swift.png", alt: "Swift" },
+    { src: "/images/service-img/xamarin.png", alt: "Xamarin" },
+    { src: "/images/service-img/ipad.png", alt: "iPad" },
+    { src: "/images/service-img/windos.png", alt: "Windows" },
+    { src: "/images/service-img/phonegap.png", alt: "PhoneGap" },
+    { src: "/images/service-img/augment-reality.png", alt: "Augmented Reality" },
+    { src: "/images/service-img/virtual-reality.jfif", alt: "Virtual Reality" },
+    { src: "/images/service-img/beacon.jfif", alt: "Beacon" },
+    { src: "/images/service-img/wearabless.webp", alt: "Wearables" },
+    { src: "/images/service-img/aperavle-titnum.png", alt: "Wearable Tech" },
+  ],
+  frontEndLanguages: [
+    { src: "/images/service-img/senchattouch.jfif", alt: "Sencha Touch" },
+    { src: "/images/service-img/typescript.png", alt: "TypeScript" },
+    { src: "/images/service-img/javascript.png", alt: "JavaScript" },
+    { src: "/images/service-img/reactjs.png", alt: "React.js" },
+    { src: "/images/service-img/golang.jfif", alt: "GoLang" },
+    { src: "/images/service-img/angularjs.png", alt: "AngularJS" },
+  ],
+  backEndLanguages: [
+    { src: "/images/service-img/php.png", alt: "PHP" },
+    { src: "/images/service-img/yii.png", alt: "Yii" },
+    { src: "/images/service-img/cakephp.png", alt: "CakePHP" },
+    { src: "/images/service-img/java.png", alt: "Java" },
+    { src: "/images/service-img/dotnet.jfif", alt: ".NET" },
+    { src: "/images/service-img/csharp.png", alt: "C#" },
+    { src: "/images/service-img/rails.png", alt: "Ruby on Rails" },
+    { src: "/images/service-img/codeignter.png", alt: "CodeIgniter" },
+    { src: "/images/service-img/python.png", alt: "Python" },
+    { src: "/images/service-img/laravel.png", alt: "Laravel" },
+    { src: "/images/service-img/scala.png", alt: "Scala" },
+    { src: "/images/service-img/symfony.png", alt: "Symfony" },
+    { src: "/images/service-img/zend.png", alt: "Zend" },
+    { src: "/images/service-img/nodejs.png", alt: "Node.js" },
+    { src: "/images/service-img/django.png", alt: "Django" },
+    { src: "/images/service-img/graphql.png", alt: "GraphQL" },
+    { src: "/images/service-img/parse.png", alt: "Parse" },
+  ],
+  cmsLanguages: [
+    { src: "/images/service-img/wordpress.png", alt: "WordPress" },
+    { src: "/images/service-img/mangeto.png", alt: "Magento" },
+    { src: "/images/service-img/prestashop.jfif", alt: "PrestaShop" },
+    { src: "/images/service-img/joomla.png", alt: "Joomla" },
+    { src: "/images/service-img/bigcommerce.png", alt: "BigCommerce" },
+    { src: "/images/service-img/drupal.png", alt: "Drupal" },
+    { src: "/images/service-img/virtumart.jfif", alt: "VirtueMart" },
+    { src: "/images/service-img/cscart.jfif", alt: "CS-Cart" },
+    { src: "/images/service-img/sitecore.png", alt: "Sitecore" },
+  ],
+};
 
 const TechnologyStack = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -10,466 +67,75 @@ const TechnologyStack = () => {
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
-  return (
-    <div className="tabs  rounded-xl ml-24 mr-24 mt-20">
-      <h2
-        className="font-bold text-2xl md:text-3xl lg:text-3xl text-center mb-6 mt-6"
-    
 
-      >
+  const renderImages = (images) => {
+    return (
+      <div className="flex flex-wrap gap-6 max-w-full place-items-center p-4 justify-center">
+        {images.map((img, idx) => (
+          <Image
+            key={idx}
+            className="hover:opacity-75 h-20"
+            src={img.src}
+            alt={img.alt}
+            width={40}
+            height={40}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div className="tabs rounded-xl mx-4 md:mx-24 mt-20">
+      <h2 className="font-bold text-xl md:text-3xl lg:text-3xl text-center mb-6 mt-6">
         Technology Stack That Makes Your Software Secure and Exceptional
       </h2>
 
-      <div className="">
-        <nav
-          className="-mb-0.5 flex justify-center space-x-12 pt-10"
-          aria-label="Tabs"
-          role="tablist"
+      {/* Responsive Tabs */}
+      <nav className="flex flex-wrap justify-center space-x-2 md:space-x-12 pt-10" role="tablist">
+        <button
+          type="button"
+          className={`px-3 py-2 rounded w-full sm:w-auto ${
+            activeTab === 1 ? "bg-sky-500 text-white" : "border border-gray-800 text-gray-700"
+          }`}
+          onClick={() => handleTabClick(1)}
         >
-          <button
-            type="button"
-            className={`px-3 py-2 sm:px-5 sm:py-3 mx-2 my-1 sm:my-0 rounded ${
-              activeTab === 1
-                ? "bg-sky-500 text-white"
-                : "border border-gray-800 text-gray-700"
-            }`}
-            onClick={() => handleTabClick(1)}
-            role="tab"
-            aria-selected={activeTab === 1 ? "true" : "false"}
-            aria-controls="horizontal-alignment-1"
-            id="horizontal-alignment-item-1 "
-          >
-            Android  Languages
-          </button>
-          <button
-            type="button"
-            className={`px-3 py-2 sm:px-5 sm:py-3 mx-2 my-1 sm:my-0 rounded ${
-              activeTab === 2
-                ? "bg-sky-500 text-white"
-                : "border border-gray-800 text-gray-700"
-            }`}
-            onClick={() => handleTabClick(2)}
-            role="tab"
-            aria-selected={activeTab === 2 ? "true" : "false"}
-            aria-controls="horizontal-alignment-1"
-            id="horizontal-alignment-item-1"
-          >
-            FrontEnd  Languages
-          </button>
-          <button
-            type="button"
-            className={`px-3 py-2 sm:px-5 sm:py-3 mx-2 my-1 sm:my-0 rounded ${
-              activeTab === 3
-                ? "bg-sky-500 text-white"
-                : "border border-gray-800 text-gray-700"
-            }`}
-            onClick={() => handleTabClick(3)}
-            role="tab"
-            aria-selected={activeTab === 3 ? "true" : "false"}
-            aria-controls="horizontal-alignment-1"
-            id="horizontal-alignment-item-1"
-          >
-            BackEnd  Languages
-          </button>
-          <button
-            type="button"
-            className={`px-3 py-2 sm:px-5 sm:py-3 mx-2 my-1 sm:my-0 rounded ${
-              activeTab === 4
-                ? "bg-sky-500 text-white"
-                : "border border-gray-800 text-gray-700"
-            }`}
-            onClick={() => handleTabClick(4)}
-            role="tab"
-            aria-selected={activeTab === 4 ? "true" : "false"}
-            aria-controls="horizontal-alignment-1"
-            id="horizontal-alignment-item-1"
-          >
-            CMS  Languages
-          </button>
-        </nav>
-      </div>
+          Android Languages
+        </button>
+        <button
+          type="button"
+          className={`px-3 py-2 rounded w-full sm:w-auto ${
+            activeTab === 2 ? "bg-sky-500 text-white" : "border border-gray-800 text-gray-700"
+          }`}
+          onClick={() => handleTabClick(2)}
+        >
+          FrontEnd Languages
+        </button>
+        <button
+          type="button"
+          className={`px-3 py-2 rounded w-full sm:w-auto ${
+            activeTab === 3 ? "bg-sky-500 text-white" : "border border-gray-800 text-gray-700"
+          }`}
+          onClick={() => handleTabClick(3)}
+        >
+          BackEnd Languages
+        </button>
+        <button
+          type="button"
+          className={`px-3 py-2 rounded w-full sm:w-auto ${
+            activeTab === 4 ? "bg-sky-500 text-white" : "border border-gray-800 text-gray-700"
+          }`}
+          onClick={() => handleTabClick(4)}
+        >
+          CMS Languages
+        </button>
+      </nav>
 
       <div className="mt-3">
-        <div
-          id="horizontal-alignment-1"
-          role="tabpanel"
-          aria-labelledby="horizontal-alignment-item-1"
-          style={{ display: activeTab === 1 ? "block" : "none" }}
-        >
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\android.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\ios.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\flutter.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\react-native.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\kotlin.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\ionic.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\swift.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\xamarin.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\ipad.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\windos.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\phonegap.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\augment-reality.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\virtual-reality.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\beacon.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\wearabless.webp"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\aperavle-titnum.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-        </div>
-        <div
-          id="horizontal-alignment-1"
-          role="tabpanel"
-          aria-labelledby="horizontal-alignment-item-1"
-          style={{ display: activeTab === 2 ? "block" : "none" }}
-        >
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\senchattouch.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\typescript.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\javascript.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\reactjs.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\golang.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\angularjs.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-        </div>
-        <div
-          id="horizontal-alignment-1"
-          role="tabpanel"
-          aria-labelledby="horizontal-alignment-item-1"
-          style={{ display: activeTab === 3 ? "block" : "none" }}
-        >
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\php.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\yii.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\cakephp.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\java.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\dotnet.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\csharp.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\rails.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\codeignter.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\python.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\laravel.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\scala.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\symfony.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\zend.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\nodejs.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\django.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\graphql.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\parse.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-        </div>
-        <div
-          id="horizontal-alignment-1"
-          role="tabpanel"
-          aria-labelledby="horizontal-alignment-item-1"
-          style={{ display: activeTab === 4 ? "block" : "none" }}
-        >
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center "
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\wordpress.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\mangeto.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\prestashop.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\joomla.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\bigcommerce.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-          <div
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap gap-10 max-w-full place-items-center p-10 justify-center"
-          >
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\drupal.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\virtumart.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\cscart.jfif"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-            <img
-              className="hover:opacity-75 h-20"
-              src="\images\service-img\sitecore.png"
-              alt="Rytesensetech Software Development"
-              title="App development company in Bangalore"
-            />
-          </div>
-        </div>
+        {activeTab === 1 && renderImages(techStacks.androidLanguages)}
+        {activeTab === 2 && renderImages(techStacks.frontEndLanguages)}
+        {activeTab === 3 && renderImages(techStacks.backEndLanguages)}
+        {activeTab === 4 && renderImages(techStacks.cmsLanguages)}
       </div>
     </div>
   );
