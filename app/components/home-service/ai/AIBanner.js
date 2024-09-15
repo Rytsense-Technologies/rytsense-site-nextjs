@@ -1,8 +1,10 @@
 import React from "react";
-
-import CustomButton from "../../../components/common/CustomButton";
+import dynamic from 'next/dynamic';
+// import CustomButton from "../../../components/common/CustomButton";
 import Image from "next/image";
 import bannerImage from "../../../../public/images/ai-banner.png"
+
+const CustomButton = dynamic(() => import('../../../components/common/CustomButton'), { ssr: false });
 
 const AIBanner = () => {
   return (

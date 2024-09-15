@@ -4,8 +4,11 @@ import HeadingStyle from "../../../components/resource/HeadingStyle";
 import RelatedNews from "../../../components/resource/RelatedNews";
 import LatestBlogs from "../../../components/home/Latestblog";
 import OurProdcast from "../../../components/resource/OurProdcast";
-import ContactForm from "../../../components/common/ContactForm";
+// import ContactForm from "../../../components/common/ContactForm";
 import SocialMedia from "../../../components/resource/SocialMedia";
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('../../../components/common/ContactForm'), { ssr: false });
 
 
 const page = ({ params }) => {

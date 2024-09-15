@@ -1,11 +1,19 @@
-"use client"; 
+"use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const CustomButton = ({title}) => {
+const CustomButton = ({ title }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); 
+  }, []);
+
   const handleButtonClick = () => {
-    window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
+    if (isClient) {
+      window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
+    }
   };
 
   return (

@@ -53,7 +53,7 @@ const EducationWhyHire = () => {
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
-          Here's Why You Should Hire Rytsense Technologies as Your Education App Development Company
+          Heres Why You Should Hire Rytsense Technologies as Your Education App Development Company
         </h2>
         <p className="mt-2 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-12">
           Our solutions make education mobile app development synonymous with comfort and ease. Our education app development incorporates a broader span of varied edtech features and functionalities to turn your learning business global.

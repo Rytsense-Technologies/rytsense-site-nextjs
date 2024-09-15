@@ -142,7 +142,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/who-we-are"
+                  href="/company/who-we-are"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Who We Are
@@ -150,7 +150,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/career"
+                  href="/company/career"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Career
@@ -158,7 +158,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/event"
+                  href="/company/event"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Events
@@ -166,7 +166,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/company/service"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Services
@@ -182,7 +182,7 @@ const Footer = () => {
                 </li> */}
               <li>
                 <Link
-                  href="/casestudy"
+                  href="/case-studies"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Case Study
@@ -190,7 +190,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/company/service"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Services
@@ -214,7 +214,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Contact US
@@ -244,7 +244,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/android-app-development"
+                  href="/service/MOBILE-APP/android-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Android Apps
@@ -252,7 +252,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/iphone-application-development"
+                  href="/service/MOBILE-APP/iphone-application-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   iPhone Apps
@@ -260,7 +260,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hybrid-app-development"
+                  href="/service/MOBILE-APP/hybrid-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Hybrid Apps
@@ -268,7 +268,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/flutter-app-development"
+                  href="/service/MOBILE-APP/flutter-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Flutter
@@ -277,7 +277,7 @@ const Footer = () => {
               
               <li>
                 <Link
-                  href="/react-native-app-development"
+                  href="/service/MOBILE-APP/react-native-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   React Native
@@ -285,7 +285,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/kotlin-app-development"
+                  href="/service/MOBILE-APP/kotlin-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Kotlin
@@ -293,7 +293,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/ionic-app-development"
+                  href="/service/MOBILE-APP/ionic-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ionic
@@ -301,7 +301,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/swift-development"
+                  href="/service/MOBILE-APP/swift-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Swift
@@ -309,7 +309,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/xamarin-app-development"
+                  href="/service/MOBILE-APP/xamarin-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Xamrin
@@ -339,7 +339,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/magento-development"
+                  href="/service/ECOMMERCE/magento-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Magento
@@ -347,7 +347,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/shopify-developmen"
+                  href="/service/ECOMMERCE/shopify-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Shopify
@@ -355,7 +355,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/ubercart-development"
+                  href="/service/ECOMMERCE/ubercart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ubercart
@@ -363,7 +363,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/prestashop"
+                  href="/service/ECOMMERCE/prestashop-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Prestashop
@@ -371,7 +371,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/cs-cart-development"
+                  href="/service/ECOMMERCE/cs-cart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CS Cart
@@ -379,7 +379,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/virtuemart-development"
+                  href="/service/ECOMMERCE/virtuemart-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   VirtueMart
@@ -387,7 +387,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/bigcommerce"
+                  href="/service/ECOMMERCE/bigcommerce-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   BigCommerce
@@ -395,7 +395,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/woocommerce-development"
+                  href="/service/ECOMMERCE/woocommerce-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   WooCommerce
@@ -424,7 +424,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/php-web-application-development"
+                  href="/service/WEB-CMS/php-web-application-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   PHP
@@ -432,7 +432,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/python-web-development"
+                  href="/service/WEB-CMS/python-web-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Python
@@ -440,7 +440,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/wordpress-development"
+                  href="/service/WEB-CMS/wordpress-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Wordpress
@@ -448,7 +448,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/drupal-development"
+                  href="/service/WEB-CMS/drupal-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Drupal
@@ -456,7 +456,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/laravel-development"
+                  href="/service/WEB-CMS/laravel-development"
                   className="  dark:text-neutral-200  hover:text-rose-50"
                 >
                   Laravel
@@ -464,7 +464,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/codeigniter-development"
+                  href="/service/WEB-CMS/codeigniter-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CodeIgniter
@@ -472,7 +472,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/cakephp-development"
+                  href="/service/WEB-CMS/cakephp-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   CakesPHP
@@ -480,7 +480,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/typescript"
+                  href="/service/WEB-CMS/typescript-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   TypeScript
@@ -510,7 +510,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/text-to-speech"
+                  href="/service/AI-ML/text-to-speech"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Text to Speech
@@ -518,7 +518,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/business-intelligence"
+                  href="/service/AI-ML/business-intelligence"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Business Intelligence
@@ -526,7 +526,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/data-forecasting"
+                  href="/service/AI-ML/data-forecasting"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Data Forecasting
@@ -534,7 +534,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/atural-language-processing"
+                  href="/service/AI-ML/natural-language-processing"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Natural LAnguage Processing
@@ -542,7 +542,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/data-analytics"
+                  href="/service/AI-ML/data-analytics"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Data Analytics
@@ -550,7 +550,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/object-recognitio"
+                  href="/service/AI-ML/object-recognition"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Object Recognition
@@ -558,7 +558,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/sentimental-analysis"
+                  href="/service/AI-ML/sentimental-analysis"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Semitimental Analysis
@@ -566,7 +566,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/alexa-skills-development"
+                  href="/service/AI-ML/alexa-skills-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Alexa SKill Development
@@ -596,7 +596,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/iot-app-development"
+                  href="/service/IOT/iot-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT App
@@ -604,7 +604,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/embedded-software"
+                  href="/service/IOT/embedded-software"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Embedded Software
@@ -612,7 +612,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/iot-hardware-prototyping"
+                  href="/service/IOT/iot-hardware-prototyping"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT Hardware Prototyping
@@ -620,7 +620,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/iot-dashboard-and-analytics"
+                  href="/service/IOT/iot-dashboard-and-analytics"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   IOT Dashboard and Analytics
@@ -628,7 +628,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/smart-home-home-automation"
+                  href="/service/IOT/smart-home-home-automation"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Smart Home -Home Automation
@@ -658,7 +658,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/cryptocurrency-wallet-development"
+                  href="/service/BLOCKCHAIN/cryptocurrency-wallet-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Wallet
@@ -666,7 +666,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/cryptocurrency-exchange-development"
+                  href="/service/BLOCKCHAIN/cryptocurrency-exchange-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Exchange
@@ -674,7 +674,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/ethereum-app-development"
+                  href="/service/BLOCKCHAIN/ethereum-app-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Ethereum{" "}
@@ -682,7 +682,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hyperledger-blockchain-development"
+                  href="/service/BLOCKCHAIN/hyperledger-blockchain-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   HyperLedger
@@ -690,7 +690,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/smart-contracts-development"
+                  href="/service/BLOCKCHAIN/smart-contracts-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Smart Contracts
@@ -698,7 +698,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/private-blockchain-development"
+                  href="/service/BLOCKCHAIN/private-blockchain-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Private Blockchains
@@ -706,7 +706,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/nft-marketplace-development-company"
+                  href="/service/BLOCKCHAIN/nft-marketplace-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   NFT Marketplace
@@ -735,7 +735,7 @@ const Footer = () => {
             <ul className="mb-0 list-none">
               <li>
                 <Link
-                  href="/unity3d-game-development"
+                  href="/service/GAME/unity3d-game-development"
                   className=" dark:text-neutral-200  hover:text-rose-500"
                 >
                   Unity 3D
@@ -743,7 +743,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/unreal-engine-game-development"
+                  href="/service/GAME/unreal-engine-game-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Unreal Engine
@@ -751,7 +751,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/augmented-reality-app-development-company"
+                  href="/service/GAME/augmented-reality-app-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Augmented Reality
@@ -759,7 +759,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/virtual-reality-mobile-game-application-development-company"
+                  href="/service/GAME/virtual-reality-mobile-game-application-development-company"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Virtual Reality
@@ -767,7 +767,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/casual-game-development"
+                  href="/service/GAME/casual-game-development"
                   className="  dark:text-neutral-200  hover:text-rose-500"
                 >
                   Casual Games

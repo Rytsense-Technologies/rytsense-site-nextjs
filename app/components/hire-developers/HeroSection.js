@@ -10,7 +10,7 @@ const HeroSection = () => {
             Hire Dedicated Developers from India’s Top 1% Talent Pool
           </h1>
           <p className="mb-8 text-base sm:text-lg leading-relaxed">
-            Elevate your business with Rytsense Technologies' years of expertise, 
+            Elevate your business with Rytsense Technologies years of expertise, 
             delivering customized software solutions that ensure your success in 
             a fast-paced market.
           </p>
@@ -24,9 +24,9 @@ const HeroSection = () => {
           <Image
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://miro.medium.com/v2/resize:fit:800/0*XH3rLskyOsCqVV-j.jpg"
-            width={300}
-            height={300}
+            src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1726193210/hire_tcafiw.jpg"
+            width={500}
+            height={500}
           />
         </div>
       </div>

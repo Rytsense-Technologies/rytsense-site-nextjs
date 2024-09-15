@@ -1,7 +1,7 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
-import bannerImage from "../../../../public/images/service-img/hyper-banner.png";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
+import bannerImage from "../../../../../public/images/service-img/hyper-banner.png";
 import Link from "next/link";
 import varients from "../../../../mock/varients";
 

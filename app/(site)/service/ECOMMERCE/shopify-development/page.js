@@ -1,7 +1,7 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
-import bannerImage from "../../../../public/images/service-img/shopify-banner.png";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
+import bannerImage from "../../../../../public/images/service-img/shopify-banner.png";
 import Link from "next/link";
 import varients from "../../../../mock/varients";
 
@@ -55,7 +55,7 @@ const page = () => {
         </div>
 
         <div
-          variants={fadeIn("up", 0.2)}
+       
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.5 }}

@@ -24,11 +24,11 @@ const SoftwareClients = () => {
                   Client from USA
                 </h3>
                 <p class="my-4">
-                  "Rytsense Technologies provided us with a custom software
+                  Rytsense Technologies provided us with a custom software
                   solution that exceeded our expectations. Their team was
                   professional, knowledgeable, and always available to answer
                   our questions. The software they developed has significantly
-                  improved our business processes and customer satisfaction"
+                  improved our business processes and customer satisfaction
                 </p>
               </blockquote>
             </figure>
@@ -38,11 +38,11 @@ const SoftwareClients = () => {
                   Client from India
                 </h3>
                 <p class="my-4">
-                  "We were looking for a custom software development company in
+                  We were looking for a custom software development company in
                   Chennai that could help us with a complex project. Rytsense
                   Technologies delivered on all fronts. Their team understood
                   our needs and delivered a product that was both innovative and
-                  easy to use. We highly recommend their services."
+                  easy to use. We highly recommend their services.
                 </p>
               </blockquote>
             </figure>

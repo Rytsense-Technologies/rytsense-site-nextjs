@@ -52,7 +52,7 @@ const page = () => {
           Want to know How Much Exactly Your Mobile App Will Cost ?
         </h2>
         <p className="mb-6 text-white md:text-lg">
-          "The Experts Are Just A CLick Away . Get A Quote"
+          The Experts Are Just A CLick Away . Get A Quote
         </p>
 
         <Link

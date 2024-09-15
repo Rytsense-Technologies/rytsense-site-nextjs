@@ -1,8 +1,8 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
 import Link from "next/link";
-import bannerImage from "../../../../public/images/service-img/Text-banner.png";
+import bannerImage from "../../../../../public/images/service-img/Text-banner.png";
 
 const page = () => {
   return (

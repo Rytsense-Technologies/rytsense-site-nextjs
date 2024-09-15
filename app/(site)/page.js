@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 import MainPageBanner from "../components/home/MainPageBanner";
@@ -18,7 +17,7 @@ import ServiceSuspence from "../components/home/ServiceSuspence";
 import MainProdcast from "../components/home/MainProdcast";
 import LatestBlogs from "../components/home/Latestblog";
 import LetsConnect from "../components/common/LetsConnect";
-// import CaseStudyCardAnimation from "../components/home/CaseStudyCardAnimation";
+import CaseStudyCardAnimation from "../components/home/CaseStudyCardAnimation";
 import EaseInOutCardsAnimation from "../components/case-study/EaseInOutCardsAnimation";
 import MobileViewCaseStudy from "../components/case-study/MobileViewCaseStudy";
 
@@ -33,8 +32,6 @@ export const metadata = {
 };
 
 export default function Home() {
-  
-
   return (
     <>
       <main>
@@ -51,17 +48,17 @@ export default function Home() {
           }
         />
         <EaseInOutCardsAnimation />
-         {/* {isMobileView ? <MobileViewCaseStudy /> : <EaseInOutCardsAnimation />} */}
+        {/* {isMobileView ? <MobileViewCaseStudy /> : <EaseInOutCardsAnimation />} */}
         <Partnercompany />
         <EstimateProject />
         <PartnerShipModel />
         <ServiceSuspence />
         <MainProdcast />
         <LatestBlogs />
-        {/* <CaseStudyCardAnimation /> */}
 
-        <Testimonials/>
-        <LetsConnect/>
+        <Testimonials />
+        <CaseStudyCardAnimation />
+        <LetsConnect />
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 export const allCaseStudies = [
     //  new
     {
+      id:1,
       heading:
         "Automating Underwriting in Insurance Using Python-Based Optical Character Recognition",
       appname:
@@ -35,12 +36,13 @@ export const allCaseStudies = [
       tags: ["AI", "Travel", "Service"],
     },
     {
+      id:2,
       heading:
         "Building a Machine Learning Model to Predict the Sales of Paints Manufacturer",
       appname:
         "Building a Machine Learning Model to Predict the Sales of Paints Manufacturer",
       image: 'url("/images/casestudy/Paint industry_1.jpg")',
-      topimage: "/images/casestudy/Paint industry_1.jpg",
+      topimage: "/images/casestudy/industry_1.jpg",
       languages: ["iOS"],
       sub: "Travel",
       num: 9,
@@ -67,10 +69,11 @@ export const allCaseStudies = [
       tags: ["AI", "Service"],
     },
     {
+      id:3,
       heading: "How an AI Chatbot Reduced Customer Support Tickets by 80%",
       appname: "How an AI Chatbot Reduced Customer Support Tickets by 80%",
-      image: 'url("/images/casestudy/AI Bot.jpg")',
-      topimage: "/images/casestudy/developer.jpg",
+      image: 'url("/images/casestudy/aibot.png")',
+      topimage: "/images/casestudy/aibot.png",
       languages: ["iOS"],
       sub: "AI",
       num: 9,
@@ -96,6 +99,7 @@ export const allCaseStudies = [
       tags: ["AI", "Service"],
     },
     {
+      id:4,
       heading:
         "The Future of Reservations? See How BookMyTable Increased Bookings by 45%",
       appname: "Restaurant Chatbots",
@@ -126,6 +130,7 @@ export const allCaseStudies = [
       tags: ["AI", "Service"],
     },
     {
+      id:5,
       heading:
         "Oral Wellness Clinic Accelerates Appointment Booking by 80% Using Chatbot",
       appname:
@@ -157,11 +162,12 @@ export const allCaseStudies = [
     },
     // old
     {
+      id:6,
       heading: "Option Trading",
       appname:
         "Option Trading Platform - Revolutionizing Trading with Cutting-Edge Innovation",
       image: 'url("/images/casestudy/dooption-trading.png")',
-      topimage: "/images/dooption-trading.png",
+      topimage: "/images/casestudy/dooption-trading.png",
       languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
       sub: "Trading Platform",
       num: 4,
@@ -189,11 +195,12 @@ export const allCaseStudies = [
     },
   
     {
+      id:7,
       heading: "SupportXDR",
       appname:
         "SupportXDR - Enhancing Browsing Efficiency with SupportXDR AI Browser extension",
       image: 'url("/images/casestudy/suprtxdr.png")',
-      topimage: "/images/casestudy/sprt2.png",
+      topimage: "/images/casestudy/suprtxdr.png",
       languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
       sub: "AI Browser Extension",
       num: 4,
@@ -226,10 +233,11 @@ export const allCaseStudies = [
       ],
     },
     {
+      id:8,
       heading: "TopGrad",
       appname: "TopGrad - Employment Web App",
       image: 'url("/images/casestudy/topgrad.png")',
-      topimage: "/images/topGrad-Logo.svg",
+      topimage: "/images/casestudy/topgrad.png",
       languages: ["Angular", "Node Js", "Express", "Bootstrap", "Mongo DB"],
       sub: "Job",
       num: 2,
@@ -259,10 +267,11 @@ export const allCaseStudies = [
     },
   
     {
+      id:9,
       heading: "Duelo Betting ",
       appname: "Duelo Betting Platform - An Online Sports Betting Platform",
       image: 'url("/images/casestudy/duelo-mid.webp")',
-      topimage: "/images/casestudy/duelo-deck-1-320.webp",
+      topimage: "/images/casestudy/duelo-mid.webp",
       languages: ["Swift", "ROR", "Angular", "PostgraSql", "AWS"],
       sub: "Sports",
       num: 5,
@@ -291,10 +300,11 @@ export const allCaseStudies = [
     },
   
     {
+      id:11,
       heading: "GATEWAY STREAM",
       appname: "GATEWAY STREAM - one-stop app for locals and visitors",
       image: 'url("/images/casestudy/1689749521152.jfif")',
-      topimage: "/images/casestudy/logodsfsd.png",
+      topimage: "/images/casestudy/gateway.jpg",
       languages: ["Android", "iOs", "Angular"],
       sub: "One Stop App",
       num: 3,
@@ -324,11 +334,12 @@ export const allCaseStudies = [
     },
   
     {
+      id:12,
       heading: "Edplace",
       appname:
         "Edplace - Mobile App for Parents to Monitor Their Children’s Performance",
       image: 'url("/images/casestudy/edplace.png")',
-      topimage: "/images/download (1).png",
+      topimage: "/images/casestudy/edplace.png",
       languages: ["C#", "Laravel", "MySQL", "jQuery", "AWS", "Lumen"],
       sub: "Education",
       num: 6,
@@ -357,10 +368,11 @@ export const allCaseStudies = [
       tags: ["Education", "Parental Monitoring", "Learning", "Revision"],
     },
     {
+      id:13,
       heading: "OkLegal Connect",
       appname: "OkLegal Connect - a non-profit law firm",
       image: 'url("/images/casestudy/oklegal.png")',
-      topimage: "/images/OKLegalConnect.jpg",
+      topimage: "/images/casestudy/oklegal.png",
       languages: ["Angular", "Apache", "PHP", "Javascript", "Python", "MySQL"],
       sub: "Services",
       num: 7,
@@ -389,10 +401,11 @@ export const allCaseStudies = [
     },
   
     {
+      id:14,
       heading: "Net Lease Trading platform",
       appname: "Net Lease Trading platform - modern Investment Brokerage firm",
       image: 'url("/images/casestudy/BE.png")',
-      topimage: "/images/casestudy/download.jfif",
+      topimage: "/images/casestudy/BE.png",
       languages: ["Angular", "Wordpress", ".Net frameworks", "MsSQL"],
       sub: "Trading",
       num: 8,
@@ -421,10 +434,11 @@ export const allCaseStudies = [
     },
   
     {
+      id:15,
       heading: "VIP Cars",
       appname: "VIP Cars - International rental car broker",
       image: 'url("/images/casestudy/vipcars.png")',
-      topimage: "/images/twitter_vipcars.png",
+      topimage: "/images/casestudy/vipcars.png",
       languages: ["iOS"],
       sub: "Travel",
       num: 9,
@@ -454,6 +468,7 @@ export const allCaseStudies = [
     },
   
     {
+      id:16,
       heading: "AI Chat Bot",
       appname:
         "AI Chat Bot - Building an Intelligent Chatbot for IT Service Requirements",

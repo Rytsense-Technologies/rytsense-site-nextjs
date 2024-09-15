@@ -22,7 +22,7 @@ const Partnercompany = () => {
               }}
             >
               <Image
-                src="/images/homepageimages/Google-Cloud-Logo.png"
+                src="/images/homepageimages/aws1.png"
                 alt="logo"
                 width={200}
                 height={200}

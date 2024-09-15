@@ -258,21 +258,21 @@ const ContactForm = () => {
   };
   const [showExitModal, setShowExitModal] = useState(false);
 
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      setShowExitModal(true);
-      // Customize the message if needed
-      const message = "Are you sure you want to leave this page?";
-      event.returnValue = message;
-      return message;
-    };
+  // useEffect(() => {
+  //   const handleBeforeUnload = (event) => {
+  //     setShowExitModal(true);
+  //     // Customize the message if needed
+  //     const message = "Are you sure you want to leave this page?";
+  //     event.returnValue = message;
+  //     return message;
+  //   };
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
 
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleBeforeUnload);
+  //   };
+  // }, []);
 
   return (
     <div>

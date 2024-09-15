@@ -4,11 +4,17 @@ import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import "./globals.css";
-import ClutchNavNew from "../components/_app/ClutchNavNew";
-import FooterClutch from "../components/_app/FooterClutch";
-import Footer from "../components/_app/Footer";
-import Modal from "../components/common/Modal";
+import dynamic from 'next/dynamic';
+// import ClutchNavNew from "../components/_app/ClutchNavNew";
+// import FooterClutch from "../components/_app/FooterClutch";
+// import Footer from "../components/_app/Footer";
+// import Modal from "../components/common/Modal";
 import ProgressBar from "../providers/ProgressBar";
+
+const ClutchNavNew  = dynamic(() => import('../components/_app/ClutchNavNew'), { ssr: false });
+const FooterClutch = dynamic(() => import('../components/_app/FooterClutch'), { ssr: false });
+const Footer = dynamic(() => import('../components/_app/Footer'), { ssr: false });
+const Modal = dynamic(() => import('../components/common/Modal'), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +28,7 @@ export default function RootLayout({ children }) {
     "/ai-development-services-usa",
     "/software-development-services-usa",
     "/hire-developers-in-india",
+    
   ];
 
   useEffect(() => {
@@ -30,7 +37,7 @@ export default function RootLayout({ children }) {
     } else {
       setIsClutchRoute(false);
     }
-  }, [pathname]);
+  }, [pathname, clutchRoutes]);
 
   const isHomePage = pathname === "/";
 
@@ -62,8 +69,8 @@ export default function RootLayout({ children }) {
         />
         <ProgressBar />
         <main>{children}</main>
-        <FooterClutch />
-        {/* {isClutchRoute ? <FooterClutch /> : <Footer />} */}
+        {/* <FooterClutch /> */}
+        {isClutchRoute ? <FooterClutch /> : <Footer />}
       </body>
     </html>
   );

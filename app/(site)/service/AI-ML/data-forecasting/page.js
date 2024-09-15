@@ -1,7 +1,7 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
-import bannerImage from "../../../../public/images/service-img/forcasting-banner.png";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
+import bannerImage from "../../../../../public/images/service-img/forcasting-banner.png";
 import Link from "next/link";
 
 const page = () => {

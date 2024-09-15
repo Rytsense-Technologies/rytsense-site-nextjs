@@ -1,7 +1,11 @@
 import React from "react";
-
+import dynamic from 'next/dynamic';
 import estimateImage from "../../../public/images/homepageimages/estimate.png";
-import CustomButton from "../common/CustomButton";
+// import CustomButton from "../common/CustomButton";
+
+const CustomButton = dynamic(() => import('../common/CustomButton'), { ssr: false });
+
+
 import Image from "next/image";
 
 const EstimateProject = () => {

@@ -77,19 +77,13 @@ const ClientReviews = () => {
                       <blockquote class="flex-1 mt-8">
                         <p class="text-lg leading-relaxed text-gray-900 font-pj">
                           “Rytsense Technologies built a high-performance app
-                          that's endowed with a wide range of capabilities.”
+                          thats endowed with a wide range of capabilities.”
                         </p>
                       </blockquote>
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <Image
-                        class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                        src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
-                        alt=""
-                        width={40}
-                        height={40}
-                      />
+                  
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">
                           Arlenys Guillen
@@ -158,13 +152,7 @@ const ClientReviews = () => {
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <Image
-                        class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                        src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
-                        alt=""
-                        width={40}
-                        height={40}
-                      />
+                    
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">
                           Mohmed Badr
@@ -233,13 +221,7 @@ const ClientReviews = () => {
                     </div>
 
                     <div class="flex items-center mt-8">
-                      <Image
-                        class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                        src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
-                        alt=""
-                        width={40}
-                        height={40}
-                      />
+                    
                       <div class="ml-4">
                         <p class="text-base font-bold text-gray-900 font-pj">
                           Ivon MCColl

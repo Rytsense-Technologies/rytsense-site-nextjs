@@ -1,9 +1,9 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
-import bannerImage from "../../../../public/images/service-img/ubercart-banner.png";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
+import bannerImage from "../../../../../public/images/service-img/ubercart-banner.png";
 import Link from "next/link";
-import varients from "../../../../mock/varients"
+import varients from "../../../../mock/varients";
 
 const page = () => {
   return (
@@ -15,20 +15,14 @@ const page = () => {
         }
         heroImage={bannerImage}
       />
-  <div className=" min-h-screen">
+      <div className=" min-h-screen">
         <div className="container mx-auto py-8 px-4">
           <section className="mb-8">
-            <div
-              
-              className="my-4 font-bold text-3xl text-gray-800 sm:text-4xl mb-4"
-            >
+            <div className="my-4 font-bold text-3xl text-gray-800 sm:text-4xl mb-4">
               Reasons To Adopt The Ubercart E-commerce Solution For Your
               Business
             </div>
-            <p
-             
-              className="text-gray-700"
-            >
+            <p className="text-gray-700">
               If you have an e-commerce site, you may be looking for a great
               e-commerce software solution that can help make sales generation
               and data management easier. Would you consider Ubercart? Ubercart
@@ -40,9 +34,7 @@ const page = () => {
               business.
             </p>{" "}
           </section>
-          <section
-            
-          >
+          <section>
             <p className="text-gray-700">
               Why is Ubercart the right e-commerce solution for your online
               business? First, it allows you to assign products to the right
@@ -63,9 +55,7 @@ const page = () => {
               generate. Your business survival depends on it.
             </p>{" "}
           </section>
-          <section
-            
-          >
+          <section>
             <p className="text-gray-700 mt-5">
               Ubercart is also great to use because often you might have
               different ideas on how your e-commerce transactions should go.
@@ -80,7 +70,8 @@ const page = () => {
               feature. You can rely on this feature to easily move your
               customers, orders, products, and attributes to your new website or
               vice versa. If you need some assistance with the other Ubercart
-              features you can always rely on Rytsense Technologies to guide you.{" "}
+              features you can always rely on Rytsense Technologies to guide
+              you.{" "}
             </p>
           </section>
         </div>

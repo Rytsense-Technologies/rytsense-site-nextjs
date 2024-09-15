@@ -4,9 +4,11 @@ import "../../css/easein.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const cardData = [
   {
+    id:6,
     heading: "Option Trading ",
     appname:
       "Option Trading Platform - Revolutionizing Trading with Cutting-Edge Innovation",
@@ -45,12 +47,13 @@ const cardData = [
     ],
   },
   {
+    id:3,
     heading: "AI Chat Bot",
     appname:
       "AI Chat Bot - Building an Intelligent Chatbot for IT Service Requirements",
     image: 'url("/images/casestudy/aibot.png")',
     topimage:
-      "/images/casestudy/dooption-trading.png",
+      "/images/casestudy/ai.png",
     logo: "",
     languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
     sub: "AI Chat Bot",
@@ -83,12 +86,13 @@ const cardData = [
     ],
   },
   {
+    id:7,
     heading: "SupportXDR",
     appname:
       "SupportXDR - Enhancing Browsing Efficiency with SupportXDR AI Browser extension",
     image: 'url("/images/casestudy/suprtxdr.png")',
     topimage:
-      "/images/casestudy/dooption-trading.png",
+      "/images/casestudy/suprtxdr.png",
     logo: "",
     languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
     sub: "AI Browser Extension",
@@ -133,11 +137,12 @@ const cardData = [
   },
 
   {
+    id:8,
     heading: "TopGrad",
     appname: "TopGrad - Employment Web App",
     image: 'url("/images/casestudy/topgrad.png")',
     topimage:
-      "/images/casestudy/dooption-trading.png",
+      "/images/casestudy/topgrad.png",
     logo: "/images/topGrad-Logo.svg",
     languages: ["Angular", "Node Js", "Express", "Bootstrap", "Mango DB"],
     sub: "Job",
@@ -165,11 +170,12 @@ const cardData = [
     ],
   },
   {
+    id:11,
     heading: "GATEWAY STREAM",
     appname: "GATEWAY STREAM - one-stop app for locals and visitors",
     image: 'url("/images/1689749521152.jfif")',
     topimage:
-      "/images/casestudy/dooption-trading.png",
+      "/images/casestudy/gateway.jpg",
     logo: "/images/logodsfsd.png",
     languages: ["Android", "iOs", "Angular"],
     sub: "One Stop App",
@@ -199,10 +205,11 @@ const cardData = [
     ],
   },
   {
+    id:10,
     heading: "Duelo Betting ",
     appname: "Duelo Betting Platform - An Online Sports Betting Platform",
     image: 'url("/images/duelo-mid.webp")',
-    topimage: "/images/duelo-deck-1-320.webp",
+    topimage: "/images/casestudy/edplace.png",
     logo: "",
     languages: ["Swift", "ROR", "Angular", "PostgraSql", "AWS"],
     sub: "Sports",
@@ -451,12 +458,12 @@ const EaseInOutCardsAnimation = () => {
                           {card.passage}
                         </span>
 
-                        <span
+                        <Link
                           className="custom-read-more cursor-pointer"
-                      
+                          href={`/single-case-study/${card.id}`}
                         >
                           Read more →
-                        </span>
+                        </Link>
                       </div>
                     </div>
                   </>

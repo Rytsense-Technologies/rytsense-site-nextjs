@@ -13,7 +13,7 @@ import { menuItems } from "../../mock/menuItems";
 
 const ClutchNavNew = ({ isHomePage, isTransparent }) => {
   const handleButtonClick = () => {
-    window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
+    // window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
   };
   // const [comapnyOpen, companyClose] = useState(false);
   const [comapnyOpen, companyClose] = useState(false);
@@ -209,6 +209,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
       setTextColor("#213E59");
     }
   }, []);
+  
   return (
     <div
       className={`navbarmain sticky  shadow-lg top-0 z-10 mb-10 ${navbarBg}`}
@@ -257,7 +258,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
             </li>
 
             <Link
-              href="/hire-developer"
+              href="/hire-developers-in-india"
               className={`hover:cursor-pointer hover:text-indigo-500 text-${textColor} ${
                 activeTab === "/hire-developers-in-india"
                   ? "bg-blue-500 text-white"
@@ -613,7 +614,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                         }}
                       >
                         <img
-                          src="/images/partner/ford-nav-1.jpg"
+                          src="/images/casestudy/dooption-trading.png"
                           alt="Ford"
                           className="absolute inset-0 w-full h-full object-cover"
                         />

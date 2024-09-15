@@ -1,11 +1,11 @@
 import React from "react";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import CustomButton from "../common/CustomButton";
+import dynamic from 'next/dynamic';
+// import CustomButton from "../common/CustomButton";
+
+const CustomButton = dynamic(() => import('../common/CustomButton'), { ssr: false });
 
 const MainPageBanner = () => {
-  const handleButtonClick = () => {
-    window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
-  };
+ 
 
   return (
     <div className="relative w-full h-screen overflow-hidden mb-10">

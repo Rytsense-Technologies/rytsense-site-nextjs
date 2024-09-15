@@ -55,7 +55,7 @@ const ClucthBannerContactUs = ({
     "#1 Top Blockchain",
     "#1 Top Metaverse",
   ];
-  const isSmallScreen = window.innerHeight <= 935;
+  // const isSmallScreen = window.innerHeight <= 935;
   const getAlignmentStyle = (serviceType) => {
     const fixedWidthStyle = { width: "500px", margin: "0 auto" }; // Center and fix width
 
@@ -65,7 +65,7 @@ const ClucthBannerContactUs = ({
           width: "550px",
           height: "12px",
           marginLeft: "40px",
-          fontSize: isSmallScreen ? "30px" : "50px",
+          // fontSize: isSmallScreen ? "30px" : "50px",
         };
       case "Blockchain":
         return {

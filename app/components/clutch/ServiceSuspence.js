@@ -1,6 +1,9 @@
 import React from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import CustomButton from "../../components/common/CustomButton";
+import dynamic from 'next/dynamic';
+// import CustomButton from "../../components/common/CustomButton";
+
+const CustomButton = dynamic(() => import('../../components/common/CustomButton'), { ssr: false });
 
 const ServiceSuspence = () => {
   const bannerColor = {

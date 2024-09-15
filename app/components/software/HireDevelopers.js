@@ -1,7 +1,9 @@
 import React from "react";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import CustomButton from "../custom-common/CustomButton";
+import dynamic from 'next/dynamic';
+// import CustomButton from "../custom-common/CustomButton";
 import Image from "next/image";
+
+const CustomButton = dynamic(() => import('../custom-common/CustomButton'), { ssr: false });
 
 const HireDevelopers = () => {
   return (
@@ -27,7 +29,7 @@ const HireDevelopers = () => {
             </li>
             <li>
               We test our software thoroughly to prevent any problems before
-              it's finished.
+              its finished.
             </li>
             <li>
               We use strong security measures to keep your personal info safe in

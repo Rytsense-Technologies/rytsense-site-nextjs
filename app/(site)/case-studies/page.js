@@ -1,17 +1,14 @@
 "use client";
 import React, { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-
 import "../../css/productclutch.css";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { allCaseStudies } from "../../mock/allCaseStudies";
 import Image from "next/image";
+import Link from "next/link";
 
-
-
-const page = () => {
+const Page = () => {
   const [popupContact, setPopupContact] = useState(false);
   const [activeType, setActiveType] = useState("All");
   const [filteredStudies, setFilteredStudies] = useState(allCaseStudies);
@@ -37,6 +34,11 @@ const page = () => {
       setFilteredStudies(filtered);
     }
   };
+
+  const handleCaseStudyClick = (casestudy) => {
+    // Implement your click handler logic here
+  };
+
   return (
     <>
       <div className="py-28">
@@ -50,7 +52,7 @@ const page = () => {
           <div className="case-types">
             {caseStudyTypes.map((type, index) => (
               <button
-                key={index}
+                key={type} // Changed from index to type for better key uniqueness
                 onClick={() => handleTypeChange(type)}
                 className={`px-4 py-2 inter-semibold rounded-full  border-gray-400 focus:outline-none ${
                   activeType === type
@@ -65,57 +67,34 @@ const page = () => {
           <div className="case-studies">
             <div className="case-studies-grid">
               <TransitionGroup component={null}>
-                {filteredStudies.map((casestudy, index) => (
-                  <CSSTransition key={index} classNames="fade" timeout={1000}>
-                    <div
-                      onClick={() => handleCaseStudyClick(casestudy)}
-                      className="case-study-card bg-sky-100"
-                    >
-                      <div className="case-study-content">
-                        <h3 className="case-study-heading inter-semibold">
-                          {casestudy.heading}
-                        </h3>
-                        <div
-                          className="image-container"
-                          style={{
-                            backgroundImage: casestudy.image,
-                          }}
-                        ></div>
-                        <div className="tags">
-                          {casestudy.tags.map((tag, idx) => (
-                            <div key={idx} className="tag">
-                              <h1 className="tag-text inter-semibold">{tag}</h1>
-                            </div>
-                          ))}
-                        </div>
-                        <h3 className="case-study-sub inter-semibold">
-                          {casestudy.sub}
-                        </h3>
-                        <p className="case-study-description inter-med">
-                          {casestudy.about}
-                        </p>
-                      </div>
-                      <div className="rating-review">
-                        <p className="rating">
-                          <FontAwesomeIcon icon={faStar} />
-                          <FontAwesomeIcon icon={faStar} className="star" />
-                          <FontAwesomeIcon icon={faStar} className="star" />
-                          <FontAwesomeIcon icon={faStar} className="star" />
-                          <FontAwesomeIcon icon={faStar} className="star" />
-                        </p>
-                        <div className="review-source">
-                          <span className="review-text">Reviewed on</span>
-                          <Image
-                            className="clutch-logo"
-                            src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725257360/clutch-text2_eydh33.png"
-                            alt="clutch"
-                            width={40}
-                            height={40}
-                          />
+                {filteredStudies.map((casestudy) => (
+                  <Link
+                    key={casestudy.id}
+                    href={`/single-case-study/${casestudy.id}`}
+                  >
+                    <CSSTransition classNames="fade" timeout={1000}>
+                      <div className="case-study-card bg-sky-100">
+                        <div className="case-study-content">
+                          <h3 className="case-study-heading inter-semibold">
+                            {casestudy.heading}
+                          </h3>
+                          <div
+                            className="image-container"
+                            style={{
+                              backgroundImage: `url(${casestudy.topimage})`,
+                            }}
+                          ></div>
+                          <div className="tags">
+                            {casestudy.tags.map((tag, index) => (
+                              <span key={index} className="tag">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </CSSTransition>
+                    </CSSTransition>
+                  </Link>
                 ))}
               </TransitionGroup>
             </div>
@@ -126,4 +105,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

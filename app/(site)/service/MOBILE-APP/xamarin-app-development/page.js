@@ -1,7 +1,7 @@
 import React from "react";
-import TechnologyStack from "../../../components/services/TechnologyStack";
-import HeroSection from "../../../components/services/HeroSection";
-import bannerImage from "../../../../public/images/service-img/mobiletab.png";
+import TechnologyStack from "../../../../components/services/TechnologyStack";
+import HeroSection from "../../../../components/services/HeroSection";
+import bannerImage from "../../../../../public/images/service-img/mobiletab.png";
 import Link from "next/link";
 import { fadeIn } from "../../../../mock/varients";
 
@@ -15,7 +15,7 @@ const page = () => {
         }
         heroImage={bannerImage}
       />
-  <div className=" min-h-screen">
+      <div className=" min-h-screen">
         <div className="container mx-auto py-8 px-4">
           <section>
             <p className="text-gray-700">

@@ -1,5 +1,8 @@
 import React from "react";
-import CustomButton from "../common/CustomButton";
+import dynamic from 'next/dynamic';
+// import CustomButton from "../common/CustomButton";
+
+const CustomButton = dynamic(() => import('../common/CustomButton'), { ssr: false });
 
 const ServiceSuspence = () => {
   const bannerColor = {

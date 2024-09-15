@@ -5,7 +5,10 @@ import resourceblogseparatecontent from "../../../mock/resourceblogseparateconte
 import Image from "next/image";
 import OurProdcast from "../../../components/resource/OurProdcast"
 import SocialMedia from "../../../components/resource/SocialMedia"
-import ContactForm from "../../../components/common/ContactForm"
+// import ContactForm from "../../../components/common/ContactForm"
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('../../../components/common/ContactForm'), { ssr: false });
 
 
 export async function generateStaticParams() {

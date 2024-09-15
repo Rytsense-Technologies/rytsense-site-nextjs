@@ -1,10 +1,13 @@
 .slider-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: auto; 
     white-space: nowrap;
     padding: 20px;
     cursor: grab;
     position: relative;
     display: flex;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
 }
 
 .slider-container:active {

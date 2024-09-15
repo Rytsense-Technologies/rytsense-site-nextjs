@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "../../css/CaseStudyCard.css";
-import { casestudies } from "@/app/mock/casestudies";
+import { allCaseStudies } from "../../mock/allCaseStudies";
 
 const CaseStudyCardAnimation = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -25,10 +25,10 @@ const CaseStudyCardAnimation = () => {
   ];
 
   useEffect(() => {
-    setCards([...casestudies, ...casestudies]);
-    if (window.innerWidth <= 768) {
-      setExpandedCard(0); // Default expand the first card on mobile
-    }
+    setCards([...allCaseStudies, ...allCaseStudies]);
+    // if (window.innerWidth <= 768) {
+    //   setExpandedCard(0); // Default expand the first card on mobile
+    // }
   }, []);
 
   const handleExpandClick = (index) => {
@@ -97,11 +97,11 @@ const CaseStudyCardAnimation = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              data-index={index % casestudies.length}
+              data-index={index % allCaseStudies.length}
               className={`caseStudyCard ${
-                expandedCard === index % casestudies.length ? "expanded" : ""
+                expandedCard === index % allCaseStudies.length ? "expanded" : ""
               }`}
-              onClick={() => handleExpandClick(index % casestudies.length)}
+              onClick={() => handleExpandClick(index % allCaseStudies.length)}
               style={{ backgroundColor: colors[index % colors.length] }}
             >
               <div className="text-content text-gray-800">
@@ -110,27 +110,7 @@ const CaseStudyCardAnimation = () => {
                 <div className="flex justify-between gap-20 mt-10">
                   <div className="logo">CULDESAC</div>
                   <div className="cta-text">
-                    <Link
-                      href={{
-                        pathname: "/casestudies",
-                        query: {
-                          heading: card.heading,
-                          sub: card.sub,
-                          passage: card.passage,
-                          clientrequirements: card.clientrequirements,
-                          clientsrc: card.clientsrc,
-                          topimage: card.topimage,
-                          imagearray: card.imagearray,
-                          feature1: card.feature1,
-                          feature2heading: card.feature2heading,
-                          feature2: card.feature2,
-                          feature3heading: card.feature3heading,
-                          feature3: card.feature3,
-                          challenges: card.challenges,
-                        },
-                      }}
-                      passHref
-                    >
+                    <Link href={`/single-case-study/${card.id}`} passHref>
                       <p className="text-md font-bold cursor-pointer">
                         Read Case Study
                       </p>
