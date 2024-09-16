@@ -27,7 +27,14 @@ const Carousalclutch = () => {
           <div className="slide-track">
             {[...logos, ...logos].map((company, index) => (
               <div key={index} className="slide px-4">
-                <Image width={100} height={100} src={company} alt={company} loading="lazy" />
+               <Image
+                  width={100}
+                  height={100}
+                  src={company}
+                  alt="Company Logo"
+                  loading="lazy"
+                
+                />
               </div>
             ))}
           </div>

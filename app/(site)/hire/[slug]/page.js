@@ -48,6 +48,12 @@ import WooCommerceDev from "../../../components/hire/hire-page-comp/WooCommerceD
 import YiiDev from "../../../components/hire/hire-page-comp/YiiDev";
 import DataSci from "../../../components/hire/hire-page-comp/DataSci";
 
+export async function generateStaticParams() {
+  return pagesData.map((page) => ({
+    slug: page.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const pageData = pagesData.find((page) => page.slug === params.slug);
 

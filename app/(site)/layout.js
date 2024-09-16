@@ -62,6 +62,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="https://res.cloudinary.com/dlg3i3ari/image/upload/v1724669142/logo_bgania.png" />
+      </head>
       <body className={inter.className}>
         {showExitModal && <Modal />}
         <ClutchNavNew
