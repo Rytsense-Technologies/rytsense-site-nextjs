@@ -15,19 +15,19 @@ const logos = [
 
 const Carousalclutch = () => {
   return (
-    <div className="my-5 px-6 py-10">
+    <div className="my-5 px-6">
       <div
         className="container items-center justify-center mx-auto"
         data-aos="fade-up"
       >
-        <h2 className="text-center text-3xl md:text-4xl font-extrabold text-black">
+        <h2 className="text-center text-3xl md:text-4xl font-extrabold text-black mb-10">
           Brands that work with us
         </h2>
         <div className="logo-slider">
           <div className="slide-track">
             {[...logos, ...logos].map((company, index) => (
               <div key={index} className="slide px-4">
-                <Image width={200} height={200} src={company} alt={company} loading="lazy" />
+                <Image width={100} height={100} src={company} alt={company} loading="lazy" />
               </div>
             ))}
           </div>

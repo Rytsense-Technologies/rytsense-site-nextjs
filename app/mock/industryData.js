@@ -1058,11 +1058,25 @@ export const industryData = [
       buttoncontent: "Share Your App Idea",
       bgimage: "/images/homepageimages/wordpress-923188_1280.jpg",
     },
+
     servicemid: {
-      heading: "",
-      passage: "",
-      arraypassage: [],
+      heading: "Why Opt for Our On-Demand App Development Services",
+      passage:
+        "Our team specializes in delivering robust on-demand app development services that directly address users' everyday challenges in real-time.",
+      arraypassage: [
+        {
+          heading: "Features",
+          array: [
+            "Enhanced User Experience",
+            "Industry-Tailored Solutions",
+            "Customer-Centricity",
+            "Integrity & Transparency",
+            "24/7 Customer Support",
+          ],
+        },
+      ],
     },
+
     features: {
       heading: "Bringing on-demand revolution to all industries",
       passage:

@@ -70,23 +70,27 @@ const TechnologyStack = () => {
 
   const renderImages = (images) => {
     return (
-      <div className="flex flex-wrap gap-6 max-w-full place-items-center p-4 justify-center">
+      <div className="grid grid-cols-8 gap-4 max-w-full place-items-center p-4 justify-center h-96">
         {images.map((img, idx) => (
-          <Image
+          <div
             key={idx}
-            className="hover:opacity-75 h-20"
-            src={img.src}
-            alt={img.alt}
-            width={40}
-            height={40}
-          />
+            className="m-2 w-10 h-10 sm:w-20 sm:h-20 lg:w-32 lg:h-32 bg-gray-50 p-2 rounded-lg shadow-lg flex flex-col items-center justify-center"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={80}
+              height={80}
+              className="mb-2 mx-auto"
+            />
+          </div>
         ))}
       </div>
     );
   };
 
   return (
-    <div className="tabs rounded-xl mx-4 md:mx-24 mt-20">
+    <div className="tabs rounded-xl mx-4 md:mx-24 mt-20 mb-28">
       <h2 className="font-bold text-xl md:text-3xl lg:text-3xl text-center mb-6 mt-6">
         Technology Stack That Makes Your Software Secure and Exceptional
       </h2>

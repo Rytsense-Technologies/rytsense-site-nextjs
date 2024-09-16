@@ -36,7 +36,7 @@ const page = ({ params }) => {
       <SponserSection1
         title={data?.servicebutton?.heading}
         buttonText={data?.servicebutton?.buttoncontent}
-        bgImage={data?.servicebutton?.bgimage}
+        bgImage={data?.bg}
       />
       <QualitiesService
         data={data?.servicemid?.arraypassage}

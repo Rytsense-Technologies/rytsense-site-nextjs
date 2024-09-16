@@ -311,17 +311,17 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
               </span>
             </div> */}
             {phoneHover && (
-              <div className="absolute phone-hovercard inter-semibold top-full mt-2 w-72 pb-4 origin-top-right divide-y divide-gray-100 rounded-md bg-indigo-300 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div className="absolute phone-hovercard inter-semibold top-full mt-2 w-72 pb-4 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="py-1 p-4" role="none">
-                  <div className="p-2 box-border h-fit w-full mt-3 mx-auto text-black border-1 border-transparent rounded-lg  bg-indigo-200 font-extralight">
+                  <div className="p-2 box-border h-fit w-full mt-3 mx-auto text-black border-1 border-transparent rounded-lg  bg-white font-extralight">
                     <div className="flex flex-row">
-                      <div className="text-sm inter-semibold ">
+                      <div className="text-sm font-semibold ">
                         Rytsense Technologies Contacts
                       </div>
                     </div>
-                    <div className="text-sm  mt-2 inter-semibold">
+                    <div className="text-sm  mt-2 font-semibold text-gray-400">
                       For Sales Department
-                      <div className="mt-2 rounded-md shadow-sm">
+                      <div className="mt-2 rounded-md shadow-sm text-black font-semibold">
                         <div className="flex">
                           <Image
                             src="/images/flag/ind5.png"
@@ -338,7 +338,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                           </a>
                         </div>
                       </div>
-                      <div className="rounded-md mt-3 shadow-sm border-1 hover:border-gray-400">
+                      <div className="rounded-md mt-3 shadow-sm border-1 hover:border-gray-400 text-black font-semibold">
                         <div className="flex">
                           <Image
                             src="/images/flag/usa.png"
@@ -350,7 +350,7 @@ const ClutchNavNew = ({ isHomePage, isTransparent }) => {
                           <div className="mt-1 ml-6"> +1 650 681 0090</div>
                         </div>
                       </div>
-                      <div className="mt-3 rounded-md shadow-sm border-1 border-gray-600 hover:border-gray-400">
+                      <div className="mt-3 rounded-md shadow-sm border-1 border-gray-600 hover:border-gray-400 text-black font-semibold">
                         <div className="flex">
                           <Image
                             src="/images/flag/mail.png"

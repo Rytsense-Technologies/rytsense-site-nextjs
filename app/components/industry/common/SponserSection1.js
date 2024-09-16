@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import CustomButton from "../../common/CustomButton";
 
 const SponserSection1 = ({title, buttonText, bgImage
 }) => {
@@ -12,9 +13,7 @@ const SponserSection1 = ({title, buttonText, bgImage
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             {title}
             </h2>
-            <button className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-xs sm:text-sm md:text-base px-4 sm:px-5 py-2.5 text-center mb-2">
-              {buttonText}
-            </button>
+            <CustomButton title={buttonText} />
           </div>
         </div>
         <Image

@@ -1,8 +1,10 @@
 import React from "react";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 // import CustomButton from "../common/CustomButton";
 
-const CustomButton = dynamic(() => import('../common/CustomButton'), { ssr: false });
+const CustomButton = dynamic(() => import("../common/CustomButton"), {
+  ssr: false,
+});
 
 const CompanyStats = () => {
   return (

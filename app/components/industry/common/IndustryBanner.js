@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import CustomButton from "../../common/CustomButton";
 
 const IndustryBanner = ({ heading, subheading, bannerImage, buttonText }) => {
   return (
@@ -16,14 +17,7 @@ const IndustryBanner = ({ heading, subheading, bannerImage, buttonText }) => {
               {subheading}
             </h1>
             <div class="px-8 sm:items-start sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9">
-              <Link
-                href="#"
-                title=""
-                class="mb-3 sm:mb-0 inline-flex items-center bg-sky-600 text-white justify-center gap-5 w-full px-8 py-2 text-lg font-bold  transition-all duration-200  border-2 border-white sm:w-auto rounded-xl hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                role="button"
-              >
-                {buttonText} <IoIosArrowForward />
-              </Link>
+              <CustomButton title={buttonText} />
             </div>
           </div>
 

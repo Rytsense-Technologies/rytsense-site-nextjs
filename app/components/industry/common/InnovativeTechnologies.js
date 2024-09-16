@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import inno from "../../../../public/images/inno.webp"
 
 const InnovativeTechnologies = ({ data, title }) => {
   return (
@@ -17,7 +18,7 @@ const InnovativeTechnologies = ({ data, title }) => {
               <div className="flex items-center gap-4">
                 <Image
                   className="w-8 md:w-10"
-                  src="https://www.shutterstock.com/image-vector/light-bulb-electronics-new-electronic-600nw-1921894430.jpg"
+                  src={inno}
                   alt=""
                   width={40}
                   height={40}

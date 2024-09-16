@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 // import Footer from "../components/_app/Footer";
 // import Modal from "../components/common/Modal";
 import ProgressBar from "../providers/ProgressBar";
+import Navbar from "../components/_app/Navbar/Navbar"
 
 const ClutchNavNew  = dynamic(() => import('../components/_app/ClutchNavNew'), { ssr: false });
 const FooterClutch = dynamic(() => import('../components/_app/FooterClutch'), { ssr: false });
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
           key={pathname}
           isTransparent={isHomePage ? true : false}
         />
+        {/* <Navbar/> */}
         <ProgressBar />
         <main>{children}</main>
         {/* <FooterClutch /> */}

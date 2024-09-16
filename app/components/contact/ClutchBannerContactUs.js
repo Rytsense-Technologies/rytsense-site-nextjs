@@ -1,14 +1,11 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 
-import countryCodes from "../../mock/countryCodes"
-
-import { toast } from "react-toastify";
-
+import countryCodes from "../../mock/countryCodes";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { FaSpinner } from "react-icons/fa";
 
 const ClucthBannerContactUs = ({
   bgColor,
@@ -17,7 +14,6 @@ const ClucthBannerContactUs = ({
   buttonbg,
   textcolor,
 }) => {
-
   const getColorClass = (index) => {
     const colorClasses = [
       "text-pink1",
@@ -111,6 +107,7 @@ const ClucthBannerContactUs = ({
 
   const [displayedText, setDisplayedText] = useState("");
   const [displayedText2, setDisplayedText2] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const typeText = () => {
@@ -210,7 +207,7 @@ const ClucthBannerContactUs = ({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     const fullContactNumber = concatenateCountryCode();
     const newErrorMessages = {};
 
@@ -229,6 +226,7 @@ const ClucthBannerContactUs = ({
 
     if (Object.keys(newErrorMessages).length > 0) {
       setErrorMessages(newErrorMessages);
+      setLoading(false);
       return;
     }
 
@@ -242,8 +240,8 @@ const ClucthBannerContactUs = ({
       )}&email=${encodeURIComponent(
         formData.email
       )}&contactnumber=${encodeURIComponent(fullContactNumber)}`;
-      window.open(calendlyUrl, "_blank");
-      navigate("/success");
+      // window.open(calendlyUrl, "_blank");
+
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbymWBh4OHxVDYNJOD0nXsnBKY-gUGVvNrNW4nTk2s479a17NtWgH0sXWXS6nkL3MopD/exec",
         {
@@ -259,7 +257,6 @@ const ClucthBannerContactUs = ({
       const data = await response.text();
 
       setIsSubmitted(true);
-      toast.success("Form sent successfully!");
 
       // Reset the form and open the Calendly URL
       resetForm();
@@ -267,6 +264,7 @@ const ClucthBannerContactUs = ({
     } catch (error) {
       console.error("Error in fetch:", error.message);
     }
+    setLoading(false);
   };
 
   const resetForm = () => {
@@ -310,7 +308,10 @@ const ClucthBannerContactUs = ({
               />
             </div>
             <div className="mt-4">
-              <label htmlFor="email" className="block text-md  text-[#092947] mb-2">
+              <label
+                htmlFor="email"
+                className="block text-md  text-[#092947] mb-2"
+              >
                 Email
               </label>
               <input
@@ -330,7 +331,10 @@ const ClucthBannerContactUs = ({
               )}
             </div>
             <div className="mt-4">
-              <label htmlFor="phone" className="block text-md  text-[#092947] mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-md  text-[#092947] mb-2"
+              >
                 Phone
               </label>
               <div className="flex items-center gap-2">
@@ -384,11 +388,14 @@ const ClucthBannerContactUs = ({
                 className={`text-white w-full ${buttonbg} text-lg font-semibold focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 inline-flex items-center justify-center dark:focus:ring-[#1da1f2]/55`}
               >
                 {buttonText}
+                {loading && (
+                  <FaSpinner className="ml-2 animate-spin" /> // Spinner added next to button text
+                )}
               </button>
             </div>
             {isSubmitted && (
               <div className="text-green-500 mt-4">
-                <p>Form submitted successfully!</p>
+                <p>Your response submitted successfully!</p>
               </div>
             )}
           </form>

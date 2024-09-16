@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import CustomButton from "../common/CustomButton";
 
 const HeroSection = () => {
   return (
@@ -15,9 +16,7 @@ const HeroSection = () => {
             a fast-paced market.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Connect Us
-            </button>
+          <CustomButton title={"Book a Call"} />
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
