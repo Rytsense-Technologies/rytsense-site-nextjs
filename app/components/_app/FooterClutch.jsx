@@ -34,7 +34,7 @@ const FooterClutch = () => {
             </div>
           </div>
 
-          <Link href="/software-development-services-usa">
+          <Link href="/software-development-company-india">
             <div className="flex flex-col justify-center items-center text-center md:text-left mt-28 cursor-pointer">
               <Image
                 src="/images/address/hq-usa 2.webp"

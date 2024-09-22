@@ -1,18 +1,18 @@
-import React from 'react';
-import RanksClutch from '../../components/common/RanksClutch';
+import React from "react";
+import RanksClutch from "../../components/common/RanksClutch";
 
-import ClucthBannerContactUs from '../../components/contact/ClutchBannerContactUs';
+import ClucthBannerContactUs from "../../components/contact/ClutchBannerContactUs";
 
 const Banner = () => {
-  
   return (
-    <section className="px-6 sm:px-20 lg:py-40 py-28 body-font">
+    <section className="px-6 sm:px-20 lg:py-10 py-10 body-font">
       <div className=" flex flex-wrap">
         <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-3/5 sm:w-2/3 content-start sm:pr-10">
           <div className="w-full sm:p-4 px-4 mb-6 text-[#092947]">
             <h1 className="md:text-left">
               <span className="text-4xl sm:text-5xl font-medium">
-              Best <span className='font-bold'>Software  Development</span> Company  in India & USA
+                Best <span className="font-bold">Software Development</span>{" "}
+                Company in India & USA
               </span>
               <br />
               <div className="text-base sm:text-lg mt-4 inter-semibold banner-textsecond">

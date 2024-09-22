@@ -9,6 +9,7 @@ export const menuItems = [
         { label: "Services", path: "/company/service" },
         { label: "Career", path: "/company/career" },
         { label: "Events", path: "/company/events" },
+        { label: "Hire Developers", path: "/company/hire-developers-in-india" },
       ],
     },
     {
