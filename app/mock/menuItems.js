@@ -173,7 +173,7 @@ export const menuItems = [
       label: "Hire Developers",
       path: "",
       submenu: [
-        { label: "App Developers", path: "/hire/app-developers-for-hire" },
+        { label: "App Developers", path: "/hire/app-developers-for-hire", },
         { label: "Web Developers", path: "/hire/hire-web-developers" },
         { label: "Software Developers", path: "/hire/hire-software-developers" },
         { label: "Full-stack Developers", path: "/hire/hire-full-stack-developer" },

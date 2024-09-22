@@ -79,7 +79,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/first.jpg")`,
+                backgroundImage: `url("/images/keyfeatures/key1.webp")`,
                 //  // filter: "blur(2px)",,
               }}
             ></div>
@@ -131,7 +131,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url("/images/keyfeatures/secondSlider.jpg")`,
+                backgroundImage: `url("/images/keyfeatures/key2.webp")`,
                 // filter: "blur(2px)",,
               }}
             ></div>
@@ -182,7 +182,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/thirdSlider.jpg")`,
+                backgroundImage: `url("/images/keyfeatures/key3.webp")`,
                 // filter: "blur(2px)",,
               }}
             ></div>
@@ -234,7 +234,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/fourthSlider.jpg")`,
+                backgroundImage: `url("/images/keyfeatures/key4.webp")`,
                 // filter: "blur(2px)",,
               }}
             ></div>
@@ -287,7 +287,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/fifthSlider.jpeg")`,
+                backgroundImage: `url("/images/keyfeatures/key5.webp")`,
                 // filter: "blur(2px)",,
               }}
             ></div>

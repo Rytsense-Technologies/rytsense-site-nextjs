@@ -47,44 +47,48 @@ const projects = [
 const page = () => {
   return (
     <>
-      <div className="py-20 px-40">
-        <h1 className="text-2xl text-rose-500 text-center mt-8 font-semibold font-serif">
+      <div className="py-10 px-4 sm:px-10 md:px-20 lg:px-40 xl:px-60">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl mt-8 font-semibold font-serif text-center">
           Successful Software Development Projects in India
         </h1>
         {projects.map((topic, index) => (
-          <div
-            key={index}
-            style={{ margin: "20px 0" }}
-            className="border-b border-sky-600 p-8"
-          >
-            <div className="flex items-center gap-8">
+          <div key={index} className="my-8 p-4 sm:p-8">
+            <div className="flex flex-col  lg:items-start lg:gap-8 items-center gap-8">
               <Image
                 src={topic.imageUrl}
                 alt={topic.altText}
-                width={300}
+                width={500}
                 height={300}
-                className="shadow-xl"
+                className="mx-auto  shadow-xl"
               />
-              <div>
-                <h2 className="text-xl font-bold text-sky-700">
+              <div className="">
+                <h2 className="text-lg sm:text-xl font-bold text-sky-700">
                   {topic.title}
                 </h2>
-                <p className="text-lg  mt-5">{topic.description}</p>
+                <p className="text-md sm:text-lg mt-3 sm:mt-5">
+                  {topic.description}
+                </p>
                 <div className="mt-4">
                   <h1 className="text-sky-600 font-semibold">Solution -</h1>
-                  <p className="text-md text-gray-500">{topic.solution}</p>
+                  <p className="text-sm sm:text-md text-gray-500">
+                    {topic.solution}
+                  </p>
                 </div>
                 <div className="mt-4">
                   <h1 className="text-sky-600 font-semibold">Outcome -</h1>
-                  <p className="text-md text-gray-500">{topic.solution}</p>
+                  <p className="text-sm sm:text-md text-gray-500">
+                    {topic.outcome}
+                  </p>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         ))}
         <div className="py-10">
-          <h1 className="text-xl font-bold">Conclusion</h1>
-          <p className="text-gray-600 font-semibold">
+          <h1 className="text-lg sm:text-xl font-bold ">
+            Conclusion
+          </h1>
+          <p className="text-sm sm:text-md text-gray-600 font-semibold  mt-5 px-4">
             These case studies highlight the importance of custom software
             development services in India in driving business success. By
             addressing specific challenges and creating tailored solutions,

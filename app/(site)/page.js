@@ -1,25 +1,5 @@
-import Image from "next/image";
 
-import MainPageBanner from "../components/home/MainPageBanner";
-
-import Carousalclutch from "../components/common/Carousalclutch";
-import Ranking from "../components/home/Ranking";
-import CompanyStats from "../components/home/CompanyStats";
-import RankSection from "../components/home/RankSection";
-import KeyfeatureClutch from "../components/home/KeyfeatureClutch";
-import Testimonials from "../components/common/Testimonials";
-
-import ServicesBox from "../components/common/ServicesBox";
-import Partnercompany from "../components/home/Partnercompany";
-import EstimateProject from "../components/home/EstimateProject";
-import PartnerShipModel from "../components/home/PartnerShipModel";
-import ServiceSuspence from "../components/home/ServiceSuspence";
-import MainProdcast from "../components/home/MainProdcast";
-import LatestBlogs from "../components/home/Latestblog";
-import LetsConnect from "../components/common/LetsConnect";
-import CaseStudyCardAnimation from "../components/home/CaseStudyCardAnimation";
-import EaseInOutCardsAnimation from "../components/case-study/EaseInOutCardsAnimation";
-import MobileViewCaseStudy from "../components/case-study/MobileViewCaseStudy";
+import HomePage from "../components/home/HomePage"
 
 export const metadata = {
   title:
@@ -32,34 +12,11 @@ export const metadata = {
 };
 
 export default function Home() {
+
+
   return (
     <>
-      <main>
-        <MainPageBanner />
-        <Carousalclutch />
-
-        <Ranking />
-        <CompanyStats />
-        <RankSection />
-        <KeyfeatureClutch />
-        <ServicesBox
-          heading={
-            "We Create New Solution &Transform.Existing Ones With a Development.  Process That Beats Industry - Best Time Line</span>"
-          }
-        />
-        <EaseInOutCardsAnimation />
-        {/* {isMobileView ? <MobileViewCaseStudy /> : <EaseInOutCardsAnimation />} */}
-        <Partnercompany />
-        <EstimateProject />
-        <PartnerShipModel />
-        <ServiceSuspence />
-        <MainProdcast />
-        <LatestBlogs />
-
-        <Testimonials />
-        <CaseStudyCardAnimation />
-        <LetsConnect />
-      </main>
+      <HomePage/>
     </>
   );
 }

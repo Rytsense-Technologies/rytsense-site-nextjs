@@ -57,7 +57,7 @@ const ClutchLandingPage = () => {
       <EstimateProject />
       {/* <PartnerClutch /> */}
       <Partnercompany />
-      <ServiceSuspence />
+      {/* <ServiceSuspence /> */}
       <LatestBlogs />
       <Faq faqs={faqs} />
 

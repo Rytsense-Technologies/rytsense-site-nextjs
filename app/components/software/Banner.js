@@ -12,7 +12,7 @@ const Banner = () => {
           <div className="w-full sm:p-4 px-4 mb-6 text-[#092947]">
             <h1 className="md:text-left">
               <span className="text-4xl sm:text-5xl font-medium">
-              Best <span className='font-bold'>Software  Development</span> Company  in USA
+              Best <span className='font-bold'>Software  Development</span> Company  in India & USA
               </span>
               <br />
               <div className="text-base sm:text-lg mt-4 inter-semibold banner-textsecond">

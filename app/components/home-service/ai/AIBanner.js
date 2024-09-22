@@ -12,7 +12,7 @@ const AIBanner = () => {
       <div className="font-sans bg-white py-28 px-4">
         <div className="max-w-7xl mx-auto text-center md:text-left">
           <h2 className="text-gray-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-snug">
-            AI Development Company
+            AI Development Company in India & USA
           </h2>
           <div className="grid gap-12 mt-6 md:grid-cols-2">
             <div>

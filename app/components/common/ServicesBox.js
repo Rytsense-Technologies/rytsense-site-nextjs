@@ -37,7 +37,7 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609492/service3_lbaxva.webp",
       desc: "Crafting an intuitive and engaging user experience, blending aesthetics & functionality.",
-      href: "/ai-development-services-usa",
+      href: "/ai-development-company-india",
     },
     {
       icon: <FontAwesomeIcon icon={faTachographDigital} />,
@@ -45,7 +45,7 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609499/service4_aqbfm6.png",
       desc: "Turning designs into reality with efficient and robust software development.",
-      href: "/software-development-services-usa",
+      href: "/software-development-company-india",
     },
     {
       icon: <FontAwesomeIcon icon={faMagnifyingGlassChart} />,

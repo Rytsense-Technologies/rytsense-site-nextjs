@@ -4,18 +4,26 @@ import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import "./globals.css";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 // import ClutchNavNew from "../components/_app/ClutchNavNew";
 // import FooterClutch from "../components/_app/FooterClutch";
 // import Footer from "../components/_app/Footer";
 // import Modal from "../components/common/Modal";
 import ProgressBar from "../providers/ProgressBar";
-import Navbar from "../components/_app/Navbar/Navbar"
+import Navbar from "../components/_app/Navbar/Navbar";
 
-const ClutchNavNew  = dynamic(() => import('../components/_app/ClutchNavNew'), { ssr: false });
-const FooterClutch = dynamic(() => import('../components/_app/FooterClutch'), { ssr: false });
-const Footer = dynamic(() => import('../components/_app/Footer'), { ssr: false });
-const Modal = dynamic(() => import('../components/common/Modal'), { ssr: false });
+const ClutchNavNew = dynamic(() => import("../components/_app/ClutchNavNew"), {
+  ssr: false,
+});
+const FooterClutch = dynamic(() => import("../components/_app/FooterClutch"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("../components/_app/Footer"), {
+  ssr: false,
+});
+const Modal = dynamic(() => import("../components/common/Modal"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +37,6 @@ export default function RootLayout({ children }) {
     "/ai-development-services-usa",
     "/software-development-services-usa",
     "/hire-developers-in-india",
-    
   ];
 
   useEffect(() => {
@@ -63,15 +70,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/dlg3i3ari/image/upload/v1724669142/logo_bgania.png" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/dlg3i3ari/image/upload/v1724669142/logo_bgania.png"
+        />
       </head>
       <body className={inter.className}>
         {showExitModal && <Modal />}
-        <ClutchNavNew
+        {/* <ClutchNavNew
           key={pathname}
           isTransparent={isHomePage ? true : false}
-        />
-        {/* <Navbar/> */}
+        /> */}
+        <Navbar key={pathname} isTransparent={isHomePage ? true : false} />
         <ProgressBar />
         <main>{children}</main>
         {/* <FooterClutch /> */}

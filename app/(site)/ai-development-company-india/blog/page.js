@@ -42,29 +42,25 @@ const aiTopics = [
 const page = () => {
   return (
     <>
-      <div className="py-20 px-40">
-        <h1 className="text-2xl text-rose-500 text-center mt-8 font-semibold font-serif">
+      <div className="py-10 px-4 sm:px-10 md:px-20 lg:px-40 xl:px-60">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl mt-8 font-semibold font-serif">
           Top 5 AI Trends to Watch in 2024
         </h1>
         {aiTopics.map((topic, index) => (
-          <div
-            key={index}
-            style={{ margin: "20px 0" }}
-            className="border-b border-sky-600 p-8"
-          >
-            <div className="flex items-center gap-8">
+          <div key={index} className="my-8 p-4 sm:p-8">
+            <div className="flex flex-col  lg:items-start lg:gap-8 items-center gap-8">
               <Image
                 src={topic.img}
                 alt={topic.altText}
                 width={300}
                 height={300}
-                className="shadow-xl"
+                className="mx-auto shadow-xl"
               />
-              <div>
-                <h2 className="text-xl font-bold text-sky-700">
+              <div className="">
+                <h2 className="text-lg sm:text-xl font-bold text-sky-700">
                   {topic.title}
                 </h2>
-                <p className="text-lg text-gray-500 mt-5">
+                <p className="text-md sm:text-lg text-gray-500 mt-3 sm:mt-5">
                   {topic.description}
                 </p>
               </div>
@@ -72,8 +68,10 @@ const page = () => {
           </div>
         ))}
         <div className="py-10">
-          <h1 className="text-xl font-bold">Conclusion</h1>
-          <p className="text-gray-600 font-semibold">
+          <h1 className="text-lg sm:text-xl font-bold text-center">
+            Conclusion
+          </h1>
+          <p className="text-sm sm:text-md text-gray-600 font-semibold text-center px-4">
             AI is set to continue its rapid evolution in 2024, with new trends
             and technologies transforming industries and creating new
             opportunities. By staying ahead of these trends, businesses in India

@@ -1,167 +1,270 @@
-import React, { useState } from "react";
 import Link from "next/link";
-import { FiMenu, FiX, FiChevronDown } from "react-icons/fi"; // Import menu icons
+import { FaBars, FaTimes } from "react-icons/fa";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { useState, useEffect } from "react";
+import { menuItems } from "../../../mock/menuItems"; // Assuming menuItems is in a separate file
+import logo from "../../../../public/images/logo.png";
+import Image from "next/image";
 
-const Navbar = () => {
-  const [openMobileMenu, setOpenMobileMenu] = useState(false); // Mobile menu toggle
-  const [openSubmenu, setOpenSubmenu] = useState(false); // Submenu toggle for mobile
+const Navbar = ({ isTransparent }) => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [navbarTransparent, setNavbarTransparent] = useState(isTransparent);
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const handleButtonClick = () => {
+    window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
+  }; // Popover visibility state
 
   const toggleMobileMenu = () => {
-    setOpenMobileMenu(!openMobileMenu);
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const toggleSubmenu = () => {
-    setOpenSubmenu(!openSubmenu);
+  const toggleSubMenu = (index) => {
+    setOpenSubMenu(openSubMenu === index ? null : index);
   };
 
-  const menus = [
-    { name: "Home", link: "#" },
-    {
-      name: "Company",
-      link: "#",
-      submenu: [
-        { name: "About Us", link: "#" },
-        { name: "Library", link: "#" },
-        { name: "Resources", link: "#" },
-        { name: "Pro Version", link: "#" },
-      ],
-    },
-    { name: "Team", link: "#" },
-    { name: "Contact", link: "#" },
-  ];
+  const togglePopover = () => {
+    setIsPopoverOpen(!isPopoverOpen); // Toggle popover visibility
+  };
 
-  return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center space-x-3">
-              <img
-                src="/images/logo.png"
-                className="h-8"
-                alt="Company Logo"
-              />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
-              </span>
-            </a>
-          </div>
+  useEffect(() => {
+    setNavbarTransparent(isTransparent);
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none"
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+
+      if (isTransparent) {
+        if (position > 50) {
+          setNavbarTransparent(false); // Change to white background after scrolling
+        } else {
+          setNavbarTransparent(true); // Initially transparent
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isTransparent]);
+
+  const renderMenuItems = (items) => {
+    return items.map((item, index) => (
+      <div key={index} className="relative group">
+        <Link
+          href={item.path || "#"}
+          className={`cursor-pointer ${
+            navbarTransparent ? "text-white" : "text-gray-900"
+          }`}
+        >
+          <p className="hover:text-sky-500 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:bg-sky-500 after:h-[2px] after:w-0 after:transition-all after:duration-300 group-hover:after:w-1/2 flex items-center">
+            {item.label}
+          </p>
+        </Link>
+        {item.submenu && (
+          <div
+            className="absolute left-0 top-full mt-8 bg-white shadow-lg rounded-lg py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:block transition-all duration-300"
+            style={{
+              minWidth: item.label === "Hire Developers" ? "900px" : "500px",
+            }}
+          >
+            <div
+              className={`grid ${
+                item.label === "Hire Developers" ? "grid-cols-6" : "grid-cols-3"
+              } gap-8 p-4 text-gray-500`}
             >
-              {openMobileMenu ? <FiX size={28} /> : <FiMenu size={28} />}
-            </button>
-          </div>
-
-          {/* Menu items center-aligned */}
-          <div className="hidden md:flex items-center space-x-8 justify-center w-full">
-            <ul className="flex space-x-6">
-              {menus.map((menu, index) => (
-                <li key={index} className="relative group">
-                  <a
-                    href={menu.link}
-                    className="text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 transition-colors duration-200"
+              {item.submenu.map((subItem, subIndex) => (
+                <div key={subIndex} className="group flex items-center">
+                  <Link
+                    href={subItem.path || "#"}
+                    className="flex items-center gap-2"
                   >
-                    {menu.name}
-                  </a>
-                  {/* Flyout Submenu for desktop */}
-                  {menu.submenu && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-300 ease-in-out z-10">
-                      {menu.submenu.map((submenuItem, subIndex) => (
-                        <li key={subIndex} className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
-                          <a
-                            href={submenuItem.link}
-                            className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-                          >
-                            {submenuItem.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
+                    {item.label === "Industries" && (
+                      <Image
+                        src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725175063/star-removebg-preview_sy1kzj.png"
+                        width={20}
+                        height={20}
+                        alt=""
+                        className="bg-gray-500  rounded-full"
+                      />
+                    )}
+
+                    <p className="hover:text-sky-500  after:content-[''] after:absolute after:left-0 after:bottom-0 after:bg-sky-500 after:h-[2px] after:w-0 after:transition-all after:duration-300 group-hover:after:w-1/2 flex items-center">
+                      {subItem.label}
+                    </p>
+                  </Link>
+                </div>
               ))}
-            </ul>
-          </div>
-
-          {/* Buttons on the right side */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="#"
-              className="px-4 py-2 text-gray-900 dark:text-white border border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-            >
-              Login
-            </a>
-            <a
-              href="#"
-              className="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg"
-            >
-              Sign Up
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {openMobileMenu && (
-          <div className="md:hidden">
-            <ul className="flex flex-col items-center space-y-4 py-4">
-              {menus.map((menu, index) => (
-                <li key={index} className="w-full">
-                  <a
-                    href={menu.link}
-                    className="block text-center text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 transition-colors duration-200"
-                  >
-                    {menu.name}
-                  </a>
-
-                  {/* Submenu for mobile */}
-                  {menu.submenu && (
-                    <button
-                      onClick={toggleSubmenu}
-                      className="text-gray-900 dark:text-white w-full text-left px-4 py-2 flex justify-between items-center"
-                    >
-                      {menu.name} <FiChevronDown />
-                    </button>
-                  )}
-                  {menu.submenu && openSubmenu && (
-                    <ul className="w-full bg-gray-100 dark:bg-gray-800">
-                      {menu.submenu.map((submenuItem, subIndex) => (
-                        <li key={subIndex} className="py-2 px-4">
-                          <a
-                            href={submenuItem.link}
-                            className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-                          >
-                            {submenuItem.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="px-4 py-2 text-gray-900 dark:text-white border border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-                >
-                  Login
-                </a>
-                <a
-                  href="#"
-                  className="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg"
-                >
-                  Sign Up
-                </a>
-              </div>
-            </ul>
+            </div>
           </div>
         )}
       </div>
+    ));
+  };
+
+  return (
+    <nav
+      className={`p-5 sticky top-0 z-50 transition-all duration-300 ${
+        navbarTransparent ? "bg-transparent" : "bg-white shadow-lg"
+      }`}
+    >
+      <div className="mx-auto flex items-center justify-between w-full max-w-8xl">
+        {/* Logo */}
+        <div className="flex items-center">
+          <Link href="/">
+            <div className="flex items-center gap-2">
+              <Image
+                className=""
+                src={logo}
+                alt="Rytsense Technologies"
+                width={40}
+                height={40}
+              />
+              <h1
+                className={`text-xl font-semibold transition-all duration-300 ${
+                  navbarTransparent ? "text-white" : "text-gray-900"
+                }`}
+              >
+                Rytsense Technologies
+              </h1>
+            </div>
+          </Link>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-8">
+          {renderMenuItems(menuItems)}
+        </div>
+
+        {/* Call to Action buttons */}
+        <div className="hidden lg:flex items-center space-x-4 relative">
+          <button
+            type="button"
+            onClick={togglePopover} // Open popover on phone call button click
+            className="text-white bg-[#2C87D9] text-xl font-extrabold hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 text-center inline-flex items-center"
+          >
+            <BiSolidPhoneCall />
+          </button>
+
+          {/* Popover Content */}
+          {isPopoverOpen && (
+            <div className="absolute right-12 top-full mt-2 p-4 box-border h-fit w-80 text-black border-1 border-transparent rounded-lg bg-white font-extralight shadow-lg z-20">
+              <div className="text-sm font-semibold">
+                Rytsense Technologies Contacts
+              </div>
+              <div className="text-sm mt-2 font-semibold text-gray-400">
+                For Sales Department
+                <div className="mt-2 rounded-md shadow-sm text-black font-semibold">
+                  <div className="flex">
+                    <Image
+                      src="/images/flag/ind5.png"
+                      alt="icon"
+                      className="w-8 h-8 rounded-3xl"
+                      width={20}
+                      height={20}
+                    />
+                    <a href="https://wa.me/917010044153" className="mt-1 ml-6">
+                      +917010044153
+                    </a>
+                  </div>
+                </div>
+                <div className="rounded-md mt-3 shadow-sm border-1 hover:border-gray-400 text-black font-semibold">
+                  <div className="flex">
+                    <Image
+                      src="/images/flag/usa.png"
+                      alt="icon"
+                      className="w-8 h-8"
+                      width={20}
+                      height={20}
+                    />
+                    <div className="mt-1 ml-6"> +1 650 681 0090</div>
+                  </div>
+                </div>
+                <div className="mt-3 rounded-md shadow-sm border-1 border-gray-600 hover:border-gray-400 text-black font-semibold">
+                  <div className="flex">
+                    <Image
+                      src="/images/flag/mail.png"
+                      alt="icon"
+                      className="w-8 h-8 rounded-3xl"
+                      width={20}
+                      height={20}
+                    />
+                    <div className="mt-1 ml-6">hey@rytsensetech.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <button
+            type="button"
+            className="text-white bg-[#2C87D9] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-xl text-sm px-5 py-2.5 text-center inline-flex items-center"
+            onClick={handleButtonClick}
+          >
+            BOOK A CALL
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden flex items-center">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white focus:outline-none"
+          >
+            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden text-gray-900 p-4 space-y-4 bg-white shadow-lg">
+          {menuItems.map((item, index) => (
+            <div key={index}>
+              <div className="flex justify-between items-center">
+                <Link href={item.path || "#"}>
+                  <p className="hover:text-gray-300 cursor-pointer">
+                    {item.label}
+                  </p>
+                </Link>
+                {item.submenu && (
+                  <button onClick={() => toggleSubMenu(index)}>
+                    {openSubMenu === index ? <FaTimes /> : <FaBars />}
+                  </button>
+                )}
+              </div>
+              {item.submenu && openSubMenu === index && (
+                <div className="pl-4">
+                  {item.submenu.map((subItem, subIndex) => (
+                    <Link key={subIndex} href={subItem.path}>
+                      <p className="block px-4 py-2 cursor-pointer">
+                        {subItem.label}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+
+          <div className="flex flex-col space-y-4">
+            <button
+              type="button"
+              className="text-white bg-[#2C87D9] text-xl font-extrabold hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 text-center inline-flex items-center"
+            >
+              <BiSolidPhoneCall />
+            </button>
+            <button
+              type="button"
+              className="text-white bg-[#2C87D9] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-xl text-sm px-5 py-2.5 text-center inline-flex items-center"
+            >
+              BOOK A CALL
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

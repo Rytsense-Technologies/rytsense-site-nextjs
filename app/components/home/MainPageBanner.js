@@ -8,7 +8,7 @@ const MainPageBanner = () => {
  
 
   return (
-    <div className="relative w-full h-screen overflow-hidden mb-10">
+    <div className=" w-full h-screen overflow-hidden mb-10">
       <video
         autoPlay
         loop
