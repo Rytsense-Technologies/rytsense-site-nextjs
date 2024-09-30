@@ -2,14 +2,15 @@
 const nextConfig = {
   images: {
     domains: ["res.cloudinary.com", "appinventiv.com"],
-    unoptimized: true,
+    unoptimized: true, 
   },
   pageExtensions: ["js", "jsx", "ts", "tsx"],
+  trailingSlash: true, 
   experimental: {
-    appDir: true,
+    appDir: false,  
     pagesDir: "site", 
   },
-  output: "export",
+  output: "export",  
 };
 
 export default nextConfig;

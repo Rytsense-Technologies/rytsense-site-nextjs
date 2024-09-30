@@ -12,8 +12,8 @@ const AIModels = () => {
           <Image
             src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1721789452/logos_qwneal.png"
             alt="ai models"
-            width={500}
-            height={500}
+            width={800}
+            height={800}
           />
         </div>
       </div>

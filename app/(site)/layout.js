@@ -33,10 +33,12 @@ export default function RootLayout({ children }) {
 
   const clutchRoutes = [
     "/",
-    "/clutch",
-    "/ai-development-services-usa",
-    "/software-development-services-usa",
-    "/hire-developers-in-india",
+    "/clutch/",
+    "/ai-development-company-india/",
+    "/software-development-company-india/",
+    "/company/hire-developers-in-india/",
+    "/software-development-company-usa/",
+    "/ai-development-company-usa/"
   ];
 
   useEffect(() => {

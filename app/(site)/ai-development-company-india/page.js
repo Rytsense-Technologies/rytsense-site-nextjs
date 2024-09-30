@@ -1,7 +1,7 @@
 import React from "react";
 
 import AIBanner from "../../components/home-service/ai/AIBanner";
-import Expertise from "../../components/software/Expertise";
+import Expertise from "../../components/software/software-india/Expertise";
 import AIService from "../../components/home-service/ai/AIServices";
 import AIModels from "../../components/home-service/ai/AIModels";
 import AIPartnershipModels from "../../components/home-service/ai/AIPartnershipModels";
@@ -11,14 +11,14 @@ import LetsConnect from "../../components/common/LetsConnect";
 import Testimonials from "../../components/common/Testimonials"
 
 export const metadata = {
-  title: "Artificial Intelligence (AI) development services in USA",
+  title: "AI development company in india | Rytsense Technologies",
   description:
-    "We are one of the top AI development companies in USA, offering a wide range of custom AI development services for your business needs. As one of the best custom software development companies in USA, we offer a wide range of custom software development services for your business needs.",
+    "Partner with top AI developers in India for advanced AI solutions. As one of the leading AI development companies in India, we specialize in AI and chatbot development to support your business",
   alternates: {
-    canonical: "https://rytsensetech.com/ai-development-services-usa",
+    canonical: "https://rytsensetech.com/ai-development-company-india",
     languages: {
-      "en-us": "https://rytsensetech.com/ai-development-services-usa",
-      "x-default": "https://rytsensetech.com/ai-development-services-usa",
+      // "en-us": "https://rytsensetech.com/ai-development-services-usa",
+      "x-default": "https://rytsensetech.com/ai-development-company-india",
     },
   },
 };

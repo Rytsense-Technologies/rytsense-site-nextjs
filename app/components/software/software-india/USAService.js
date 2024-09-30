@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import useService from "../../../public/images/usa-service.jpg"
+import useService from "../../../../public/images/usa-service.jpg"
 
 const USAService = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import dynamic from 'next/dynamic';
-// import CustomButton from "../../components/common/CustomButton";
+import CustomButton from "../../../components/common/CustomButton";
 
-const CustomButton = dynamic(() => import('../../components/common/CustomButton'), { ssr: false });
+
 
 const AboutComapny = () => {
   return (

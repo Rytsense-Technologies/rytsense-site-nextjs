@@ -1,26 +1,25 @@
 import React from "react";
-import Banner from "../../components/software/Banner";
-import Expertise from "../../components/software/Expertise";
-import AboutComapny from "../../components/software/AboutComapny";
-import SoftwareServices from "../../components/software/SoftwareServices";
-import USAService from "../../components/software/USAService";
-import Process from "../../components/software/Process";
-import OurValues from "../../components/software/OurValues";
-import SoftwareClients from "../../components/software/SoftwareClients";
+import Banner from "../../components/software/software-india/Banner";
+import Expertise from "../../components/software/software-india/Expertise";
+import AboutComapny from "../../components/software/software-india/AboutComapny";
+import SoftwareServices from "../../components/software/software-india/SoftwareServices";
+import USAService from "../../components/software/software-india/USAService";
+import Process from "../../components/software/software-india/Process";
+import OurValues from "../../components/software/software-india/OurValues";
+import SoftwareClients from "../../components/software/software-india/SoftwareClients";
 import Faq from "../../components/common/faq/Faq";
-import SoftwareBlogs from "../../components/software/SoftwareBlogs";
+import SoftwareBlogs from "../../components/software/software-india/SoftwareBlogs";
 import LetsConnect from "../../components/common/LetsConnect";
-import Testimonials from "../../components/common/Testimonials";
 
 export const metadata = {
-  title: "Custom Software Development services in USA",
+  title: "Custom software development company in india | Rytsnese Technologies",
   description:
-    "We are one of the leading Custom software development company in USA and India, Lets Build innovative software solutions with Rytsense Technologies",
+    "Looking for a custom software development company in India? We offer top custom software development services in India, including Chennai, delivering tailored solutions that help your business grow.",
   alternates: {
-    canonical: "https://rytsensetech.com/software-development-services-usa",
+    canonical: "https://rytsensetech.com/software-development-company-india",
     languages: {
-      "en-us": "https://rytsensetech.com/software-development-services-usa",
-      "x-default": "https://rytsensetech.com/software-development-services-usa",
+      "en-US": "https://rytsensetech.com/software-development-company-india",
+      // "x-default": "https://rytsensetech.com/software-development-services-usa",
     },
   },
 };
@@ -57,7 +56,8 @@ const faqs = [
       "Hiring custom software developers from Rytsense Technologies in India is easy. To connect with us, visit our website or contact us directly through the provided details. We'll talk about your project needs, budget, and timeline. Once we agree on everything, our developers will start working on your project. We'll keep you updated on progress along the way. With Rytsense Technologies, you'll get straightforward hiring and top-notch software that suits your business.",
   },
   {
-    question: "How can you outsource a IT software development company in India?",
+    question:
+      "How can you outsource a IT software development company in India?",
     answer:
       "Outsourcing a IT software development company in United States of America is easy. To start, you can search online or ask others for suggestions. Then, you tell them what you need and when you need it. They'll give you a plan and a price. After you pick the best one for your business needs, then you sign a contract, and they start working on your projects.",
   },
@@ -75,7 +75,7 @@ const page = () => {
       <Process />
       <OurValues />
       <SoftwareClients />
-      <Testimonials />
+
       <Faq faqs={faqs} />
       <SoftwareBlogs />
       <LetsConnect />

@@ -18,7 +18,7 @@ export const menuItems = [
       submenu: [
         {
           label: "AI & ML",
-          path: "/services/artificial-intelligence-and-machine-learning",
+          path: "/ai-development-company-usa",
           sub_submenu: [
             { label: "Object Recognition", path: "/object-recognition" },
             { label: "Text to Speech", path: "/text-to-speech" },

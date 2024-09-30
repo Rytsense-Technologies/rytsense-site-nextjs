@@ -1,7 +1,7 @@
 import React from "react";
-import RanksClutch from "../../components/common/RanksClutch";
+import RanksClutch from "../../../components/common/RanksClutch";
 
-import ClucthBannerContactUs from "../../components/contact/ClutchBannerContactUs";
+import ClucthBannerContactUs from "../../../components/contact/ClutchBannerContactUs";
 
 const Banner = () => {
   return (
@@ -12,7 +12,7 @@ const Banner = () => {
             <h1 className="md:text-left">
               <span className="text-4xl sm:text-5xl font-medium">
                 Best <span className="font-bold">Software Development</span>{" "}
-                Company in India & USA
+                Company in USA
               </span>
               <br />
               <div className="text-base sm:text-lg mt-4 inter-semibold banner-textsecond">

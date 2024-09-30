@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,25 +16,27 @@ const FooterClutch = () => {
     <div className="footer">
       <div className="bg-[#092947] firstfooter text-white flex justify-center items-center">
         <div className="pb-10 flex flex-row gap-36 firstfootermain w-full bg-[#092947] bg-opacity-30 justify-center text-center items-center">
-          <div className="flex flex-col text-center justify-center items-center md:text-left mt-28">
-            <Image
-              src="/images/address/hq-india 3.webp"
-              alt="HQ India"
-              className="h-20 mb-2 justify-center items-center hover:text-white"
-              width={80}
-              height={80}
-            />
-            <div className="flex justify-start items-center text-zinc-500 text-center font-semibold hover:text-white">
-              <span>
-                Phase 1, Greeta Techpark, <br />
-                Rajiv Gandhi Industrial Estate,
-                <br />
-                Perungudi, Chennai, India 600096
-              </span>
-            </div>
-          </div>
-
           <Link href="/software-development-company-india">
+            <div className="flex flex-col text-center justify-center items-center md:text-left mt-28">
+              <Image
+                src="/images/address/hq-india 3.webp"
+                alt="HQ India"
+                className="h-20 mb-2 justify-center items-center hover:text-white"
+                width={80}
+                height={80}
+              />
+              <div className="flex justify-start items-center text-zinc-500 text-center font-semibold hover:text-white">
+                <span>
+                  Phase 1, Greeta Techpark, <br />
+                  Rajiv Gandhi Industrial Estate,
+                  <br />
+                  Perungudi, Chennai, India 600096
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/software-development-company-usa">
             <div className="flex flex-col justify-center items-center text-center md:text-left mt-28 cursor-pointer">
               <Image
                 src="/images/address/hq-usa 2.webp"
@@ -133,8 +135,7 @@ const FooterClutch = () => {
                   />
                   <FontAwesomeIcon
                     onClick={() => {
-                      window.location.href =
-                        "mailto:hey@rytsensetech.com"   
+                      window.location.href = "mailto:hey@rytsensetech.com";
                     }}
                     icon={faEnvelope}
                     className="hover:text-indigo-500"
@@ -193,7 +194,10 @@ const FooterClutch = () => {
             <h3 className="mb-2.5 text-2xl font-bold uppercase">About</h3>
             <ul className="mb-0 list-none space-y-2">
               <li>
-                <Link href="/company/who-we-are" className="hover:text-indigo-500">
+                <Link
+                  href="/company/who-we-are"
+                  className="hover:text-indigo-500"
+                >
                   Who We Are
                 </Link>
               </li>
@@ -235,14 +239,17 @@ const FooterClutch = () => {
             <ul className="mb-0 list-none space-y-2">
               <li>
                 <Link
-                  href="/services/artificial-intelligence-and-machine-learning"
+                  href="/ai-development-company-usa"
                   className="hover:text-indigo-500"
                 >
                   AI & ML
                 </Link>
               </li>
               <li>
-                <Link href="/services/iot-development" className="hover:text-indigo-500">
+                <Link
+                  href="/services/iot-development"
+                  className="hover:text-indigo-500"
+                >
                   IOT
                 </Link>
               </li>
@@ -270,7 +277,6 @@ const FooterClutch = () => {
                   React Native
                 </Link>
               </li>
-             
             </ul>
           </div>
 
@@ -302,7 +308,10 @@ const FooterClutch = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/service/ECOMMERCE/prestashop" className="hover:text-indigo-500">
+                <Link
+                  href="/service/ECOMMERCE/prestashop"
+                  className="hover:text-indigo-500"
+                >
                   Prestashop
                 </Link>
               </li>
@@ -323,7 +332,10 @@ const FooterClutch = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/service/ECOMMERCE/bigcommerce-development" className="hover:text-indigo-500">
+                <Link
+                  href="/service/ECOMMERCE/bigcommerce-development"
+                  className="hover:text-indigo-500"
+                >
                   BigCommerce
                 </Link>
               </li>
