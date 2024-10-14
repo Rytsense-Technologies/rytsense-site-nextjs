@@ -25,7 +25,7 @@ const RankSection = () => {
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
           {images.map((img, i) => (
-            <Image key={i} class="hover:opacity-75" src={img} alt="" width={100} height={100} />
+            <Image key={i} class="hover:opacity-75" src={img} alt="" width={180} height={180} />
           ))}
         </div>
         <div className="flex items-center gap-5">

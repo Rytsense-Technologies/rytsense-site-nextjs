@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import client1 from "../../../public/images/client/c1.jpg"
-import client2 from "../../../public/images/client/c2.jpg"
-import client3 from "../../../public/images/client/c3.png"
-import client4 from "../../../public/images/client/c4.jpg"
+import React, { useEffect, useState, useRef } from "react";
+import client1 from "../../../public/images/client/c1.jpg";
+import client2 from "../../../public/images/client/c2.jpg";
+import client3 from "../../../public/images/client/c3.png";
+import client4 from "../../../public/images/client/c4.jpg";
 import Image from "next/image";
 
 const Testimonials = () => {
@@ -46,21 +46,41 @@ const Testimonials = () => {
     },
   ];
 
+  // Clone the details array to create an infinite loop effect
+  const extendedDetails = [...details, ...details];
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const carouselRef = useRef(null);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === details.length - 3 ? 0 : prevIndex + 1.5
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % extendedDetails.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? details.length - 3 : prevIndex - 1
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? extendedDetails.length - 1 : prevIndex - 1
     );
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change slide every 3 seconds
 
+    return () => clearInterval(interval); // Cleanup the interval on unmount
+  }, []);
+
+  useEffect(() => {
+    if (currentIndex === details.length) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0); // Reset the index without animation
+      }, 500); // Delay to allow the current animation to complete
+    } else {
+      setIsTransitioning(true);
+    }
+  }, [currentIndex]);
 
   const bannerColor = {
     background:
@@ -82,8 +102,7 @@ const Testimonials = () => {
           .carousel-wrapper {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            width: ${details.length * (100 / 4)}%;
-            transform: translateX(-${currentIndex * (100 / details.length)}%);
+            transform: translateX(-${(currentIndex % details.length) * (100 / 4)}%);
           }
 
           .carousel-slide {
@@ -105,6 +124,7 @@ const Testimonials = () => {
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            z-index: 10;
           }
 
           .carousel-btn-prev {
@@ -113,6 +133,10 @@ const Testimonials = () => {
 
           .carousel-btn-next {
             right: 10px;
+          }
+
+          .no-transition {
+            transition: none !important;
           }
         `}
       </style>
@@ -127,8 +151,11 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="carousel-container">
-          <div className="carousel-wrapper">
-            {details.map((cli, i) => (
+          <div
+            ref={carouselRef}
+            className={`carousel-wrapper ${!isTransitioning ? "no-transition" : ""}`}
+          >
+            {extendedDetails.map((cli, i) => (
               <div key={i} className="carousel-slide">
                 <div
                   className="backdrop-opacity-10 backdrop-invert bg-[#092947]/30 rounded-2xl p-10 flex flex-col justify-between transition-all duration-500 hover:border-indigo-600"
@@ -142,8 +169,8 @@ const Testimonials = () => {
                       src={cli.profile}
                       alt="avatar"
                       className="w-20 h-20 rounded-full object-cover"
-                     width={100}
-                     height={100}
+                      width={100}
+                      height={100}
                     />
                     <div className="grid gap-1 text-center">
                       <h5 className="text-white font-medium transition-all duration-500">
@@ -158,6 +185,8 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
+
+          {/* Previous and Next Buttons */}
           <div className="carousel-btn carousel-btn-prev" onClick={prevSlide}>
             &#10094;
           </div>

@@ -4,10 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "../../css/CaseStudyCard.css";
-import { allCaseStudies } from "../../mock/allCaseStudies";
+import { allCardStudies } from "../../mock/allCardStudies";
 
 const CaseStudyCardAnimation = () => {
-  const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(4); 
   const sliderRef = useRef(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -25,15 +25,19 @@ const CaseStudyCardAnimation = () => {
   ];
 
   useEffect(() => {
-    setCards([...allCaseStudies, ...allCaseStudies]);
-    // if (window.innerWidth <= 768) {
-    //   setExpandedCard(0); // Default expand the first card on mobile
-    // }
+    setCards([...allCardStudies, ...allCardStudies]);
+    // Automatically center the expanded card
+    setTimeout(() => {
+      centerExpandedCard(0); // Center the first card by default
+    }, 200); // Add a small delay to ensure the component renders first
   }, []);
 
   const handleExpandClick = (index) => {
     setExpandedCard(expandedCard === index ? null : index);
+    centerExpandedCard(index);
+  };
 
+  const centerExpandedCard = (index) => {
     const slider = sliderRef.current;
     const card = slider.querySelector(`[data-index="${index}"]`);
     if (card) {
@@ -97,11 +101,11 @@ const CaseStudyCardAnimation = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              data-index={index % allCaseStudies.length}
+              data-index={index % allCardStudies.length}
               className={`caseStudyCard ${
-                expandedCard === index % allCaseStudies.length ? "expanded" : ""
+                expandedCard === index % allCardStudies.length ? "expanded" : ""
               }`}
-              onClick={() => handleExpandClick(index % allCaseStudies.length)}
+              onClick={() => handleExpandClick(index % allCardStudies.length)}
               style={{ backgroundColor: colors[index % colors.length] }}
             >
               <div className="text-content text-gray-800">

@@ -51,9 +51,9 @@ const cardData = [
     heading: "AI Chat Bot",
     appname:
       "AI Chat Bot - Building an Intelligent Chatbot for IT Service Requirements",
-    image: 'url("/images/casestudy/aibot.png")',
+    image: 'url("/images/casestudy/aibot.jpg")',
     topimage:
-      "/images/casestudy/ai.png",
+      "/images/casestudy/aibot.webp",
     logo: "",
     languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
     sub: "AI Chat Bot",
@@ -173,7 +173,7 @@ const cardData = [
     id:11,
     heading: "GATEWAY STREAM",
     appname: "GATEWAY STREAM - one-stop app for locals and visitors",
-    image: 'url("/images/1689749521152.jfif")',
+    image: 'url("/images/casestudy/gateway.jpg")',
     topimage:
       "/images/casestudy/gateway.jpg",
     logo: "/images/logodsfsd.png",
@@ -209,7 +209,7 @@ const cardData = [
     heading: "Duelo Betting ",
     appname: "Duelo Betting Platform - An Online Sports Betting Platform",
     image: 'url("/images/duelo-mid.webp")',
-    topimage: "/images/casestudy/edplace.png",
+    topimage: "/images/casestudy/sport.jpg",
     logo: "",
     languages: ["Swift", "ROR", "Angular", "PostgraSql", "AWS"],
     sub: "Sports",
@@ -433,7 +433,7 @@ const EaseInOutCardsAnimation = () => {
                           <span className="text-xs text-indigo-700 font-semibold">
                             HIGH VOLUMES HANDLED
                           </span>
-                          <h1 className="text-4xl font-bold">104+</h1>
+                          <h1 className="text-3xl font-bold">104+</h1>
                           <span className="text-xs text-gray-800 font-semibold">
                             Queries automated by Gen AI
                           </span>
@@ -442,7 +442,7 @@ const EaseInOutCardsAnimation = () => {
                           <span className="text-xs text-indigo-700 font-semibold">
                             HIGH VOLUMES HANDLED
                           </span>
-                          <h1 className="text-4xl font-bold">104+</h1>
+                          <h1 className="text-3xl font-bold">104+</h1>
                           <span className="text-xs text-gray-800 font-semibold">
                             Queries automated by Gen AI
                           </span>
@@ -473,8 +473,8 @@ const EaseInOutCardsAnimation = () => {
                       src={card.topimage}
                       alt=""
                       className="small-image contrast-50"
-                      width={500}
-                      height={500}
+                      width={600}
+                      height={600}
                     />
                     <div className="flex flex-col gap-2">
                       <span className="custom-tag">{card.sub}</span>

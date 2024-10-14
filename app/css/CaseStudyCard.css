@@ -94,12 +94,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 70%;
+    height: 90%;
     width: 100%;
     overflow: hidden;
     z-index: 0;
     transition: all 0.3s ease-in-out;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%); */
 }
 
 .image-content img {

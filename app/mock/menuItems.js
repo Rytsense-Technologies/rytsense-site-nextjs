@@ -9,7 +9,7 @@ export const menuItems = [
         { label: "Services", path: "/company/service" },
         { label: "Career", path: "/company/career" },
         { label: "Events", path: "/company/events" },
-        { label: "Hire Developers", path: "/company/hire-developers-in-india" },
+        { label: "Hire Developers", path: "/hire-developers-in-india" },
       ],
     },
     {
@@ -242,7 +242,7 @@ export const menuItems = [
         { label: "On-Demand", path:"/industry/on-demand" },
         { label: "Sass", path:"/industry/sass" },
         { label: "Travel", path:"/industry/travel" },
-        { label: "Finance", path:"/industry/finance" },
+        { label: "Finance", path:"/industries-pages/finance" },
         { label: "EV", path:"/industry/ev" },
         { label: "Game App", path:"/industry/game-app" },
       ],

@@ -11,6 +11,9 @@ import dynamic from "next/dynamic";
 // import Modal from "../components/common/Modal";
 import ProgressBar from "../providers/ProgressBar";
 import Navbar from "../components/_app/Navbar/Navbar";
+import Link from "next/link";
+import Image from "next/image";
+import wp from "../../public/images/wp.png";
 
 const ClutchNavNew = dynamic(() => import("../components/_app/ClutchNavNew"), {
   ssr: false,
@@ -38,7 +41,8 @@ export default function RootLayout({ children }) {
     "/software-development-company-india/",
     "/company/hire-developers-in-india/",
     "/software-development-company-usa/",
-    "/ai-development-company-usa/"
+    "/ai-development-company-usa/",
+    "/industries-pages/finance/",
   ];
 
   useEffect(() => {
@@ -88,7 +92,17 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         {/* <FooterClutch /> */}
         {isClutchRoute ? <FooterClutch /> : <Footer />}
+        <div className="fixed bottom-0 right-5 p-3 z-20">
+          <a
+            href="http://wa.me/+917010044153?text=Hello how can I help you?"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={wp} width={60} height={60} alt="WhatsApp Icon" />
+          </a>
+        </div>
       </body>
     </html>
   );
-}
+} 0.
+  

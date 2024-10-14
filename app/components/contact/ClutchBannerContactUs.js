@@ -6,6 +6,7 @@ import countryCodes from "../../mock/countryCodes";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaSpinner } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const ClucthBannerContactUs = ({
   bgColor,
@@ -255,7 +256,16 @@ const ClucthBannerContactUs = ({
       }
 
       const data = await response.text();
-
+      emailjs.send(
+        "service_xf9pb1o",
+        "template_vh69bcj",
+        {
+          to_name: formDataToSend.get("name"),
+          to_email: formDataToSend.get("email"),
+          message: "We have received your information. Thank you!",
+        },
+        "1ibY0iCEQ0eE9oQFq"
+      );
       setIsSubmitted(true);
 
       // Reset the form and open the Calendly URL
