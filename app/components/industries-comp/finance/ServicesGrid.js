@@ -62,10 +62,10 @@ export default function ServicesGrid() {
     <section className="bg-white py-12">
       <div className=" mx-auto">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">
             Use Cases Our Financial Software Development Services Cater
           </h2>
-          <p className="text-gray-600  mx-auto mb-16">
+          <p className="text-gray-680  mx-auto mb-16">
             Our FinTech app developers have expertise in different domains. We
             offer financial software development services for everything - from
             investment to payments.
@@ -91,10 +91,10 @@ export default function ServicesGrid() {
                     {service.icon}
                   </div>
 
-                  <h3 className="text-white text-xl font-semibold mb-2">
+                  <h3 className="text-white text-2xl font-semibold mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-white text-sm">{service.description}</p>
+                  <p className="text-white text-lg">{service.description}</p>
                 </div>
               </div>
             </div>

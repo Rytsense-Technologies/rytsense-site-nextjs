@@ -5,8 +5,8 @@ export default function TrustedBrands() {
     <section className="bg-white py-12">
       <div className="container mx-auto text-center">
         {/* Title Section */}
-        <h2 className="text-lg text-gray-600">Choose The Top FinTech App Development Company,</h2>
-        <h3 className="text-3xl font-bold text-gray-900 mb-8">Trusted By Leading Brands Worldwide</h3>
+        <h2 className="text-2xl text-gray-800">Choose The Top FinTech App Development Company,</h2>
+        <h3 className="text-4xl font-bold text-gray-900 mb-8">Trusted By Leading Brands Worldwide</h3>
 
         {/* Logos Section */}
         <div className="flex justify-center items-center flex-wrap space-x-28">

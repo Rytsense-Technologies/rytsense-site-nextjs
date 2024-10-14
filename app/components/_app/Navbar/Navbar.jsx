@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { menuItems } from "../../../mock/menuItems"; // Assuming menuItems is in a separate file
 import logo from "../../../../public/images/logo.png";
 import Image from "next/image";
+import CustomButton from "../../common/CustomButton";
 
 const Navbar = ({ isTransparent }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -81,16 +82,6 @@ const Navbar = ({ isTransparent }) => {
                     href={subItem.path || "#"}
                     className="flex items-center gap-2"
                   >
-                    {item.label === "Industries" && (
-                      <Image
-                        src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1725175063/star-removebg-preview_sy1kzj.png"
-                        width={20}
-                        height={20}
-                        alt=""
-                        className="bg-gray-500  rounded-full"
-                      />
-                    )}
-
                     <p className="hover:text-sky-500  after:content-[''] after:absolute after:left-0 after:bottom-0 after:bg-sky-500 after:h-[2px] after:w-0 after:transition-all after:duration-300 group-hover:after:w-1/2 flex items-center">
                       {subItem.label}
                     </p>
@@ -107,7 +98,7 @@ const Navbar = ({ isTransparent }) => {
   return (
     <nav
       className={`p-5 sticky top-0 z-50 transition-all duration-300 ${
-        navbarTransparent ? "bg-transparent" : "bg-white shadow-lg"
+        navbarTransparent ? "bg-transparent" : "bg-white border-b border-gray-200"
       }`}
     >
       <div className="mx-auto flex items-center justify-between w-full max-w-8xl">
@@ -198,13 +189,7 @@ const Navbar = ({ isTransparent }) => {
             </div>
           )}
 
-          <button
-            type="button"
-            className="text-white bg-[#2C87D9] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-xl text-sm px-5 py-2.5 text-center inline-flex items-center"
-            onClick={handleButtonClick}
-          >
-            BOOK A CALL
-          </button>
+         <CustomButton title={"Get in Touch"}/>
         </div>
 
         {/* Mobile Menu Button */}

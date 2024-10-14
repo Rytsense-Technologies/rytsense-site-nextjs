@@ -9,22 +9,23 @@ import FintechSection from "../../../components/industries-comp/finance/FintechS
 import BrandsSection from "../../../components/industries-comp/finance/BrandsSection";
 import FinanceTestimonials from "../../../components/industries-comp/finance/FinanceTestimonials";
 import FAQSection from "../../../components/industries-comp/finance/FAQSection";
-
+import FinanceNav from "../../../components/industries-comp/finance/FinanceNav";
 
 const page = () => {
   return (
     <>
+      <FinanceNav />
       <div className="lg:px-20">
         <Hero />
         <TrustedBrands />
         <ServicesSection />
         <ServicesGrid />
-        <BenefitsSection/>
-        <Solutions/>
-<FintechSection/>
-<BrandsSection/>
-<FinanceTestimonials/>
-<FAQSection/>
+        <BenefitsSection />
+        <Solutions />
+        <FintechSection />
+        <BrandsSection />
+        <FinanceTestimonials />
+        <FAQSection />
       </div>
     </>
   );

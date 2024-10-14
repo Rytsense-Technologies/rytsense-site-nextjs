@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CustomButton from "../../common/CustomButton";
 
 const services = [
   {
@@ -37,10 +38,10 @@ export default function ServicesSection() {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8">
           Revolutionizing The Financial Ecosystem For Every Business Size
         </h2>
-        <p className="text-gray-600  mx-auto mb-16">
+        <p className="text-gray-800 text-xl mx-auto mb-16">
           Code Brew offers deploys extensive FinTech domain knowledge &
           first-class financial software development services to create next-gen
           financial app development solutions for everyone.
@@ -54,21 +55,19 @@ export default function ServicesSection() {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={100}
-                  height={100}
+                  width={300}
+                  height={300}
                 />
               </div>
               <div className="border-b-4 border-sky-500 w-16  mb-4"></div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 {service.title}
               </h3>
-              <p className="text-sky-500 text-xs font-semibold mb-4 border border-sky-500 bg-sky-100 p-1 rounded-lg">
+              <p className="text-sky-500 text-md font-semibold mb-4 border border-sky-500 bg-sky-100 p-1 rounded-lg">
                 {service.question}
               </p>
-              <p className="text-gray-600 text-sm font-normal mb-8">{service.description}</p>
-              <button className="px-6 py-3 bg-sky-500 text-white rounded-lg hover:bg-sky-600">
-                {service.button}
-              </button>
+              <p className="text-gray-800 text-lg font-normal mb-8">{service.description}</p>
+              <CustomButton title={"Get Started"}/>
             </div>
           ))}
         </div>

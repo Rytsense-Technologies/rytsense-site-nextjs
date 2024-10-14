@@ -87,11 +87,11 @@ export default function Solutions() {
                   {service.icon}
                 </span>
 
-                <h3 className="text-xl font-semibold text-gray-900 mt-2 border-b border-gray-500">
+                <h3 className="text-2xl font-bold text-gray-900 mt-2 border-b border-gray-500">
                   {service.title}
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <p className="text-gray-800 text-lg font-sans">{service.description}</p>
             </div>
           ))}
         </div>

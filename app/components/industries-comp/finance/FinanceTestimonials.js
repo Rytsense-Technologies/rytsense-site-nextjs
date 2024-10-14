@@ -33,11 +33,11 @@ const FinanceTestimonials = () => {
         <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="md:flex md:items-end md:justify-between">
             <div className="max-w-xl">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                 Straight From Our Clients Heart!
               </h2>
 
-              <p className="mt-6 max-w-lg leading-relaxed text-gray-700">
+              <p className="mt-6 max-w-lg leading-relaxed text-gray-800">
                 They have unlocked their success & gained a competitive edge
                 with our enterprise software development services.
               </p>
@@ -101,7 +101,7 @@ const FinanceTestimonials = () => {
                   <div className="mt-4">
                  
 
-                    <p className="mt-4 leading-relaxed text-sm text-gray-700">
+                    <p className="mt-4 leading-relaxed text-md text-gray-700">
                       {testi.message}
                     </p>
                   </div>
