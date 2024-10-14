@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
         {isClutchRoute ? <FooterClutch /> : <Footer />}
         <div className="fixed bottom-0 right-5 p-3 z-20">
           <a
-            href="http://wa.me/+917010044153?text=Hello how can I help you?"
+            href="http://wa.me/+917010044153?text=Hello"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,4 +105,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 } 0.
-  
+
