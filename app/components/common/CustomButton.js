@@ -17,7 +17,7 @@ const CustomButton = ({ title }) => {
 
   return (
     <button
-      className="text-white bg-[#2C87D9] text-lg font-semibold hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-lg px-5 py-1.5 flex items-center gap-5 justify-center dark:focus:ring-[#1da1f2]/55"
+      className="text-white bg-[#2C87D9] text-lg font-semibold hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50  px-5 py-2.5 flex items-center gap-5 justify-center dark:focus:ring-[#1da1f2]/55"
       onClick={handleButtonClick}
     >
       <span className="relative flex h-5 w-5">

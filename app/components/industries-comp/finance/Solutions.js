@@ -82,7 +82,7 @@ export default function Solutions() {
           {services.map((service, index) => (
             <div key={index} className="p-6  text-left">
               <div className=" mb-4">
-                <span className="text-sky-500 w-20 h-20">
+                <span className="text-sky-500 w-28 h-28 text-6xl">
                   {" "}
                   {service.icon}
                 </span>

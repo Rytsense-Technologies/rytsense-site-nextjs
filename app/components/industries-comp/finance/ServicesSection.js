@@ -47,27 +47,29 @@ export default function ServicesSection() {
           financial app development solutions for everyone.
         </p>
         </div>
-        {/* Cards Section */}
+      
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {services.map((service, index) => (
             <div key={index} className="bg-white p-8 rounded-lg">
-              <div className="flex justify-start mb-6">
+              <div className="flex justify-start mb-6" style={{width:"350px", height:"350px"}}>
                 <Image
                   src={service.image}
                   alt={service.title}
                   width={300}
                   height={300}
+            
                 />
               </div>
               <div className="border-b-4 border-sky-500 w-16  mb-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-5">
                 {service.title}
               </h3>
-              <p className="text-sky-500 text-md font-semibold mb-4 border border-sky-500 bg-sky-100 p-1 rounded-lg">
+              <p className="text-sky-500 text-sm font-semibold mb-4 border border-sky-500 bg-sky-100 p-1 rounded-lg">
                 {service.question}
               </p>
               <p className="text-gray-800 text-lg font-normal mb-8">{service.description}</p>
-              <CustomButton title={"Get Started"}/>
+       
             </div>
           ))}
         </div>

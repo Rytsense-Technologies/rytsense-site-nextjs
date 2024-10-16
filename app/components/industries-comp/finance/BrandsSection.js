@@ -2,13 +2,22 @@ import Image from 'next/image';
 
 const BrandsSection = () => {
   const logos = [
-    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542565/772ec2d68ef087be3b045adb551202c7.fint_brand_img1_v896xy.webp", alt: "BharatPe" },
-    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542611/85ba15c6b7f8093ba255ab98095ce9fd.fint_brand_img2_nfp5zr.webp", alt: "Vodafone" },
-    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542621/96268d9366d227a2a2c206ed2714ceeb.fint_brand_img3_ukclif.webp", alt: "Fiji Eats" },
-    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542684/b98303ecb9476588eb0653bc35131e89.fint_brand_img4_ow7evd.webp", alt: "Eglooz" },
-    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542700/d41d8cd98f00b204e9800998ecf8427e.fint_brand_img6_pske3g.webp", alt: "ZipEats" },
-    // Add more logo paths here
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728975891/finance-brand1_n6iqd0.svg", alt: "BharatPe" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976101/jupiter-removebg-preview_xbkqsz.png", alt: "Vodafone" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976105/ippo-removebg-preview_paupx0.png", alt: "Fiji Eats" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976113/Groww-removebg-preview_gso9ja.png", alt: "Eglooz" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131449/virginpus_nsaulp.png", alt: "Virgin Plus" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131478/Ford_logo_flat.svg_p29mu0.png", alt: "Ford" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131491/ikea-logo.3ee105eef6b5939c1269_sic2jt.svg", alt: "Ikea" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131504/Hitachi_pqcry1.webp", alt: "Hitachi" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131514/Disney__logo.svg_ei0hl0.webp", alt: "Disney" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131537/Fidelity-Logo_k3vtga.png", alt: "Fidelity" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725131520/CEAT_xm9dsb.webp", alt: "CEAT" },
+    { src: "https://res.cloudinary.com/dlg3i3ari/image/upload/v1725426919/tcs1_wigk9e.webp", alt: "TCS" },
+  
+    // Add more logo paths here as needed
   ];
+  
 
   return (
     <div className="py-12 max-w-xl mx-auto">
@@ -16,13 +25,13 @@ const BrandsSection = () => {
         These Brands Have Found Success With Our Fintech App Development Services
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8 px-4">
         {logos.map((logo, index) => (
           <div key={index} className="flex items-center justify-center">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={120}
+              width={200}
               height={60}
               className="object-contain"
             />

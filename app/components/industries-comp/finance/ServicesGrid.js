@@ -87,7 +87,7 @@ export default function ServicesGrid() {
                 />
 
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-                  <div className="absolute top-4 left-4 bg-sky-500 p-3 text-white rounded-full">
+                  <div className="absolute top-4 left-4 bg-sky-500  w-20 h-20 p-4 text-5xl text-center text-white rounded-full">
                     {service.icon}
                   </div>
 

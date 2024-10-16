@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const FAQSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const faqs = [
     {
@@ -36,7 +36,7 @@ const FAQSection = () => {
         <div key={index} className="border-b border-gray-300 mb-4">
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full text-left flex justify-between items-center py-4 focus:outline-none"
+            className="w-full text-left flex text-lg justify-between items-center py-4 focus:outline-none"
           >
             <span className="text-lg font-semibold">{faq.question}</span>
             {activeIndex === index ? (
@@ -47,7 +47,7 @@ const FAQSection = () => {
           </button>
 
           {activeIndex === index && (
-            <div className="py-4 text-gray-500">
+            <div className="py-4 text-xl text-gray-500">
               {faq.answer}
             </div>
           )}

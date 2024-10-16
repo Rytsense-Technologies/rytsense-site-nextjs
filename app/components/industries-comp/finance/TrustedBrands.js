@@ -12,50 +12,42 @@ export default function TrustedBrands() {
         <div className="flex justify-center items-center flex-wrap space-x-28">
           <div className="flex justify-center items-center">
             <Image 
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542565/772ec2d68ef087be3b045adb551202c7.fint_brand_img1_v896xy.webp" 
+              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728975891/finance-brand1_n6iqd0.svg" 
               alt="BharatPe" 
-              width={100} 
-              height={50} 
+              width={200} 
+              height={20} 
               objectFit="contain"
             />
           </div>
           <div className="flex justify-center items-center">
             <Image 
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542611/85ba15c6b7f8093ba255ab98095ce9fd.fint_brand_img2_nfp5zr.webp" 
+              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976101/jupiter-removebg-preview_xbkqsz.png" 
               alt="Vodafone" 
-              width={100} 
-              height={50} 
+              width={200} 
+              height={20} 
               objectFit="contain"
             />
           </div>
           <div className="flex justify-center items-center">
             <Image 
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542621/96268d9366d227a2a2c206ed2714ceeb.fint_brand_img3_ukclif.webp" 
+              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976105/ippo-removebg-preview_paupx0.png" 
               alt="Grintafy" 
-              width={100} 
-              height={50} 
+              width={200} 
+              height={20} 
               objectFit="contain"
             />
           </div>
       
           <div className="flex justify-center items-center">
             <Image 
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542694/197b8c56785a577ec7ba43fd745572ba.fint_brand_img5_xcbsyp.webp" 
+              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976113/Groww-removebg-preview_gso9ja.png" 
               alt="AWR Rostamani" 
-              width={100} 
-              height={50} 
+              width={200} 
+              height={20} 
               objectFit="contain"
             />
           </div>
-          <div className="flex justify-center items-center">
-            <Image 
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728542700/d41d8cd98f00b204e9800998ecf8427e.fint_brand_img6_pske3g.webp" 
-              alt="Tinystep" 
-              width={100} 
-              height={50} 
-              objectFit="contain"
-            />
-          </div>
+         
         </div>
       </div>
     </section>

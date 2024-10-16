@@ -60,20 +60,20 @@ const Navbar = ({ isTransparent }) => {
             navbarTransparent ? "text-white" : "text-gray-900"
           }`}
         >
-          <p className="hover:text-sky-500 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:bg-sky-500 after:h-[2px] after:w-0 after:transition-all after:duration-300 group-hover:after:w-1/2 flex items-center">
+          <p className="hover:text-sky-500   flex items-center">
             {item.label}
           </p>
         </Link>
         {item.submenu && (
           <div
-            className="absolute left-0 top-full mt-8 bg-white shadow-lg rounded-lg py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:block transition-all duration-300"
+            className="absolute left-1/2 top-full mt-8 bg-white shadow-lg rounded-2xl py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:block transition-all duration-300 transform -translate-x-1/2"
             style={{
-              minWidth: item.label === "Hire Developers" ? "900px" : "500px",
+              minWidth: item.label === "Hire Developers" ? "1000px" : "600px",
             }}
           >
             <div
               className={`grid ${
-                item.label === "Hire Developers" ? "grid-cols-6" : "grid-cols-3"
+                item.label === "Hire Developers" ? "grid-cols-5" : "grid-cols-2"
               } gap-8 p-4 text-gray-500`}
             >
               {item.submenu.map((subItem, subIndex) => (
@@ -82,8 +82,8 @@ const Navbar = ({ isTransparent }) => {
                     href={subItem.path || "#"}
                     className="flex items-center gap-2"
                   >
-                    <p className="hover:text-sky-500  after:content-[''] after:absolute after:left-0 after:bottom-0 after:bg-sky-500 after:h-[2px] after:w-0 after:transition-all after:duration-300 group-hover:after:w-1/2 flex items-center">
-                      {subItem.label}
+                    <p className="hover:text-sky-500 flex itemse-center gap-4 font-sans text-gray-800 font-semibold  flex items-center">
+                     <span className=" text-center text-xl">{subItem.icon}</span> {subItem.label}
                     </p>
                   </Link>
                 </div>
@@ -98,7 +98,9 @@ const Navbar = ({ isTransparent }) => {
   return (
     <nav
       className={`p-5 sticky top-0 z-50 transition-all duration-300 ${
-        navbarTransparent ? "bg-transparent" : "bg-white border-b border-gray-200"
+        navbarTransparent
+          ? "bg-transparent"
+          : "bg-white border-b border-gray-200"
       }`}
     >
       <div className="mx-auto flex items-center justify-between w-full max-w-8xl">
@@ -189,7 +191,7 @@ const Navbar = ({ isTransparent }) => {
             </div>
           )}
 
-         <CustomButton title={"Get in Touch"}/>
+          <CustomButton title={"Get in Touch"} />
         </div>
 
         {/* Mobile Menu Button */}

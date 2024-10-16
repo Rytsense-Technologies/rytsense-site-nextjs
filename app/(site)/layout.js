@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
     "/clutch/",
     "/ai-development-company-india/",
     "/software-development-company-india/",
-    "/company/hire-developers-in-india/",
+    "/hire-developers-in-india/",
     "/software-development-company-usa/",
     "/ai-development-company-usa/",
     "/industries-pages/finance/",
