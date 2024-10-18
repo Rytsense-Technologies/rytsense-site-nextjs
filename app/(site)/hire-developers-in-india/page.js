@@ -9,11 +9,18 @@ import HiringChallenges from "../../components/hire-developers/HiringChallenges"
 import HiringComparison from "../../components/hire-developers/HiringComparison";
 import DeveloperTips from "../../components/hire-developers/DeveloperTips";
 import FAQSection from "../../components/hire-developers/FAQSection";
+import DetailedMessageSection from "../../components/hire-developers/DetailedMessageSection";
+import TypesOfDevelopersSection from "../../components/hire-developers/TypesOfDevelopersSection";
+import TechnologiesExpertiseSection from "../../components/hire-developers/TechnologiesExpertiseSection";
+import EngagementModelsSection from "../../components/hire-developers/EngagementModelsSection";
+import HiringProcessSection from "../../components/hire-developers/HiringProcessSection";
+import SuccessStoriesSection from "../../components/hire-developers/SuccessStoriesSection";
+import LetsConnect from "../../components/common/LetsConnect";
 
 export const metadata = {
-  title: "Best software developers in india | Rytsense Technologies",
+  title: "Hire Dedicated Software Developers and Programmers India",
   description:
-    "Hire programmers in India from a top software development company. We offer skilled developers and programmers for your projects, helping you find the best software developers in India for custom solutions",
+    "Looking to hire software developers in India? Rytsense Tech offers skilled, dedicated developers for custom software solutions. Scale your business with expert IT talent today.",
   alternates: {
     canonical: "https://rytsensetech.com/hire-developers-in-india",
     languages: {
@@ -28,15 +35,17 @@ const page = () => {
     <>
       <div className="lg:px-20">
         <HeroSection />
+        <DetailedMessageSection />
         <WhyHireUs />
-        <ValuesAndBenefits />
+        <TypesOfDevelopersSection />
+        <TechnologiesExpertiseSection />
       </div>
-      {/* <HireIndiaDevelopers /> */}
+
       <BenefitsOfHiring />
-      <HiringFactors />
-      <HiringChallenges />
-      <HiringComparison />
-      <DeveloperTips />
+      <EngagementModelsSection />
+      <HiringProcessSection />
+      <SuccessStoriesSection />
+      <LetsConnect />
       <FAQSection />
     </>
   );

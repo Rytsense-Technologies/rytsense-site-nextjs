@@ -13,7 +13,7 @@ const SponserBanner2 = () => {
       >
         <div className="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
           <div className="text-center lg:w-4/5 w-full   p-8 rounded-lg ">
-            <h1 className="title-font sm:text-4xl text-4xl mb-8 font-bold text-white">
+            <h1 className="title-font sm:text-4xl text-3xl mb-8 font-bold text-white">
               Improve Efficiency & Flexibility Of Your Processes With Top-Notch
               FinTech App Development Company
             </h1>

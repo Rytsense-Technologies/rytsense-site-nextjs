@@ -11,6 +11,7 @@ import LatestBlogs from "../../components/home/Latestblog";
 import Faq from "../../components/common/faq/Faq";
 import LetsConnect from "../../components/common/LetsConnect";
 import Carousalclutch from "../../components/common/Carousalclutch";
+import NewHeroSection from "../../components/clutch/NewHeroSection"
 
 const ClutchLandingPage = () => {
   const faqs = [
@@ -45,7 +46,8 @@ const ClutchLandingPage = () => {
   return (
     <>
       <MainBanner />
-      <Carousalclutch/>
+      {/* <NewHeroSection/> */}
+      <Carousalclutch />
       <CompanyStats />
       <RankSection />
       <KeyfeatureClutch />

@@ -19,7 +19,7 @@ const featuresData = [
   },
 
   {
-    title: " AI and Machine Learning",
+    title: "AI and Machine Learning",
     description:
       "AI and ML are used to create personalized financial services, automate trading, optimize fraud detection, and manage risks in real time.",
     imageUrl:
@@ -30,12 +30,12 @@ const featuresData = [
 const CuttingEdgeTech = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-4">
         {/* Heading Section */}
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="lg:text-4xl sm:text-3xl md:text-3xl font-bold mb-4">
           Cutting-Edge Technologies To Build Your FinTech App
         </h2>
-        <p className="text-lg mb-12">
+        <p className="text-base sm:text-lg mb-12">
           We are a renowned financial software development company creating
           customized FinTech solutions with the help of different technologies.
         </p>
@@ -52,6 +52,7 @@ const CuttingEdgeTech = () => {
                 src={feature.imageUrl}
                 alt={feature.title}
                 className="w-full h-40 object-contain mt-5"
+                loading="lazy"
               />
             </div>
           ))}

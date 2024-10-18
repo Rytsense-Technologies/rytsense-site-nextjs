@@ -41,9 +41,9 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8">
+    <section className="bg-white py-16 px-5">
+      <div className="mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
           How You Benefit With Our Financial Software Development Solutions?
         </h2>
         <p className="text-gray-800 text-lg max-w-xl mx-auto mb-16">

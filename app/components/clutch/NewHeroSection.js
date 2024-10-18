@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 
 const BookACall = dynamic(() => import('../common/BookACall'), { ssr: false });
 
-const MainPageBanner = () => {
+const NewHeroSection = () => {
  
 
   return (
@@ -34,4 +34,4 @@ const MainPageBanner = () => {
   );
 };
 
-export default MainPageBanner;
+export default NewHeroSection;

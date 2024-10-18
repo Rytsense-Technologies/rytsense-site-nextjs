@@ -16,23 +16,23 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How can I hire developers at Rytsense Technologies?",
-      answer: "To hire developers in India, visit our website and fill out the contact form, or reach out via email, chat, or phone. Our team will respond promptly to connect with you.",
+      question: "How can I hire software developers in India with Rytsense Tech?",
+      answer: "We offer a streamlined hiring process that lets you choose the best developers for your needs, whether for long-term projects or short-term engagements.",
       icon: <FaLaptopCode className="text-blue-600" />,
     },
     {
-      question: "What is the cost of hiring developers from Rytsense Technologies?",
-      answer: "The cost depends on the project size, the number of developers required, and the technologies used. We offer competitive rates tailored to your business needs.",
+      question: "What are the benefits of hiring a dedicated development team?",
+      answer: "Dedicated teams provide continuity, deep understanding of your project, and long-term support for business growth.",
       icon: <FaDollarSign className="text-green-600" />,
     },
     {
-      question: "How can I communicate with my developer?",
-      answer: "Communicate with our dedicated developers through various channels, including email, chat, video calls, and more.",
+      question: "Can I hire Indian developers for short-term projects?",
+      answer: "Yes, we offer flexible freelance options to meet your specific short-term development goals.",
       icon: <FaComments className="text-purple-600" />,
     },
     {
-      question: "How do you help businesses fulfill their development needs?",
-      answer: "Rytsense Technologies connects you with the best software programmers for your business needs, ensuring high-quality outcomes and a smooth development process.",
+      question: "How does Rytsense Tech ensure project quality and timely delivery?",
+      answer: "We follow a structured project management process and provide continuous updates, ensuring high-quality results and on-time delivery.",
       icon: <FaHandsHelping className="text-orange-600" />,
     },
   ];

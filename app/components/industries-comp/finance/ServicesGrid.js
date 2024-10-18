@@ -59,9 +59,9 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 px-5">
       <div className=" mx-auto">
-        <div className="container mx-auto text-center">
+        <div className="mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-8">
             Use Cases Our Financial Software Development Services Cater
           </h2>

@@ -15,7 +15,7 @@ const logos = [
 
 const Carousalclutch = () => {
   return (
-    <div className="my-5 px-6">
+    <div className="px-6 py-20">
       <div
         className="container items-center justify-center mx-auto"
         data-aos="fade-up"

@@ -79,7 +79,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/key1.webp")`,
+                backgroundImage: `url("/images/keyfeatures/key4.webp")`,
                 //  // filter: "blur(2px)",,
               }}
             ></div>
@@ -234,7 +234,7 @@ const KeyfeatureClutch = () => {
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url("/images/keyfeatures/key4.webp")`,
+                backgroundImage: `url("/images/keyfeatures/key7.webp")`,
                 // filter: "blur(2px)",,
               }}
             ></div>

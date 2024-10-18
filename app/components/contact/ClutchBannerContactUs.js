@@ -241,7 +241,7 @@ const ClucthBannerContactUs = ({
       )}&email=${encodeURIComponent(
         formData.email
       )}&contactnumber=${encodeURIComponent(fullContactNumber)}`;
-      // window.open(calendlyUrl, "_blank");
+      window.open(calendlyUrl, "_blank");
 
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbymWBh4OHxVDYNJOD0nXsnBKY-gUGVvNrNW4nTk2s479a17NtWgH0sXWXS6nkL3MopD/exec",
@@ -289,12 +289,12 @@ const ClucthBannerContactUs = ({
   return (
     <div className="">
       <section className={`px-10 py-5 rounded-xl ${bgColor}`}>
-        <div className="flex flex-col items-center justify-center">
-          <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-lg font-semibold tracking-tight text-[#092947] sm:text-lg">
-              Connect us
+        <div className="flex flex-col ">
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-gray-800">
+            Get In Touch
             </h2>
-            <p className={`mt-2 text-xl leading-8 font-bold ${textcolor}`}>
+            <p className={`mt-2 text-sm leading-8 font-bold ${textcolor}`}>
               {subText}
             </p>
           </div>
@@ -409,7 +409,7 @@ const ClucthBannerContactUs = ({
               </div>
             )}
           </form>
-          <div className="inter-med text-gray-600 text-xs   flex  justify-center mt-10">
+          <div className="inter-med text-gray-600 text-xs   flex  justify-center mt-5">
             <FontAwesomeIcon icon={faLock} className="mr-3" /> Your idea is 100%
             protected by our non disclosure agreement.
           </div>

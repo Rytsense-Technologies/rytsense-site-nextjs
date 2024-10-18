@@ -75,10 +75,10 @@ const FeatureSlider = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center mb-12">
+      <div className=" mx-auto flex flex-col md:flex-row justify-between items-center mb-12">
         {/* Left Text Section */}
-        <div className="text-left lg:w-2/3 w-full mb-6 md:mb-0">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="text-left lg:w-2/3 w-full mb-6 md:mb-0 px-5">
+          <h2 className="text-3xl xs:text-4xl xl:text-4xl md:text-2xl font-bold mb-4">
             Our FinTech Solutions Come Integrated With Unique Features
           </h2>
           <p className="text-lg">
@@ -90,16 +90,18 @@ const FeatureSlider = () => {
         {/* Right Arrows Section */}
         <div className="flex justify-end space-x-4">
           <button
-            className="bg-gray-300 hover:bg-gray-400 p-2 rounded-full disabled:bg-gray-200"
+            className="bg-gray-300 hover:bg-gray-400 p-2 rounded-full disabled:bg-gray-200 transition-colors duration-300"
             onClick={prevSlide}
             disabled={currentIndex === 0}
+            aria-label="Previous Slide"
           >
             ←
           </button>
           <button
-            className="bg-gray-300 hover:bg-gray-400 p-2 rounded-full disabled:bg-gray-200"
+            className="bg-gray-300 hover:bg-gray-400 p-2 rounded-full disabled:bg-gray-200 transition-colors duration-300"
             onClick={nextSlide}
             disabled={currentIndex + cardsToShow >= featuresData.length}
+            aria-label="Next Slide"
           >
             →
           </button>
@@ -109,21 +111,23 @@ const FeatureSlider = () => {
       {/* Cards Section */}
       <div className="relative overflow-hidden">
         <div
-          className="flex"
+          className="flex transition-transform duration-300 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
-            transition: "transform 0.3s ease-in-out",
             width: `${(featuresData.length / cardsToShow) * 100}%`,
           }}
         >
           {featuresData.map((feature, index) => (
-            <div key={index} className="min-w-1/3 px-4">
-              <div className="border border-green-300 rounded-lg p-6  hover:shadow-lg transition-shadow duration-300">
+            <div
+              key={index}
+              className="min-w-[calc(100%/3)] md:min-w-1/3 px-4"
+            >
+              <div className="border border-green-300 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                 {feature.icon}
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="mb-4">{feature.description}</p>
                 <button
-                  className="text-sky-500 font-semibold cursor-pointer"
+                  className="text-sky-500 font-semibold cursor-pointer hover:underline"
                   onClick={handleButtonClick}
                 >
                   Get Started →

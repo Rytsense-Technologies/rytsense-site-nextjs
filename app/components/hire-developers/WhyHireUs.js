@@ -64,77 +64,50 @@ const WhyHireUs = () => {
   ];
 
   return (
-    <div className="px-4 py-10 md:px-8 md:py-20 bg-gradient-to-r from-blue-50 via-white to-blue-50 text-gray-800">
-      {/* Header Section */}
-      <header className="text-center mb-8 md:mb-12">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-blue-600 mb-4">
-          Why Choose Rytsense Technologies?
-        </h1>
-        <p className="text-base md:text-lg text-gray-700">
-          Hire the best global talent at half the cost, with unparalleled
-          expertise and a seamless hiring process.
-        </p>
-      </header>
-
-      {/* Custom Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div className="shadow-lg p-6 rounded-lg bg-white">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
-            <span className="inline-block w-8 h-8 bg-sky-500 text-white rounded-full text-center mr-3">
-              1
-            </span>
-            {steps[0].title}
-          </h2>
-          <div className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            {steps[0].description}
+    <section className=" py-16">
+      <div className="container mx-auto px-5">
+        <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-10">
+          Why Choose Rytsense Tech for Hiring Developers?
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          <div className="flex items-start bg-sky-200 p-4">
+            <FaCheckCircle className="text-sky-500 text-3xl mr-4" />
+            <p className="text-lg text-gray-700  leading-relaxed">
+              Proven track record of delivering successful software solutions for businesses worldwide.
+            </p>
           </div>
-        </div>
-        <div className="shadow-lg p-6 rounded-lg bg-white">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
-            <span className="inline-block w-8 h-8 bg-sky-500 text-white rounded-full text-center mr-3">
-              2
-            </span>
-            {steps[1].title}
-          </h2>
-          <div className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            {steps[1].description}
+          <div className="flex items-start bg-rose-200 p-4">
+            <FaCheckCircle className="text-sky-500 text-3xl mr-4" />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Highly experienced developers proficient in technologies like Java, Python, React, AI, and blockchain.
+            </p>
           </div>
-        </div>
-        <div className="shadow-lg p-6 rounded-lg bg-white">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
-            <span className="inline-block w-8 h-8 bg-sky-500 text-white rounded-full text-center mr-3">
-              3
-            </span>
-            {steps[2].title}
-          </h2>
-          <div className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            {steps[2].description}
+          <div className="flex items-start bg-orange-200 p-4">
+            <FaCheckCircle className="text-sky-500 text-3xl mr-4" />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Competitive pricing with no compromise on quality and performance.
+            </p>
           </div>
-        </div>
-        <div className="shadow-lg p-6 rounded-lg bg-white">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
-            <span className="inline-block w-8 h-8 bg-sky-500 text-white rounded-full text-center mr-3">
-              4
-            </span>
-            {steps[3].title}
-          </h2>
-          <div className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            {steps[3].description}
+          <div className="flex items-start bg-green-200 p-4">
+            <FaCheckCircle className="text-sky-500 text-3xl mr-4" />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Customized engagement models: hire a dedicated development team or choose freelance developers based on your project needs.
+            </p>
           </div>
-        </div>
-        <div className="md:col-span-2 lg:col-span-2 shadow-lg p-6 rounded-lg bg-white">
-          <h2 className="text-lg md:text-xl font-bold mb-4 text-center">
-            <span className="inline-block w-8 h-8 bg-sky-500 text-white rounded-full text-center mr-3">
-              5
-            </span>
-            {steps[4].title}
-          </h2>
-          <div className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            {steps[4].description}
+          <div className="flex items-start bg-indigo-200 p-4">
+            <FaCheckCircle className="text-sky-500 text-3xl mr-4" />
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Commitment to timely project delivery with ongoing support and maintenance.
+            </p>
+          </div>
+          <div className="col-span-1 md:col-span-2 lg:col-span-2 text-center mt-8">
+            <p className="text-xl font-semibold text-gray-900">
+              Hire dedicated developers in India with Rytsense Tech and experience exceptional software development that drives business success.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

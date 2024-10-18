@@ -9,13 +9,13 @@ export default function TrustedBrands() {
         <h3 className="text-4xl font-bold text-gray-900 mb-8">Trusted By Leading Brands Worldwide</h3>
 
         {/* Logos Section */}
-        <div className="flex justify-center items-center flex-wrap space-x-28">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center px-4">
           <div className="flex justify-center items-center">
             <Image 
               src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728975891/finance-brand1_n6iqd0.svg" 
               alt="BharatPe" 
-              width={200} 
-              height={20} 
+              width={160} 
+              height={40} 
               objectFit="contain"
             />
           </div>
@@ -23,8 +23,8 @@ export default function TrustedBrands() {
             <Image 
               src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976101/jupiter-removebg-preview_xbkqsz.png" 
               alt="Vodafone" 
-              width={200} 
-              height={20} 
+              width={160} 
+              height={40} 
               objectFit="contain"
             />
           </div>
@@ -32,22 +32,20 @@ export default function TrustedBrands() {
             <Image 
               src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976105/ippo-removebg-preview_paupx0.png" 
               alt="Grintafy" 
-              width={200} 
-              height={20} 
+              width={160} 
+              height={40} 
               objectFit="contain"
             />
           </div>
-      
           <div className="flex justify-center items-center">
             <Image 
               src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1728976113/Groww-removebg-preview_gso9ja.png" 
               alt="AWR Rostamani" 
-              width={200} 
-              height={20} 
+              width={160} 
+              height={40} 
               objectFit="contain"
             />
           </div>
-         
         </div>
       </div>
     </section>

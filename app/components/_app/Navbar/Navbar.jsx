@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { menuItems } from "../../../mock/menuItems"; // Assuming menuItems is in a separate file
 import logo from "../../../../public/images/logo.png";
 import Image from "next/image";
-import CustomButton from "../../common/CustomButton";
+import BookACall from "../../common/BookACall";
+import wp from "../../../../public/images/wp.png";
 
 const Navbar = ({ isTransparent }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,10 @@ const Navbar = ({ isTransparent }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navbarTransparent, setNavbarTransparent] = useState(isTransparent);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
   const handleButtonClick = () => {
     window.open("https://calendly.com/ramkumar_p/call-schedule", "_blank");
-  }; // Popover visibility state
+  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -60,9 +62,7 @@ const Navbar = ({ isTransparent }) => {
             navbarTransparent ? "text-white" : "text-gray-900"
           }`}
         >
-          <p className="hover:text-sky-500   flex items-center">
-            {item.label}
-          </p>
+          <p className="hover:text-sky-500 flex items-center">{item.label}</p>
         </Link>
         {item.submenu && (
           <div
@@ -72,20 +72,37 @@ const Navbar = ({ isTransparent }) => {
             }}
           >
             <div
-              className={`grid ${
-                item.label === "Hire Developers" ? "grid-cols-5" : "grid-cols-2"
-              } gap-8 p-4 text-gray-500`}
+              className={`${
+                item.label === "Hire Developers" ? "grid-cols-5" : "grid-cols-3"
+              } grid gap-8 p-6 text-gray-500`}
             >
-              {item.submenu.map((subItem, subIndex) => (
-                <div key={subIndex} className="group flex items-center">
+              {item.submenu.map((subMenuCategory, subMenuIndex) => (
+                <div key={subMenuIndex}>
                   <Link
-                    href={subItem.path || "#"}
-                    className="flex items-center gap-2"
+                    href={subMenuCategory.path || "#"}
+                    className="font-semibold  mb-5 hover:text-sky-500 text-gray-800 flex items-center gap-4 cursor-pointer"
                   >
-                    <p className="hover:text-sky-500 flex itemse-center gap-4 font-sans text-gray-800 font-semibold  flex items-center">
-                     <span className=" text-center text-xl">{subItem.icon}</span> {subItem.label}
-                    </p>
+                    <span className="text-center text-xl">
+                      {subMenuCategory.icon}
+                    </span>
+                    <span className="text-md text-gray-500 hover:text-sky-500">
+                      {" "}
+                      {subMenuCategory.label}
+                    </span>
                   </Link>
+                  <div className="mt-2">
+                    {subMenuCategory.technologies &&
+                      subMenuCategory.technologies.map((tech, techIndex) => (
+                        <Link href={tech.path || "#"} key={techIndex}>
+                          <p className="hover:text-sky-500 flex items-center mb-4 gap-4 text-gray-800 font-sans font-semibold">
+                            <span className="text-center text-2xl">
+                              {tech.icon}
+                            </span>{" "}
+                            {tech.label}
+                          </p>
+                        </Link>
+                      ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -98,9 +115,7 @@ const Navbar = ({ isTransparent }) => {
   return (
     <nav
       className={`p-5 sticky top-0 z-50 transition-all duration-300 ${
-        navbarTransparent
-          ? "bg-transparent"
-          : "bg-white border-b border-gray-200"
+        navbarTransparent ? "bg-transparent" : "bg-white"
       }`}
     >
       <div className="mx-auto flex items-center justify-between w-full max-w-8xl">
@@ -133,72 +148,26 @@ const Navbar = ({ isTransparent }) => {
 
         {/* Call to Action buttons */}
         <div className="hidden lg:flex items-center space-x-4 relative">
-          <button
-            type="button"
-            onClick={togglePopover} // Open popover on phone call button click
-            className="text-white bg-[#2C87D9] text-xl font-extrabold hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 text-center inline-flex items-center"
-          >
-            <BiSolidPhoneCall />
-          </button>
+          <div className="">
+            <a
+              href="http://wa.me/+917010044153?text=Hello"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={wp} width={50} height={50} alt="WhatsApp Icon" />
+            </a>
+          </div>
 
           {/* Popover Content */}
-          {isPopoverOpen && (
-            <div className="absolute right-12 top-full mt-2 p-4 box-border h-fit w-80 text-black border-1 border-transparent rounded-lg bg-white font-extralight shadow-lg z-20">
-              <div className="text-sm font-semibold">
-                Rytsense Technologies Contacts
-              </div>
-              <div className="text-sm mt-2 font-semibold text-gray-400">
-                For Sales Department
-                <div className="mt-2 rounded-md shadow-sm text-black font-semibold">
-                  <div className="flex">
-                    <Image
-                      src="/images/flag/ind5.png"
-                      alt="icon"
-                      className="w-8 h-8 rounded-3xl"
-                      width={20}
-                      height={20}
-                    />
-                    <a href="https://wa.me/917010044153" className="mt-1 ml-6">
-                      +917010044153
-                    </a>
-                  </div>
-                </div>
-                <div className="rounded-md mt-3 shadow-sm border-1 hover:border-gray-400 text-black font-semibold">
-                  <div className="flex">
-                    <Image
-                      src="/images/flag/usa.png"
-                      alt="icon"
-                      className="w-8 h-8"
-                      width={20}
-                      height={20}
-                    />
-                    <div className="mt-1 ml-6"> +1 650 681 0090</div>
-                  </div>
-                </div>
-                <div className="mt-3 rounded-md shadow-sm border-1 border-gray-600 hover:border-gray-400 text-black font-semibold">
-                  <div className="flex">
-                    <Image
-                      src="/images/flag/mail.png"
-                      alt="icon"
-                      className="w-8 h-8 rounded-3xl"
-                      width={20}
-                      height={20}
-                    />
-                    <div className="mt-1 ml-6">hey@rytsensetech.com</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
 
-          <CustomButton title={"Get in Touch"} />
+          <BookACall title={"Book a Call"} />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center">
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none"
+            className=" focus:outline-none"
           >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -224,12 +193,17 @@ const Navbar = ({ isTransparent }) => {
               </div>
               {item.submenu && openSubMenu === index && (
                 <div className="pl-4">
-                  {item.submenu.map((subItem, subIndex) => (
-                    <Link key={subIndex} href={subItem.path}>
-                      <p className="block px-4 py-2 cursor-pointer">
-                        {subItem.label}
-                      </p>
-                    </Link>
+                  {item.submenu.map((subCategory, subIndex) => (
+                    <div key={subIndex}>
+                      <h3 className="font-semibold">{subCategory.label}</h3>
+                      {subCategory.technologies?.map((tech, techIndex) => (
+                        <Link key={techIndex} href={tech.path || "#"}>
+                          <p className="block px-4 py-2 cursor-pointer">
+                            {tech.label}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}
