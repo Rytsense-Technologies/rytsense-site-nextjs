@@ -1,4 +1,6 @@
 "use client";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
@@ -8,6 +10,9 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import ProgressBar from "../providers/ProgressBar";
 import Navbar from "../components/_app/Navbar/Navbar";
+
+
+
 
 const ClutchNavNew = dynamic(() => import("../components/_app/ClutchNavNew"), {
   ssr: false,
@@ -74,7 +79,8 @@ export default function RootLayout({ children }) {
         <Navbar key={pathname} isTransparent={isHomePage} />
         <ProgressBar />
         <main>{children}</main>
-        {isClutchRoute ? <FooterClutch /> : <Footer />}
+        {/* {isClutchRoute ? <FooterClutch /> : <Footer />} */}
+        <FooterClutch />
       </body>
     </html>
   );

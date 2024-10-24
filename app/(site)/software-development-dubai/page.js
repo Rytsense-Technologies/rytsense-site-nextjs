@@ -4,13 +4,17 @@ import CompanyStats from "../../components/clutch/CompanyStats";
 import RankSection from "../../components/home/RankSection";
 import KeyfeatureClutch from "../../components/home/KeyfeatureClutch";
 import ServicesBox from "../../components/common/ServicesBox";
-import EstimateProject from "../../components/home/EstimateProject";
+import EstimateProject from "../../components/software/software-dubai/EstimateProject";
 import Partnercompany from "../../components/home/Partnercompany";
 import ServiceSuspence from "../../components/clutch/ServiceSuspence";
 import LatestBlogs from "../../components/home/Latestblog";
 import Faq from "../../components/common/faq/Faq";
 import LetsConnect from "../../components/common/LetsConnect";
-import Carousalclutch from "../../components/common/Carousalclutch";
+import DubaiCompanyLogos from "../../components/software/software-dubai/DubaiCompanyLogos"
+import IndustryGrid from "../../components/software/software-dubai/IndustryGrid"
+import DubaiTestimonials from "../../components/software/software-dubai/DubaiTestimonials"
+import HeroBanner from "../../components/software/software-dubai/HeroBanner"
+import PortfolioSection from "../../components/software/software-dubai/PortfolioSection"
 
 const ClutchLandingPage = () => {
   const faqs = [
@@ -44,20 +48,24 @@ const ClutchLandingPage = () => {
 
   return (
     <>
-      <MainBanner />
-      <Carousalclutch/>
+      {/* <MainBanner /> */}
+      <HeroBanner/>
+     <DubaiCompanyLogos/>
       <CompanyStats />
       <RankSection />
+      <IndustryGrid/>
       <KeyfeatureClutch />
       <ServicesBox
         heading={
           "We Create New Solution &Transform.Existing Ones With a Development.  Process That Beats Industry - Best Time Line</span>"
         }
       />
+      <PortfolioSection/>
       <EstimateProject />
       {/* <PartnerClutch /> */}
       <Partnercompany />
       {/* <ServiceSuspence /> */}
+      <DubaiTestimonials/>
       <LatestBlogs />
       <Faq faqs={faqs} />
 

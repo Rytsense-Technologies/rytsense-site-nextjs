@@ -6,6 +6,7 @@ export const resourcesarray = [
     heading: "Latest blogs",
     bgtext: "Blog",
     boxarray: [
+   
       {
         id: 1,
         linkTag:"blog",
@@ -83,6 +84,16 @@ export const resourcesarray = [
         para: "Comparison Between Larvel and Core PHP",
         date: "13 / 10 / 2023",
         nav: "larvel-and-php",
+      },
+      {
+        id: 9,
+        linkTag:"blog",
+        image:
+          "https://res.cloudinary.com/dlg3i3ari/image/upload/v1729737010/shutterstock_2287651241_poorvr.jpg",
+        heading: "Hire Software Developers for Startups in India ",
+        para: "Scale Your Startup with Expert Developers.",
+        date: "15 / 11 / 2023",
+        nav: "hire-software-developers-for-startups-in-india",
       },
     ],
     podcast: "yes",

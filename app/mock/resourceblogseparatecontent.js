@@ -1,6 +1,6 @@
 const resourceblogseparatecontent = [
   {
-    id:1,
+    id: 1,
     title: "How to Create a Food Delivery App Like EatClub?",
     nav: "create-a-food-delivery-app-like-eatclub",
     heading: "App Development",
@@ -126,9 +126,14 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:2,
+    id: 2,
     title: "How to Create a Transportation App Like Transit?",
     nav: "create-a-transportation-app-like-transit",
     heading: "App Development",
@@ -281,9 +286,14 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/How-To-Develop-A-Transportation-Logistics-Mobile-App.webp",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:3,
+    id: 3,
     title: "Best Kotlin Tips for Android App Developers",
     nav: "kotlin-tips-for-app-developers",
     heading: "Android",
@@ -369,9 +379,14 @@ const resourceblogseparatecontent = [
       },
     ],
     image: "/images/homepageimages/general.png",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:4,
+    id: 4,
     title: "Comparison Between Larvel and Ruby on Rails",
     nav: "comparison-between-larvel-and-ruby-on-rails",
     heading: "Web Development",
@@ -476,9 +491,14 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/Ruby-on-Rails-vs-Laravel_-Which-Framework-to-Choose-for-Your-Next-Project_.png",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:5,
+    id: 5,
     title: "The 10 Must-Have Dot Net Development Tools",
     nav: "dot-net-development-tools",
     heading: "Software Development",
@@ -562,9 +582,14 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/dot-net-concept-red-background-260nw-215597173.jpg",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:6,
+    id: 6,
     title: "Salesforce vs serviceNow: Which CRM Platform is Best?",
     nav: "salesforce-vs-servicenow",
     heading: "Salesforce",
@@ -657,9 +682,13 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/a-complete-guide-to-salesforce-qa-testing.webp",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:7,
     title: "Top Mobile App Development Trends to Watch Out in 2024",
     nav: "top-mobile-app-development-trends",
     heading: "App Development",
@@ -792,9 +821,13 @@ const resourceblogseparatecontent = [
     ],
     image:
       "/images/homepageimages/6410ebf8e483b5758186fbd8_ABM college mobile app dev main.jpg",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
   },
   {
-    id:8,
     title: "Comparison Between Larvel and Core PHP",
     nav: "larvel-and-php",
     heading: "Web Development",
@@ -916,6 +949,31 @@ const resourceblogseparatecontent = [
       },
     ],
     image: "/images/homepageimages/Laravel-vs-Core-PHP.png",
+    metadata: {
+      title: "",
+      description: "",
+      canonical: "",
+    },
+  },
+  {
+    title: "How to Create a Food Delivery App Like EatClub?",
+    nav: "hire-software-developers-for-startups-in-india",
+    heading: "App Development",
+    paraarray: [
+      "Food delivery app development has revolutionized the way Android, iPhone, and internet users access their favorite nearby eateries.",
+      "These apps simplify the process of browsing menus, placing orders for a variety of culinary delights, and enjoying enticing discounts offered by renowned brands.",
+      "Beyond the convenience of ordering meals, food delivery applications also offer endless savings and the promise of doorstep delivery.",
+      "In this article, our primary focus will be on shedding light on the development costs associated with creating app like EatClub and Uber Eats. However, before delving into the core discussion surrounding the financial aspects of food delivery app development, let's first explore a concise overview of the EatClub app.",
+    ],
+    paraarray2: [],
+    image:
+      "/images/homepageimages/mobile-app-development-company-8379091_1280.png",
+    metadata: {
+      title: "Hire Software Developers for Startups in India ",
+      description:
+        "Looking to hire software developers for startups in India? Get dedicated developers to scale your business with Rytsense Tech's cost-effective, expert teams.",
+      canonical: "",
+    },
   },
 ];
 

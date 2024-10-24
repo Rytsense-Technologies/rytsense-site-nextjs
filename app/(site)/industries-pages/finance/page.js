@@ -17,6 +17,8 @@ import FeatureSlider from "../../../components/industries-comp/finance/FeatureSl
 import CuttingEdgeTech from "../../../components/industries-comp/finance/CuttingEdgeTech";
 import SponserBanner4 from "../../../components/industries-comp/finance/sponser-banners/SponserBanner4";
 import Carousalclutch from "../../../components/common/Carousalclutch";
+import FintechCaseStudy from "../../../components/case-study/FintechCaseStudy"
+import LetsConnect from "../../../components/common/LetsConnect";
 
 const page = () => {
   return (
@@ -29,6 +31,7 @@ const page = () => {
         <SponserBanner1 />
         <ServicesGrid />
         <SponserBanner2 />
+        {/* <FintechCaseStudy/> */}
         <BenefitsSection />
         <SponserBanner3 />
         <FeatureSlider />
@@ -38,6 +41,7 @@ const page = () => {
         <FintechSection />
         <BrandsSection />
         <FinanceTestimonials />
+        <LetsConnect/>
         <FAQSection />
       </div>
     </>
