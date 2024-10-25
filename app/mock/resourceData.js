@@ -92,7 +92,7 @@ export const resourcesarray = [
           "https://res.cloudinary.com/dlg3i3ari/image/upload/v1729737010/shutterstock_2287651241_poorvr.jpg",
         heading: "Hire Software Developers for Startups in India ",
         para: "Scale Your Startup with Expert Developers.",
-        date: "15 / 11 / 2023",
+        date: "24 / 10 / 2024",
         nav: "hire-software-developers-for-startups-in-india",
       },
     ],

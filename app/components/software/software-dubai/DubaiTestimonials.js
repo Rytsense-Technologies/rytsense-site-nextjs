@@ -5,26 +5,23 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "I think Code Brew Labs is passionate enough about what we’re doing and really wants to help grow and support that. I think that’s why our relationship has lasted as long as it has and continues to do so.",
-    name: "Muhammad Asif",
-    role: "Founder, Reon-Digital",
-    flag: "🇦🇪",
+      "A heartfelt thanks to the Rytsense team for their exceptional work and unwavering commitment to excellence in developing customized fintech apps.",
+    name: "Code Brew Labs Clients-Helmi Hamzah",
+    role: "Founder, Do-option.",
   },
   {
     id: 2,
     quote:
-      "Overall Code Brew Labs gave us what we wanted, albeit slightly over budget. They stayed on schedule most of the time, the work was well done and I would potentially use them again and refer them.",
-    name: "Ahmad Hussain",
-    role: "CTO, FHC-GOC",
-    flag: "🇦🇪",
+      "I am grateful to Rytsense for developing a remarkable customized real estate app that raises the bar in Dubai. Rytsense has truly crafted a game-changer app.",
+    name: "Muhammad Altaf",
+    role: "CEO, MySpace",
   },
   {
     id: 3,
     quote:
-      "I think Code Brew Labs is passionate enough about what we’re doing and really wants to help grow and support that. I think that’s why our relationship has lasted as long as it has and continues to do so.",
-    name: "Muhammad Asif",
-    role: "Founder, Reon-Digital",
-    flag: "🇦🇪",
+      "I think Rytsense is passionate enough about what we’re doing and really wants to help grow and support that. I think that’s why our relationship has lasted as long as it has and continues to do so.",
+    name: "Rameender",
+    role: "Co-founder, Shiv.ai",
   },
 ];
 
@@ -35,18 +32,9 @@ const TestimonialCard = ({ quote, name, role, flag }) => {
         <div className="text-5xl font-bold mb-4 text-lime-400">“</div>
         <p className="mb-6 text-sm font-semibold">{quote}</p>
         <div className="flex items-center">
-          <div>
-            <Image
-              src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1705383202/samples/people/smiling-man.jpg"
-              width={100}
-              height={100}
-              className="rounded-full mx-auto object-cover"
-            />{" "}
-          </div>
           <div className="ml-4">
             <p className="font-semibold">{name}</p>
             <p className="text-sm text-gray-100">{role}</p>
-            <p className="text-sm">{flag}</p>
           </div>
         </div>
       </div>

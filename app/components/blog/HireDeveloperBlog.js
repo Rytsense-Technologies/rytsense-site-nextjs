@@ -2,6 +2,7 @@ import React from "react";
 import { FaCheckCircle, FaUsers } from "react-icons/fa";
 import { AiFillDollarCircle } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 // Sample images (you can replace these URLs with actual image paths or URLs)
 const stepImages = [
@@ -94,7 +95,7 @@ const HireDeveloperBlog = () => {
       <section className="py-10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">
-            Steps to Hire Software Developers in India
+            Steps to <Link href="https://rytsensetech.com/hire-developers-in-india/" className="underline">Hire Software Developers in India</Link>
           </h2>
           <div className="space-y-12">
             {/* Step 1 */}

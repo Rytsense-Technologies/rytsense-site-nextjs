@@ -22,7 +22,7 @@ export default function CaseStudyDetail({ params }) {
 
   return (
     <>
-      <SingleBanner heading={casestudy.heading} image={casestudy.topimage} />
+      <SingleBanner heading={casestudy.appname} image={casestudy.topimage} />
 
       {/* About Section */}
       <div className=" container-singlecase mx-auto py-12 p-10">
@@ -35,24 +35,18 @@ export default function CaseStudyDetail({ params }) {
           </div>
           <div className="flex singlepadding-left space-x-36">
             <div className="space-y-20">
-              <p className="inter-bold text-gray-300">
+              <p className=" text-gray-500 text-xl">
                 Industry:{" "}
-                <span className="inter-med text-black flex">eCommerce</span>
-              </p>
-              <p className="inter-bold text-gray-300">
-                Business Type:{" "}
-                <span className="inter-med text-black flex">Startup</span>
+                <span className="text-2xl font-bold text-black flex">
+                  {casestudy.industry}
+                </span>
               </p>
             </div>
             <div className="space-y-20">
-              <p className="inter-bold text-gray-300">
-                Industry:{" "}
-                <span className="inter-med text-black flex">eCommerce</span>
-              </p>
-              <p className="inter-bold text-gray-300">
-                Startup Build your :{" "}
-                <span className="inter-med text-black flex">
-                  Consult our experts
+              <p className="  text-gray-500 text-xl">
+                Business Type:{" "}
+                <span className="text-2xl font-bold text-black flex">
+                  {casestudy.businessType}
                 </span>
               </p>
             </div>
@@ -91,21 +85,18 @@ export default function CaseStudyDetail({ params }) {
       </div>
 
       {/* Challenges Section */}
-      <div className=" second-challenges-single mx-auto text-white py-5">
-        <div className="container-singlecase py-12 p-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 mt-16">
-          <div>
-            <h2 className="text-5xl inter-semibold">
-              The {casestudy.heading} App <br /> Alarming Challenges
-            </h2>
-          </div>
-          {/* <div>
+
+      <div className="bg-black">
+        <h2 className="text-2xl text-center text-white px-20 py-28 inter-semibold">
+          {casestudy.projectScope}
+        </h2>
+      </div>
+      {/* <div>
             <p className="leading-[2.5] text-base">{clientrequirements}</p>
           </div> */}
-        </div>
-      </div>
 
       {/* Testimonial Section */}
-      <div className="container-singlecase mx-auto py-12 p-10">
+      {/* <div className="container-singlecase mx-auto py-12 p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h2 className="text-7xl inter-med  mt-20">{casestudy.heading}</h2>
@@ -129,7 +120,7 @@ export default function CaseStudyDetail({ params }) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Process Section */}
       <div className="container-singlecase process-singlecase mx-auto py-12 mb-36 p-10">
@@ -173,7 +164,7 @@ export default function CaseStudyDetail({ params }) {
       {/* Full Width Image */}
       <div className="container-singlecase p-10 py-8 mx-auto h-full  ">
         <img
-          src="/images/estimateproject/pexels-olly-3831888.jpg"
+          src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1729864786/shutterstock_214315015_lvznpv.jpg"
           alt="Process Image"
           className="w-full"
         />
@@ -181,28 +172,33 @@ export default function CaseStudyDetail({ params }) {
 
       {/* Project Challenges Section */}
       <div className="container-singlecase mx-auto py-12 p-10">
-        <h2 className="text-5xl inter-semibold ">Our Project Challenges</h2>
+
         <div>
           {/* jjj */}
           <div className="container-singlecase mx-auto ">
             <div className="flex flex-row mobile-singlecase">
               {casestudy.challenges.map((challenge, index) => (
-                <div
-                  key={index}
-                  className="flex-1 flex challenges-singlecase mb-8"
-                >
-                  <div className="text-9xl inter-bold text-gray-200 text-center">
-                    {index + 1}
-                  </div>
-                  <div className="content-singlechallenges pt-3 flex flex-col justify-between h-full">
-                    <div className="inter-semibold text-2xl">
-                      {challenge.heading}
+                <>
+                  <h2 className="text-5xl inter-semibold ">
+                    Our Project Challenges
+                  </h2>
+                  <div
+                    key={index}
+                    className="flex-1 flex challenges-singlecase mb-8"
+                  >
+                    <div className="text-9xl inter-bold text-gray-200 text-center">
+                      {index + 1}
                     </div>
-                    <div className="inter-med text-lg leading-[2]">
-                      {challenge.passage}
+                    <div className="content-singlechallenges pt-3 flex flex-col justify-between h-full">
+                      <div className="inter-semibold text-2xl">
+                        {challenge.heading}
+                      </div>
+                      <div className="inter-med text-lg leading-[2]">
+                        {challenge.passage}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               ))}
             </div>
           </div>
@@ -210,56 +206,25 @@ export default function CaseStudyDetail({ params }) {
       </div>
 
       {/* Full Width Image */}
-      <div className="my-8">
-        <img
-          src="/images/estimateproject/pexels-olly-3831888.jpg"
-          alt="Challenges Image"
-          className="w-full"
-        />
-      </div>
 
-      <div className="container-singlecase mx-auto py-12 p-10">
-        <h2 className="text-5xl inter-semibold text-center">
-          Contrary to popular belief
-        </h2>
-        <div>
-          <div className="flex pt-10 ">
-            <div className="inter-med text-xl leading-[2] text-center  revamp-casestudysection">
-              {casestudy.solution}
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Tools and Technologies Section */}
-      <div className="container-singlecase mx-auto py-12 p-10">
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=" py-12 px-20">
+        <div className="">
           <div>
-            <h2 className="text-5xl inter-semibold">
-              Tools and <br /> Technologies Used
+            <h2 className="text-4xl text-center mb-10">
+              Tools and Technologies Used
             </h2>
           </div>
           <div>
-            <div className="flex singlepadding-left space-x-20">
-              <div className="space-y-20">
-                <p className="inter-bold text-black">
-                  For Indexing
-                  <span className="inter-med text-black flex">Algolia SDK</span>
-                </p>
-                <p className="inter-bold text-black">
-                  Business Type:{" "}
-                  <span className="inter-med text-black flex">Startup</span>
-                </p>
-              </div>
-              <div className="space-y-20">
-                <p className="inter-bold text-black">
-                  For Analytics
-                  <span className="inter-med text-black flex">Firebase</span>
-                </p>
-                <p className="inter-bold text-black">
-                  CI/CD
-                  <span className="inter-med text-black flex">App Center</span>
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+              {casestudy.languages.map((lan, i) => (
+                <div
+                  key={i}
+                  className="text-xl font-semibold shadow-lg p-4 text-center"
+                >
+                  {lan}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -274,21 +239,9 @@ export default function CaseStudyDetail({ params }) {
           <div>
             <div className="flex singlepadding-left space-x-20 ">
               <div className="space-y-20">
-                {/* <p className="inter-med text-black leading-[2]">{result}</p> */}
-                <div className="flex mobile-results">
-                  <p className="inter-semibold text-5xl text-black first-result">
-                    1+ million
-                    <span className="inter-med text-black flex text-lg">
-                      iOS App Downloads
-                    </span>
-                  </p>
-                  <p className="inter-semibold text-5xl text-black  sec-result">
-                    1+ million
-                    <span className="inter-med text-black flex text-lg">
-                      Android App Downloads
-                    </span>
-                  </p>
-                </div>
+                <p className="inter-med text-black leading-[2]">
+                  {casestudy.results}
+                </p>
               </div>
             </div>
           </div>

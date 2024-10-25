@@ -11,6 +11,8 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "Travel",
       num: 9,
+      industry:"",
+      businessType:"",
       about:
         "Our Client is one of the leading insurance broker in US,with a vast experience of over two decades.They offer services in wide sectors such as auto,motorcycle,life,health and other insurance services.Among these services our client also conduct underwriting services for numerous insurance providers across US.",
       projectScope:
@@ -19,12 +21,12 @@ export const allCaseStudies = [
         "Rytsense Technologies had successfully executed numerous AI projects within the insurance sector.We connected with the client’s team to discuss our expertise in enhancing their underwriting processes.Our experts required deeper insights into client’s current underwriting process & the associated operational issues that could be addressed using AI Solutions.",
       challenges: [
         {
-          heading: "*******",
+          heading: "",
           passage:
             "The traditional method of underwriting is tedious as it involves manual verification of  various documents & proofs.The assessment has to be carried cautiously by the professional   as it is vital to safeguard the company’s risk.Such a process result in large verification cycle  and possess room for errors resulting in churn of customers.",
         },
         {
-          heading: "*******",
+          heading: "",
           passage:
             "The client’s prerequisite was to develop an OCR model to scan these documents,transcribe them & render a digitized copy.The client was looking for an experienced partner to be their AI Solution Partner who can craft tailored solutions for insurance industry.",
         },
@@ -46,6 +48,8 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "Travel",
       num: 9,
+      industry:"",
+      businessType:"",
       about:
         "Our Client ABC Paints was a leading player in Paint & adhesive manufacturing dealing with 1000+ SKUs for Asian & European markets.Being large manufacturer ,the client has wide distribution network across the countries.",
       projectScope: "*********",
@@ -77,20 +81,15 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "AI",
       num: 9,
+      industry:"Information Technology",
+      businessType:"IT Services",
       about:
         "Our client TMF is a leading accounting & taxfiling company serving across the globe.With a clientbase of 3000 companies across 34 countries",
       projectScope:
         "Using the company’s dashboard ,customers use to share and access informations and records related to various accounting operations.The metrics in reports accessed in such a manner were limited in coverage due to which the customers had to separately reach out to customer support team to get additional details which were not covered in report. As a result for all the custom report requirements the customers have to raise a ticket or email the customer support team or should wait long queues on the phone until a customer service agent was assigned to them.",
       quote: "********8",
       challenges: [
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
+     
       ],
       soution:
         "We decided to develop an end to end solution to address this issue, and zeroed down to develop a customized chat bot .We then started building the bot using Google’s Dialogflow as per client’s insistence to ensure data security,scalability & seamless real time experience",
@@ -108,20 +107,15 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "AI",
       num: 9,
+      industry:"",
+      businessType:"",
       about:
         "Open Table, a leading hospitality marketplace catering multiple services for a wide network of 55,000restaurants across the world.The team initially had dedicated professionals to handle the reservations.They used IVR service to route the calls & queries to the reservation professionals for particular chains. ",
       projectScope:
         "The client’s existing business model demands highly skilled workforce as the task is executed manually. The staffs could handle only limited number of calls for a given time which takes a toll on the business operations.Poor Customer experience because of longer wait times Lack of scaling possibilities hindering the business growth.",
       quote: "**8888*",
       challenges: [
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
+    
       ],
       soution:
         "The OpenTable was looking for a tech partner who can assist them in this challenge and help them in scaling the operations thereby business.They partnered with Rytsense to build an AI-based chat solution.The Chatbot leverages GPT Model which was finetuned to understand the contextual nuances with proprietary datasets",
@@ -140,20 +134,15 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "AI",
       num: 9,
+      industry:"",
+      businessType:"",
       about:
         "Our Client is a leading chain of dental clinic in US led by a team of senior dentists.With their years of experience & expertise in the field the clinics are busy round the year with thousands of visitors across the chain getting various services. ",
       projectScope:
         "The most pressing issue faced by our client was in efficiently handling the operations.Dependency on the skilled professionals for the day to day operations like booking,scheduling,answering FAQs pose a significant operational challenge.This often leads to burnouts of staffs resulting in poor customer experience.",
       quote: "***********",
       challenges: [
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
-        {
-          heading: "********************",
-          passage: "*******************",
-        },
+    
       ],
       soution:
         "The client's preference was to build the chat bot that would efficiently handle the day to day operations from handling customer queries to booking appointments and executing other operations.To improve workflow and operational efficiency for our client, Rytsense Technologies designed channel-specific chatbots. For this, the chatbot was integrated with the Calendar of each doctor. Based on the answers, the chatbot pulls out a list of available and relevant doctors and suggest available time slot and book the appointment. This is then reflected in the client’s calendar as well as the doctor's calendar. The WhatsApp chatbot also sends notifications to remind the patient about the appointment to minimize the cases of no-shows. Using the bot, the users can also reschedule or cancel their appointment.",
@@ -171,6 +160,8 @@ export const allCaseStudies = [
       languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
       sub: "Trading Platform",
       num: 4,
+      industry:"FinTech",
+      businessType:"Trading platorm",
       about:
         "Our Client is a leading chain of dental clinic in US led by a team of senior dentists.With their years of experience & expertise in the field the clinics are busy round the year with thousands of visitors across the chain getting various services. ",
       projectScope:
@@ -204,6 +195,8 @@ export const allCaseStudies = [
       languages: ["React", "Dotnet", "Redux", "Tailwind", "MySQL", "Websocket"],
       sub: "AI Browser Extension",
       num: 4,
+      industry:"Browser extension",
+      businessType:"Book mark management",
       about:
         "SupportXDR aims to revolutionize the way users manage bookmarks and access relevant content. SupportXDR steps in to streamline the process, making it effortless and efficient",
       projectScope:
@@ -241,20 +234,15 @@ export const allCaseStudies = [
       languages: ["Angular", "Node Js", "Express", "Bootstrap", "Mongo DB"],
       sub: "Job",
       num: 2,
+      industry:"EdTech",
+      businessType:"Aggregator platform",
       about:
         "TopGrad, is a platform that provides job listings and services for both job seekers and employers. On the other hand, employers could conveniently post job listings and manage applications. Our team crafted features that set the application apart in the job listing realm. Our intuitive interface ensures a smooth job search and application process, enhancing the overall user experience. ",
       projectScope:
         "Our Rytsense Tech team pitched to develop web app to provide job seekers with an intuitive and user-friendly interface, allowing them to effortlessly search and apply for jobs. On the other hand, employers could conveniently post job listings and manage applications. Our team crafted features that set the application apart in the job listing realm. Our intuitive interface ensures a smooth job search and application process, enhancing the overall user experience. We ensured seamless posting and management of job listings for employers, simplifying their recruitment workflows. Implementing a mobile-first design has been key, guaranteeing an exceptional user experience across all devices. These features solidify TopGrad as the go-to platform for both job seekers and employers",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+     
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -275,20 +263,15 @@ export const allCaseStudies = [
       languages: ["Swift", "ROR", "Angular", "PostgraSql", "AWS"],
       sub: "Sports",
       num: 5,
+      industry:"Gaming",
+      businessType:"Betting platform",
       about:
         "Online Sport betting platform allows users to complete with their friends in legal, peer-to-peer challenges where they could win real rewards",
       projectScope:
         "Ralph, an American entrepreneur with a passion for sports, came up with the idea for a sports betting website at a time when betting was strictly regulated in the U.S. These regulations drove sports enthusiasts to offshore websites, and Ralph intended to capture a portion of that market with Duelo. The platform he envisioned would allow users to compete with their friends in legal, peer-to-peer challenges where they could win real rewards without risking their own money. In order to compete with offshore betting platforms where users could gamble actual money. When exploring potential tech partners to build the platform, Ralph was particularly impressed by Rytsense Tech. Then Rytsense Tech BA and UX teams worked alongside Ralph’s team to design a sticky, gamified, user-friendly platform",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+       
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -308,20 +291,15 @@ export const allCaseStudies = [
       languages: ["Android", "iOs", "Angular"],
       sub: "One Stop App",
       num: 3,
+      industry:"Travel & Hospitality",
+      businessType:"Aggregator platform",
       about:
         "Transforming the Zimbabwe travel experience, providing a one-stop app for locals and visitors. The upgrade aimed to seamlessly offer diverse services, simplifying user access even during the global pandemic. ",
       projectScope:
         "As a player in the hospitality industry, the client recognized evolving travel trends and the time constraints faced by modern tourists. To address this, the clieny wants a comprehensive range of services through a single app, upgrading it with features to become a go-to solution for users in various situations, including the challenges of the global pandemic. The goal was to simplify access to diverse services for both incoming visitors and local citizens in Zimbabwe, eliminating the need for multiple app downloads.",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+   
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -343,20 +321,15 @@ export const allCaseStudies = [
       languages: ["C#", "Laravel", "MySQL", "jQuery", "AWS", "Lumen"],
       sub: "Education",
       num: 6,
+      industry:"EdTech",
+      businessType:"E-learning platform",
       about:
         "EdPlace is an at-home learning and revision app that enhances educational resources and exam preparation. ",
       projectScope:
         "It was an exciting time for EdPlace, a growing educational technology (EdTech) platform that helps kids improve their skills in English, Science, and Mathematics. They’d been in business for a decade when, in 2014, they began to see rapid growth—with over 10,000 families using their system. Of course, growth always brings challenges, and CTO Will Lord worried that their legacy coding wasn’t up to the task of scaling to support both feature expansion or the increasing volume. They had started with a core idea and progressed with it, but it was not designed or built for rapid growth or scale. Selecting the right vendor was quite a long process. Rytsense Techs was the company that stood out from the outset. And all the way through to the details, it was clear that Rytsense understood what the client looking for. We were the ones that impressed them the most.",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+     
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -376,20 +349,15 @@ export const allCaseStudies = [
       languages: ["Angular", "Apache", "PHP", "Javascript", "Python", "MySQL"],
       sub: "Services",
       num: 7,
+      industry:"LegalTech",
+      businessType:"Legal assisstance",
       about:
         "Legal aid is the provision of assistance to people who are unable to afford legal representation and access to the court system. ",
       projectScope:
         "LASO is a state-wide non-profit law firm focusing on providing legal assistance with civil (non-criminal) cases to low-income individuals of the state. They wanted a platform to widen their reach and streamline their operations. With the growing need for civil legal aid, LASO was finding it difficult to serve more number of clients with their legacy methods of interviewing and sharing information. A technology solution seemed obvious, but it had to meet budget requirements. Rytsense Tech bespoke CRM application, tailored the clients needs, streamlines processes for bith thier builders and suppliers. We suggested ideas to maximize efficiency",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+      
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -409,20 +377,15 @@ export const allCaseStudies = [
       languages: ["Angular", "Wordpress", ".Net frameworks", "MsSQL"],
       sub: "Trading",
       num: 8,
+      industry:"Fintech",
+      businessType:"Trading platform",
       about:
         "It will provide real-time visibility into the performance of property listings, view offers, track 1031 exchanges, and visualize data insights for principals and brokers to make better decisions.",
       projectScope:
         "The client wants an integrated solution that will provide real-time visibility into the performance of property listings, view offers, track 1031 exchanges, and visualize data insights for principals and brokers to make better decisions. The client approach Rytsense then we provided a net lease trading platform with personalized property and seller dashboards, 1031 exchange tracking, dashboards that offer comparable analytics, portfolio sales, and BOVs, revenue projection charts, and financial summaries. Rytsense tech delivers functionalities based on clients requirements.",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+      
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -442,20 +405,15 @@ export const allCaseStudies = [
       languages: ["iOS"],
       sub: "Travel",
       num: 9,
+      industry:"Travel & Hospitality",
+      businessType:"",
       about:
         "VIPCars was a pioneer in online car rentals, connecting consumers to car rental services across the globe. It makes it easy and convenient for customers to compare rates from different suppliers and find the best value for their needs",
       projectScope:
         "VIPCars had launched before Smartphones became ubiquitous, and as mobile devices grew in popularity, the company’s leadership realized it was time to make their service more accessible to mobile users. VIPCars witnessed an increasing decline in visitors, which the management team attributed to the rise in mobile device users. In an effort to retain (and ultimately expand) their market share, VIPCars decided to create a powerful, highly usable mobile app. VIPCars decided to outsource design and development. Their search led them to the team at Rytsense Tech, who impressed them with their range and depth of experience. Rytsense Tech’ designers and developers asked probing questions and took the time to fully understand the online car rental industry. Rytsense Tech produced the app on an accelerated timeline, allowing VIPCars to quickly launch on the Apple Store and start winning back market share. ",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+     
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",
@@ -482,14 +440,7 @@ export const allCaseStudies = [
         "Using the company’s dashboard ,customers use to share and access informations and records related to various accounting operations.The metrics in reports accessed in such a manner were limited in coverage due to which the customers had to separately reach out to customer support team to get additional details which were not covered in report.",
       quote: "*******",
       challenges: [
-        {
-          heading: "*********",
-          passage: "*********",
-        },
-        {
-          heading: "*********",
-          passage: "*********",
-        },
+  
       ],
       imagearray: [
         "/images/iphone_2.084e3e8.png",

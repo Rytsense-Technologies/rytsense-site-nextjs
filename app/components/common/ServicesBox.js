@@ -1,3 +1,4 @@
+"use client"
 import { faUncharted } from "@fortawesome/free-brands-svg-icons";
 import {
   faCloudArrowUp,
@@ -10,10 +11,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import LetsDiscussModal from "../software/software-dubai/LetsDiscussModal";
 
 const ServicesBox = ({ heading }) => {
+  const [open, setOpen] = useState(false);
+
   const services = [
     {
       icon: <FontAwesomeIcon icon={faDesktop} />,
@@ -21,7 +24,7 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609479/service1_zhlizm.png",
       desc: "Laying the strategic foundation for your product with clear goals and a defined roadmap.",
-      href: "/",
+      href: null,
     },
     {
       icon: <FontAwesomeIcon icon={faMobileScreenButton} />,
@@ -29,7 +32,7 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609486/service2_gwwvqs.png",
       desc: "Gathering critical insights through comprehensive market and user research.",
-      href: "/",
+      href: null,
     },
     {
       icon: <FontAwesomeIcon icon={faUncharted} />,
@@ -53,7 +56,7 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609516/service6_svzy4w.png",
       desc: "Launch your product into the market with strategies that captivate your audience.",
-      href: "/",
+      href: null,
     },
     {
       icon: <FontAwesomeIcon icon={faCloudArrowUp} />,
@@ -61,9 +64,17 @@ const ServicesBox = ({ heading }) => {
       image:
         "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720609507/service5_n3noqu.png",
       desc: "Enhancing your product’s reach and impact in to market dynamics and user feedback.",
-      href: "/",
+      href: null, 
     },
   ];
+
+  const handleClick = (service) => {
+    if (service.href) {
+      window.location.href = service.href; // Use window.location.href for navigation
+    } else {
+      setOpen(true); // Open the modal
+    }
+  };
 
   return (
     <>
@@ -76,30 +87,31 @@ const ServicesBox = ({ heading }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pb-10">
           {services.map((service, index) => (
-            <Link href={service.href} key={index}>
-              <div
-                className="rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow cursor-pointer duration-300"
-              >
-                <Image
-                  className="rounded-t-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 object-cover"
-                  src={service.image}
-                  alt={service.name}
-                  width={500}
-                  height={300}
-                />
-                <div className="p-5">
-                  <h5 className="mb-2 text-xl sm:text-2xl font-semibold tracking-tight text-gray-950 dark:text-white">
-                    {service.name}
-                  </h5>
-                  <p className="mb-3 text-base sm:text-lg font-normal text-gray-900 dark:text-gray-400">
-                    {service.desc}
-                  </p>
-                </div>
+            <div
+              key={index}
+              className="rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow cursor-pointer duration-300"
+              onClick={() => handleClick(service)} // Handle click event
+            >
+              <Image
+                className="rounded-t-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 object-cover"
+                src={service.image}
+                alt={service.name}
+                width={500}
+                height={300}
+              />
+              <div className="p-5">
+                <h5 className="mb-2 text-xl sm:text-2xl font-semibold tracking-tight text-gray-950 dark:text-white">
+                  {service.name}
+                </h5>
+                <p className="mb-3 text-base sm:text-lg font-normal text-gray-900 dark:text-gray-400">
+                  {service.desc}
+                </p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
+      <LetsDiscussModal open={open} setOpen={setOpen} />
     </>
   );
 };

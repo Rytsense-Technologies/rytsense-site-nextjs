@@ -415,7 +415,7 @@ export default function LetsDiscussModal({open, setOpen}) {
                         <div className="mt-5 flex justify-center lg:px-20">
                           <button
                             type="submit"
-                            className={`text-white w-full  text-lg font-semibold focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 inline-flex items-center justify-center dark:focus:ring-[#1da1f2]/55`}
+                            className={`text-white w-full bg-sky-500 text-lg font-semibold focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 inline-flex items-center justify-center dark:focus:ring-[#1da1f2]/55`}
                           >
                          Get in touch
                             {loading && (
@@ -429,7 +429,7 @@ export default function LetsDiscussModal({open, setOpen}) {
                           </div>
                         )}
                       </form>
-                      <div className="inter-med text-gray-600 text-xs   flex  justify-center">
+                      <div className="inter-med text-gray-600 text-xs  mt-2 flex  justify-center">
                         <FontAwesomeIcon icon={faLock} className="mr-3" /> Your
                         idea is 100% protected by our non disclosure agreement.
                       </div>
