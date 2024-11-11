@@ -16,28 +16,7 @@ const caseStudies = [
     rating: "4.5/5",
     valuation: "$4M",
   },
-  // {
-  //   id: 2,
-  //   title: "Option Trading Platform - Revolutionizing Trading with Cutting-Edge Innovation",
-  //   description:
-  //     "Our Client is a leading chain of dental clinic in US led by a team of senior dentists.With their years of experience & expertise in the field the clinics are busy round the year with thousands of visitors across the chain getting various services.",
-  //   image:
-  //     "https://res.cloudinary.com/dlg3i3ari/image/upload/v1720776040/Group_105140_fkx3qa.png",
-  //   downloads: "800K+",
-  //   rating: "4.5/5",
-  //   valuation: "$4M",
-  // },
-  // {
-  //   id: 3,
-  //   title: "How an AI Chatbot Reduced Customer Support Tickets by 80%",
-  //   description:
-  //     "Our client TMF is a leading accounting & taxfiling company serving across the globe.With a clientbase of 3000 companies across 34 countries",
-  //   image:
-  //     "https://res.cloudinary.com/dlg3i3ari/image/upload/v1729687885/aibot_bvuvy4.png",
-  //   downloads: "800K+",
-  //   rating: "4.5/5",
-  //   valuation: "$4M",
-  // },
+  // Other case studies can be added here
 ];
 
 const PortfolioSection = () => {
@@ -56,14 +35,14 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section className="py-16 px-20">
-      <div className="container mx-auto px-4">
+    <section className="py-8 px-4 sm:px-8 md:px-16 lg:px-20">
+      <div className="container mx-auto">
         {/* Heading Section */}
-        <div className="flex items-center justify-between gap-5 mb-12">
-          <h2 className="text-3xl lg:text-3xl font-bold mb-4">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold mb-4 lg:mb-0">
             Explore Our Incredible App Development Portfolio Across UAE
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
             Our diversified app development portfolio in Dubai and other UAE
             regions serves as proof that we are the best mobile application
             development company when it comes to creating mobile apps.
@@ -71,60 +50,62 @@ const PortfolioSection = () => {
         </div>
 
         {/* Portfolio Content */}
-        <div className="bg-sky-900 rounded-lg overflow-hidden relative flex items-center">
+        <div className="bg-sky-900 rounded-lg overflow-hidden relative flex flex-col lg:flex-row items-center">
           {/* Left Navigation Arrow */}
-          {/* <button
+          <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2  bg-white rounded-full p-2 shadow-lg"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg"
           >
-            <FaArrowLeft className="w-6 h-6" />
-          </button> */}
+            <FaArrowLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
 
           {/* Image and Content */}
-          <div className="lg:flex lg:items-center lg:justify-between w-full">
+          <div className="flex flex-col lg:flex-row items-center w-full">
             {/* Left Section: App Image */}
-            <div className="lg:w-1/2 relative flex justify-center items-center">
+            <div className="w-full lg:w-1/2 flex justify-center items-center p-4">
               <Image
                 src={caseStudies[currentIndex].image}
                 alt={caseStudies[currentIndex].title}
-                className=" relative z-10"
+                className="rounded-lg"
                 width={500}
                 height={500}
               />
             </div>
 
             {/* Right Section: Text and Info */}
-            <div className="lg:w-1/2 text-white p-8 lg:p-16">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="w-full lg:w-1/2 text-white p-6 sm:p-8 lg:p-16">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 {caseStudies[currentIndex].title}
               </h3>
-              <p className="mb-4">{caseStudies[currentIndex].description}</p>
+              <p className="mb-4 text-sm sm:text-base">
+                {caseStudies[currentIndex].description}
+              </p>
 
               {/* Stats */}
-              <div className="flex space-x-8 mb-6">
+              <div className="flex space-x-4 sm:space-x-8 mb-6 text-center">
                 <div>
-                  <p className="text-2xl font-bold">
+                  <p className="text-lg sm:text-2xl font-bold">
                     {caseStudies[currentIndex].downloads}
                   </p>
-                  <p>Downloads</p>
+                  <p className="text-xs sm:text-sm">Downloads</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">
+                  <p className="text-lg sm:text-2xl font-bold">
                     {caseStudies[currentIndex].rating}
                   </p>
-                  <p>Rating</p>
+                  <p className="text-xs sm:text-sm">Rating</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">
+                  <p className="text-lg sm:text-2xl font-bold">
                     {caseStudies[currentIndex].valuation}
                   </p>
-                  <p>Total Valuation</p>
+                  <p className="text-xs sm:text-sm">Total Valuation</p>
                 </div>
               </div>
 
               {/* Case Study Button */}
               <Link href="/caseStudy/bluefield/">
-                <button className="bg-white text-green-900 font-bold py-2 px-6 rounded-md hover:bg-gray-200 transition-colors">
+                <button className="bg-white text-green-900 font-bold py-2 px-4 sm:px-6 rounded-md hover:bg-gray-200 transition-colors text-sm sm:text-base">
                   Explore Case Study
                 </button>
               </Link>
@@ -132,12 +113,12 @@ const PortfolioSection = () => {
           </div>
 
           {/* Right Navigation Arrow */}
-          {/* <button
+          <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2  bg-white rounded-full p-2 shadow-lg"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg"
           >
-            <FaArrowRight className="w-6 h-6" />
-          </button> */}
+            <FaArrowRight className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
         </div>
       </div>
     </section>

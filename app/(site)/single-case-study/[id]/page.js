@@ -4,6 +4,7 @@ import SingleBanner from "../../../components/case-study/single/SingleBanner";
 import "../../../css/singlecaseclutch.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import TechnologyStack from "../../../components/services/TechnologyStack";
 
 export async function generateStaticParams() {
   // Get all the paths we want to pre-render based on blog IDs
@@ -25,10 +26,10 @@ export default function CaseStudyDetail({ params }) {
       <SingleBanner heading={casestudy.appname} image={casestudy.topimage} />
 
       {/* About Section */}
-      <div className=" container-singlecase mx-auto py-12 p-10">
+      <div className=" px-20 mt-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h2 className="text-5xl inter-semibold">
+            <h2 className="text-4xl inter-semibold">
               About {casestudy.heading}
             </h2>
             <p className="inter-med  mt-5 leading-[3]">{casestudy.passage}</p>
@@ -53,34 +54,11 @@ export default function CaseStudyDetail({ params }) {
           </div>
         </div>
         <div className="flex md:space-x-20 phone-singleimage">
-          <div className="mt-8 ">
-            <img
-              src="/images/estimateproject/street-app-screen1.webp"
-              alt="6th Street"
-              className="w-fit h-fit"
-            />
-          </div>
-          <div className="mt-8 ">
-            <img
-              src="/images/estimateproject/street-app-screen1.webp"
-              alt="6th Street"
-              className="w-fit h-fit"
-            />
-          </div>
-          <div className="mt-8 ">
-            <img
-              src="/images/estimateproject/street-app-screen1.webp"
-              alt="6th Street"
-              className="w-fit h-fit"
-            />
-          </div>
-          <div className="mt-8 ">
-            <img
-              src="/images/estimateproject/street-app-screen1.webp"
-              alt="6th Street"
-              className="w-fit h-fit"
-            />
-          </div>
+          {casestudy.mobileImages.map((mob, i) => (
+            <div className="mt-8 " key={i}>
+              <img src={mob} alt="6th Street" className="w-80  h-full" />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -124,11 +102,11 @@ export default function CaseStudyDetail({ params }) {
 
       {/* Process Section */}
       <div className="container-singlecase process-singlecase mx-auto py-12 mb-36 p-10">
-        <h2 className="text-5xl inter-semibold ">Our Process</h2>
+        <h2 className="text-5xl font-semibold ">Our Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 ">
           <div>
             <div className="text-9xl inter-bold text-gray-200 ">1</div>
-            <div className="inter-semibold text-2xl">Conceptualization</div>
+            <div className="font-semibold text-2xl">Conceptualization</div>
             <div className="inter-med text-lg">
               Competition Analysis <br />
               Customer Data Analysis
@@ -136,7 +114,7 @@ export default function CaseStudyDetail({ params }) {
           </div>
           <div>
             <div className="text-9xl inter-bold text-gray-200 ">2</div>
-            <div className="inter-semibold text-2xl">Design</div>
+            <div className="font-semibold text-2xl">Design</div>
             <div className="inter-med text-lg">
               User Journey Mapping <br />
               App Design Improvement
@@ -144,7 +122,7 @@ export default function CaseStudyDetail({ params }) {
           </div>
           <div>
             <div className="text-9xl inter-bold text-gray-200 ">3</div>
-            <div className="inter-semibold text-2xl">Development</div>
+            <div className="font-semibold text-2xl">Development</div>
             <div className="inter-med text-lg">
               Android App Development <br />
               iOS App Development
@@ -152,7 +130,7 @@ export default function CaseStudyDetail({ params }) {
           </div>
           <div>
             <div className="text-9xl inter-bold text-gray-200 ">4</div>
-            <div className="inter-semibold text-2xl">Deployment</div>
+            <div className="font-semibold text-2xl">Deployment</div>
             <div className="inter-med text-lg">
               App Store & Play Store Deployment <br />
               Post-Deployment Support
@@ -164,24 +142,20 @@ export default function CaseStudyDetail({ params }) {
       {/* Full Width Image */}
       <div className="container-singlecase p-10 py-8 mx-auto h-full  ">
         <img
-          src="https://res.cloudinary.com/dlg3i3ari/image/upload/v1729864786/shutterstock_214315015_lvznpv.jpg"
+          src={casestudy.middleImage}
           alt="Process Image"
-          className="w-full"
+          className="w-1/2 mx-auto"
         />
       </div>
 
       {/* Project Challenges Section */}
       <div className="container-singlecase mx-auto py-12 p-10">
-
         <div>
-          {/* jjj */}
+          <h2 className="text-5xl inter-semibold ">Our Project Challenges</h2>
           <div className="container-singlecase mx-auto ">
             <div className="flex flex-row mobile-singlecase">
               {casestudy.challenges.map((challenge, index) => (
                 <>
-                  <h2 className="text-5xl inter-semibold ">
-                    Our Project Challenges
-                  </h2>
                   <div
                     key={index}
                     className="flex-1 flex challenges-singlecase mb-8"
@@ -190,7 +164,7 @@ export default function CaseStudyDetail({ params }) {
                       {index + 1}
                     </div>
                     <div className="content-singlechallenges pt-3 flex flex-col justify-between h-full">
-                      <div className="inter-semibold text-2xl">
+                      <div className="font-semibold text-2xl">
                         {challenge.heading}
                       </div>
                       <div className="inter-med text-lg leading-[2]">
@@ -211,24 +185,20 @@ export default function CaseStudyDetail({ params }) {
       <div className=" py-12 px-20">
         <div className="">
           <div>
-            <h2 className="text-4xl text-center mb-10">
+            <h2 className="text-4xl text-center font-semibold mb-10">
               Tools and Technologies Used
             </h2>
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {casestudy.languages.map((lan, i) => (
-                <div
-                  key={i}
-                  className="text-xl font-semibold shadow-lg p-4 text-center"
-                >
-                  {lan}
-                </div>
+                <img key={i} src={lan} alt="" className="w-40"/>
               ))}
             </div>
           </div>
         </div>
       </div>
+ 
 
       {/* //Results */}
       <div className="container-singlecase mx-auto py-12 mb-36 p-10">

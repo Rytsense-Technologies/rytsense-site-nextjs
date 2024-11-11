@@ -15,6 +15,8 @@ export const metadata = {
   title: "Custom software development company in india | Rytsnese Technologies",
   description:
     "Looking for a custom software development company in India? We offer top custom software development services in India, including Chennai, delivering tailored solutions that help your business grow.",
+    keywords:
+    "custom software development company in india, custom software development services india, software development company in india, best software company in india, custom software development india, software outsourcing companies in india, us based software companies in india, software product development company in india, custom software development company in chennai",
   alternates: {
     canonical: "https://rytsensetech.com/software-development-company-india",
     languages: {

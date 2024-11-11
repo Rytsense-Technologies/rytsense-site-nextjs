@@ -72,7 +72,7 @@ const CaseStudyCardAnimation = () => {
     if (!isDragging.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX.current) * 2; // Scroll faster
+    const walk = (x - startX.current) * 2;
     sliderRef.current.scrollLeft = scrollLeft.current - walk;
   };
 
@@ -80,9 +80,9 @@ const CaseStudyCardAnimation = () => {
     const slider = sliderRef.current;
     const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
     if (slider.scrollLeft === 0) {
-      slider.scrollLeft = maxScrollLeft / 2; // Reset to the "end" (middle of the cloned cards)
+      slider.scrollLeft = maxScrollLeft / 2;
     } else if (slider.scrollLeft >= maxScrollLeft) {
-      slider.scrollLeft = maxScrollLeft / 2; // Reset to the "start" (middle of the cloned cards)
+      slider.scrollLeft = maxScrollLeft / 2; 
     }
   };
 
@@ -112,7 +112,7 @@ const CaseStudyCardAnimation = () => {
                 <h3 className="text-gray-600">RESEARCH / DESIGN / STRATEGY</h3>
                 <h1 className="font-serif font-semibold">{card.heading}</h1>
                 <div className="flex justify-between gap-20 mt-10">
-                  <div className="logo">CULDESAC</div>
+                  {/* <div className="logo">CULDESAC</div> */}
                   <div className="cta-text">
                     <Link href={`/single-case-study/${card.id}`} passHref>
                       <p className="text-md font-bold cursor-pointer">

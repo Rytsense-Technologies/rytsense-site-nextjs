@@ -1,17 +1,20 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import { useState, useEffect } from "react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
+import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import countryCodes from "../../../mock/countryCodes";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaSpinner } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
-export default function LetsDiscussModal({open, setOpen}) {
-
-
+export default function LetsDiscussModal({ open, setOpen }) {
   const getColorClass = (index) => {
     const colorClasses = [
       "text-pink1",
@@ -297,23 +300,23 @@ export default function LetsDiscussModal({open, setOpen}) {
           >
             <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
-              
-              <section className={`px-10 py-5 rounded-xl`}>
-                    <div className="flex flex-col ">
-                      <div>
-                        <h2 className="text-2xl font-semibold tracking-tight text-gray-800">
-                          Get In Touch
-                        </h2>
-                        <p className={`mt-2 text-sm leading-8 font-bold`}>
-                        Our team will get back to you within 8 business hours or less
-                        </p>
-                      </div>
-                      <form
-                        onSubmit={handleSubmit}
-                        className=""
-                        id="contact-form-clutch"
-                      >
-                        <div className="flex items-center gap-5">
+                <section className={`px-10 py-5 rounded-xl`}>
+                  <div className="flex flex-col ">
+                    <div>
+                      <h2 className="text-2xl font-semibold tracking-tight text-gray-800">
+                        Get In Touch
+                      </h2>
+                      <p className={`mt-2 text-sm leading-8 font-bold`}>
+                        Our team will get back to you within 8 business hours or
+                        less
+                      </p>
+                    </div>
+                    <form
+                      onSubmit={handleSubmit}
+                      className=""
+                      id="contact-form-clutch"
+                    >
+                      <div className="flex items-center gap-5">
                         <div className="mt-2">
                           <label
                             htmlFor="first-name"
@@ -355,92 +358,88 @@ export default function LetsDiscussModal({open, setOpen}) {
                             </p>
                           )}
                         </div>
-                        </div>
+                      </div>
 
-                        <div className="mt-4">
-                          <label
-                            htmlFor="phone"
-                            className="block text-md  text-[#092947] mb-2"
-                          >
-                            Phone
-                          </label>
-                          <div className="flex items-center gap-2">
-                            <div className="relative w-2/3">
-                              <select
-                                className="block w-full rounded-md bg-gray-50 shadow-md border border-gray-200 px-3.5 py-2 text-[#092947] shadow-lg  placeholder:text-gray-400  sm:text-sm sm:leading-6"
-                                value={selectedCountry.name}
-                                onChange={handleCountryChange}
-                              >
-                                {countryCodes.countries.map((country) => (
-                                  <option
-                                    key={country.name}
-                                    value={country.name}
-                                  >
-                                    {country.name}({country.code})
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
-
-                            <input
-                              type="text"
-                              id="phone"
-                              name="contactnumber"
+                      <div className="mt-4">
+                        <label
+                          htmlFor="phone"
+                          className="block text-md  text-[#092947] mb-2"
+                        >
+                          Phone
+                        </label>
+                        <div className="flex items-center gap-2">
+                          <div className="relative w-2/3">
+                            <select
                               className="block w-full rounded-md bg-gray-50 shadow-md border border-gray-200 px-3.5 py-2 text-[#092947] shadow-lg  placeholder:text-gray-400  sm:text-sm sm:leading-6"
-                              placeholder="Phone Number"
-                              value={formData.contactnumber}
-                              onChange={handleInputChange}
-                              required
-                            />
+                              value={selectedCountry.name}
+                              onChange={handleCountryChange}
+                            >
+                              {countryCodes.countries.map((country) => (
+                                <option key={country.name} value={country.name}>
+                                  {country.name}({country.code})
+                                </option>
+                              ))}
+                            </select>
                           </div>
-                        </div>
-                        <div className="sm:col-span-2 mt-4">
-                          <label
-                            htmlFor="message"
-                            className="block text-md  text-[#092947] mb-2"
-                          >
-                            Message
-                          </label>
-                          <textarea
-                            id="messages"
-                            name="messages"
-                            rows="3"
+
+                          <input
+                            type="text"
+                            id="phone"
+                            name="contactnumber"
                             className="block w-full rounded-md bg-gray-50 shadow-md border border-gray-200 px-3.5 py-2 text-[#092947] shadow-lg  placeholder:text-gray-400  sm:text-sm sm:leading-6"
-                            placeholder="Leave a comment..."
-                            value={formData.messages}
+                            placeholder="Phone Number"
+                            value={formData.contactnumber}
                             onChange={handleInputChange}
                             required
-                          ></textarea>
+                          />
                         </div>
-                        <div className="mt-5 flex justify-center lg:px-20">
-                          <button
-                            type="submit"
-                            className={`text-white w-full bg-sky-500 text-lg font-semibold focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 inline-flex items-center justify-center dark:focus:ring-[#1da1f2]/55`}
-                          >
-                         Get in touch
-                            {loading && (
-                              <FaSpinner className="ml-2 animate-spin" /> 
-                            )}
-                          </button>
-                        </div>
-                        {isSubmitted && (
-                          <div className="text-green-500 mt-4">
-                            <p>Your response submitted successfully!</p>
-                          </div>
-                        )}
-                      </form>
-                      <div className="inter-med text-gray-600 text-xs  mt-2 flex  justify-center">
-                        <FontAwesomeIcon icon={faLock} className="mr-3" /> Your
-                        idea is 100% protected by our non disclosure agreement.
                       </div>
+                      <div className="sm:col-span-2 mt-4">
+                        <label
+                          htmlFor="message"
+                          className="block text-md  text-[#092947] mb-2"
+                        >
+                          Message
+                        </label>
+                        <textarea
+                          id="messages"
+                          name="messages"
+                          rows="3"
+                          className="block w-full rounded-md bg-gray-50 shadow-md border border-gray-200 px-3.5 py-2 text-[#092947] shadow-lg  placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                          placeholder="Leave a comment..."
+                          value={formData.messages}
+                          onChange={handleInputChange}
+                          required
+                        ></textarea>
+                      </div>
+                      <div className="mt-5 flex justify-center lg:px-20">
+                        <button
+                          type="submit"
+                          className={`text-white w-full bg-sky-500 text-lg font-semibold focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-xl px-5 py-2.5 inline-flex items-center justify-center dark:focus:ring-[#1da1f2]/55`}
+                        >
+                          Get in touch
+                          {loading && (
+                            <FaSpinner className="ml-2 animate-spin" />
+                          )}
+                        </button>
+                      </div>
+                      {isSubmitted && (
+                        <div className="text-green-500 mt-4">
+                          <p>Your response submitted successfully!</p>
+                        </div>
+                      )}
+                    </form>
+                    <div className="inter-med text-gray-600 text-xs  mt-2 flex  justify-center">
+                      <FontAwesomeIcon icon={faLock} className="mr-3" /> Your
+                      idea is 100% protected by our non disclosure agreement.
                     </div>
-                  </section>
+                  </div>
+                </section>
               </div>
             </div>
-           
           </DialogPanel>
         </div>
       </div>
     </Dialog>
-  )
+  );
 }

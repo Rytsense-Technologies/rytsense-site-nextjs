@@ -38,7 +38,7 @@ export const allCardStudies = [
     {
       id:2,
       heading:
-        "Building a Machine Learning Model to Predict the Sales of Paints Manufacturer",
+        "Sales prediction using Custom ML model",
       appname:
         "Building a Machine Learning Model to Predict the Sales of Paints Manufacturer",
       image: 'url("/images/casestudy/Paint industry_1.jpg")',
